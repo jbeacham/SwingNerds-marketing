@@ -169,6 +169,13 @@
         <h2 class="datasources-title">Works with your launch monitor</h2>
         <p class="datasources-sub">Connect your existing gear - no extra hardware needed.</p>
         <div class="datasources-grid">
+          <router-link to="/vision" class="ds-card ds-card-link ds-card-featured">
+            <span class="ds-top-pick">Top pick</span>
+            <img src="../assets/gspro_logo.png" alt="GSPro" class="ds-logo" />
+            <div class="ds-name">GSPro</div>
+            <span class="ds-badge ds-auto-sync">&#10003; Auto Sync</span>
+            <span class="ds-csv-note">via Windows App &rarr;</span>
+          </router-link>
           <div class="ds-card">
             <img src="../assets/rapsodo-logo.png" alt="Rapsodo" class="ds-logo" />
             <div class="ds-name">Rapsodo</div>
@@ -183,16 +190,6 @@
             <img src="../assets/squaregolf_logo.png" alt="Square Golf" class="ds-logo" />
             <div class="ds-name">Square Golf</div>
             <span class="ds-badge ds-auto-sync">&#10003; CSV</span>
-          </div>
-          <div class="ds-card">
-            <img src="../assets/gspro_logo.png" alt="GSPro" class="ds-logo" />
-            <div class="ds-name">GSPro</div>
-            <span class="ds-badge ds-auto-sync">&#10003; CSV</span>
-          </div>
-          <div class="ds-card ds-card-gspro">
-            <img src="../assets/gspro_logo.png" alt="GSPro Auto Sync" class="ds-logo ds-logo-muted" />
-            <div class="ds-name">GSPro Auto Sync</div>
-            <span class="ds-badge ds-coming-soon">Coming Soon</span>
           </div>
         </div>
       </div>
@@ -937,6 +934,40 @@ function scrollToSection(id) {
 .ds-csv-note {
   font-size: 0.75rem;
   color: var(--text-3);
+  margin-top: 2px;
+}
+.ds-card-link {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s, transform 0.15s;
+}
+.ds-card-link:hover {
+  border-color: var(--primary, #00adb5);
+  transform: translateY(-1px);
+}
+.ds-card-link:hover .ds-csv-note {
+  color: var(--primary, #00adb5);
+}
+.ds-card-featured {
+  position: relative;
+  border-color: rgba(0, 173, 181, 0.45);
+  box-shadow: 0 6px 22px rgba(0, 173, 181, 0.12);
+  background: linear-gradient(180deg, rgba(0, 173, 181, 0.05), transparent);
+}
+.ds-top-pick {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #00adb5;
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 3px 10px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 @media (max-width: 768px) {
   .datasources-grid { grid-template-columns: repeat(2, 1fr); }

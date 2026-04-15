@@ -41,7 +41,7 @@ function getStarted() {
           <div class="about-section">
             <h2>Why We Built This</h2>
             <p>
-              Golf technology has advanced tremendously, with launch monitors like Rapsodo providing incredibly detailed data about every swing. 
+              Golf technology has advanced tremendously - GSPro, Rapsodo, Uneekor, and Square Golf all provide incredibly detailed data about every swing.
               However, many golfers struggle to interpret this data in a way that actually helps them improve.
             </p>
             <p>
@@ -90,7 +90,7 @@ function getStarted() {
               <div class="feature-card">
                 <div class="feature-icon">🔗</div>
                 <h3>Seamless Integration</h3>
-                <p>Direct integration with your Rapsodo launch monitor means your data flows automatically into our analysis platform.</p>
+                <p>Direct integration with GSPro (real-time via our Windows app), Rapsodo, Uneekor, and Square Golf means your data flows automatically into our analysis platform.</p>
               </div>
               <div class="feature-card">
                 <div class="feature-icon">🎮</div>
@@ -107,7 +107,7 @@ function getStarted() {
               We prioritize data security and privacy, ensuring your swing data remains yours while providing the analytics you need to improve.
             </p>
             <ul>
-              <li><strong>Real-time data sync</strong> with your Rapsodo launch monitor</li>
+              <li><strong>Real-time data sync</strong> with GSPro, Rapsodo, Uneekor, and Square Golf</li>
               <li><strong>Advanced analytics</strong> powered by statistical analysis</li>
               <li><strong>Secure data handling</strong> with industry-standard encryption</li>
               <li><strong>Cross-platform compatibility</strong> works on desktop, tablet, and mobile</li>

@@ -39,6 +39,10 @@
               <span class="amount">{{ billingPeriod === 'monthly' ? '$4.99' : '$49.99' }}</span>
               <span class="period">{{ billingPeriod === 'monthly' ? '/month' : '/year' }}</span>
             </div>
+            <div class="price-alt">
+              <template v-if="billingPeriod === 'monthly'">or $49.99/year <span class="price-save">Save 17%</span></template>
+              <template v-else>or $4.99/month</template>
+            </div>
           </div>
           <div class="trial-badge">7 Days Free</div>
           <div class="video-limit-badge">500 shots with video</div>
@@ -65,6 +69,10 @@
               <span class="amount">{{ billingPeriod === 'monthly' ? '$9.99' : '$99.99' }}</span>
               <span class="period">{{ billingPeriod === 'monthly' ? '/month' : '/year' }}</span>
             </div>
+            <div class="price-alt">
+              <template v-if="billingPeriod === 'monthly'">or $99.99/year <span class="price-save">Save 17%</span></template>
+              <template v-else>or $9.99/month</template>
+            </div>
           </div>
           <div class="video-limit-badge highlight">2,000 shots with video</div>
           <ul class="features-list">
@@ -82,6 +90,10 @@
             <div class="price">
               <span class="amount">{{ billingPeriod === 'monthly' ? '$19.99' : '$199.99' }}</span>
               <span class="period">{{ billingPeriod === 'monthly' ? '/month' : '/year' }}</span>
+            </div>
+            <div class="price-alt">
+              <template v-if="billingPeriod === 'monthly'">or $199.99/year <span class="price-save">Save 17%</span></template>
+              <template v-else>or $19.99/month</template>
             </div>
           </div>
           <div class="video-limit-badge highlight">5,000 shots with video</div>
@@ -121,7 +133,7 @@
           </div>
           <div class="faq-item">
             <h4>What launch monitors are supported?</h4>
-            <p>We support Rapsodo MLM2Pro, Uneekor QED and EYE XO, GSPro simulator data, and Square Golf. More integrations are being added regularly.</p>
+            <p>GSPro (with real-time automatic sync via our Windows app), Rapsodo MLM2Pro, Uneekor QED and EYE XO, and Square Golf. More integrations are being added regularly.</p>
           </div>
           <div class="faq-item">
             <h4>Is my data secure?</h4>
@@ -408,7 +420,7 @@ function startTrial() {
   display: flex;
   align-items: baseline;
   gap: 0.25rem;
-  margin-bottom: var(--space-md);
+  margin-bottom: 4px;
 }
 
 .price .amount {
@@ -420,6 +432,25 @@ function startTrial() {
 .price .period {
   color: var(--text-secondary);
   font-size: 1rem;
+}
+
+.price-alt {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.price-save {
+  background: rgba(16, 185, 129, 0.12);
+  color: #059669;
+  font-weight: 700;
+  font-size: 0.7rem;
+  padding: 2px 8px;
+  border-radius: 999px;
 }
 
 .trial-badge {

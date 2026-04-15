@@ -134,7 +134,7 @@
             <div class="loop-step-num">2</div>
             <div class="loop-step-body">
               <h3>Import your shot data</h3>
-              <p>Connect your launch monitor - Uneekor, Rapsodo, Square Golf, or GSPro. Your shot data syncs automatically, or upload a CSV after your session. <em>Automatic GSPro integration coming soon.</em></p>
+              <p>Connect your launch monitor. <strong>GSPro syncs automatically in real time</strong> (via the Windows app), Uneekor and Rapsodo sync via our cloud integrations, and Square Golf supports CSV upload after your session.</p>
             </div>
           </div>
           <div class="loop-connector">→</div>
