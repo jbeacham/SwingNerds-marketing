@@ -37,7 +37,7 @@
             All your shot data. All your swing videos. Automatically in one place.
           </h1>
           <p class="hero-sub">
-            Every shot you've ever hit - stored, analyzed, and paired with video from <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB camera</a> starting at $30. One place for all your launch monitor data, whether you're using GSPro, Uneekor, Rapsodo, Square, or anything else.
+            Every shot you've ever hit - stored, analyzed, and paired with video from <router-link to="/cameras" class="camera-link">any USB camera</router-link> starting at $30. One place for all your launch monitor data, whether you're using GSPro, Uneekor, Rapsodo, Square, or anything else.
           </p>
           <div class="hero-actions">
             <button @click="startFreeTrial" class="btn-primary lg">
@@ -63,11 +63,11 @@
     <!-- Hero Screenshot -->
     <section class="hero-shot-section">
       <div class="section-inner hero-shot-inner">
-        <p class="hero-shot-label">Compare two swings with their data side by side - without expensive cameras or software. Works with <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB camera</a></p>
+        <p class="hero-shot-label">Compare two swings with their data side by side - without expensive cameras or software. Works with <router-link to="/cameras" class="camera-link">any USB camera</router-link></p>
         <div class="lp-phone-mockup hero-phone">
           <img :src="'/SwingNerds_screenshot_shotcomparison.PNG'" alt="SwingNerds swing comparison" class="lp-phone-screen" />
         </div>
-        <p class="hero-shot-footnote">Compatible <a href="#" class="camera-link" @click.prevent="showCameraModal = true">USB cameras</a> starting at $30 on Amazon - or even use your laptop's built-in webcam to get started</p>
+        <p class="hero-shot-footnote">Compatible <router-link to="/cameras" class="camera-link">USB cameras</router-link> starting at $30 on Amazon - or even use your laptop's built-in webcam to get started</p>
       </div>
     </section>
 
@@ -270,7 +270,7 @@
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </router-link>
             <ul class="pricing-features-list">
-              <li><span class="pf-check">&#10003;</span> Record swing videos from <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB camera</a></li>
+              <li><span class="pf-check">&#10003;</span> Record swing videos from <router-link to="/cameras" class="camera-link">any USB camera</router-link></li>
               <li><span class="pf-check">&#10003;</span> Store videos locally on your computer</li>
               <li><span class="pf-check">&#10003;</span> Dual camera support</li>
               <li><span class="pf-check">&#10003;</span> Automatic swing detection</li>
@@ -385,18 +385,15 @@
       </div>
     </footer>
 
-    <CameraInfoModal :isOpen="showCameraModal" @close="showCameraModal = false" />
   </div>
 </template>
 
 <script setup>
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
-import CameraInfoModal from './CameraInfoModal.vue';
 import { goToApp } from '../services/appUrl.js';
 
 const router = useRouter();
-const showCameraModal = ref(false);
 const mobileMenuOpen = ref(false);
 
 function startFreeTrial() { goToApp('/register'); }
