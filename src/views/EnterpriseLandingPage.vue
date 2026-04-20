@@ -94,41 +94,37 @@
 
       <!-- Pricing Section -->
       <section class="pricing-section" ref="trialSection">
-        <h2>Simple Per-Bay Pricing</h2>
-        <p class="pricing-subtitle">Pay only for the bays you need. No per-user fees.</p>
+        <h2>Let's talk pricing</h2>
+        <p class="pricing-subtitle">Every facility is different — bays, member volume, and how much you want to cover vs. let members self-subscribe. We keep it simple by talking it through with you.</p>
 
         <div class="enterprise-pricing-card">
           <div class="pricing-card-header">
-            <h3>Enterprise</h3>
-            <div class="price">
-              <span class="price-amount">$49.99</span>
-              <span class="price-period">/bay/month</span>
-            </div>
-            <p class="price-note">Billed monthly. Annual pricing available.</p>
+            <h3>How it works</h3>
           </div>
 
           <ul class="pricing-features">
-            <li><span class="check">&#10003;</span> SwingNerds Vision on every bay</li>
-            <li><span class="check">&#10003;</span> Automatic swing detection &amp; recording</li>
-            <li><span class="check">&#10003;</span> Enterprise dashboard with live bay status</li>
-            <li><span class="check">&#10003;</span> Bulk member management &amp; invitations</li>
-            <li><span class="check">&#10003;</span> White-label Vision login screen</li>
-            <li><span class="check">&#10003;</span> Multi-location support</li>
-            <li><span class="check">&#10003;</span> Customer data scoped to your facility</li>
-            <li><span class="check">&#10003;</span> Choose to cover member subscriptions or let them self-subscribe</li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Every active member has their own SwingNerds subscription.</strong> You choose who pays for it — you can cover some or all members on your monthly bill, or let them self-subscribe with their own card (with a standard free trial).</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Covered members are line items on your monthly invoice.</strong> Add one mid-month and we prorate. Drop coverage on a member and you get a prorated credit.</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>If you ever cancel or pause, members keep all their data</strong> — shots, videos, AI analyses. They just switch to their own personal plan.</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Tier is your call.</strong> Cover members at Pro, Premium, or Ultimate — or mix and match per member.</span>
+            </li>
           </ul>
 
           <div class="pricing-cta">
-            <button @click="startTrial" class="cta-button primary large" :disabled="trialLoading">
-              {{ trialLoading ? 'Setting up...' : 'Start 14-Day Free Trial' }}
-            </button>
-            <p class="trial-note">Includes 2 bays. No credit card required.</p>
+            <button @click="scrollToContact" class="cta-button primary large">Contact us for pricing</button>
+            <p class="trial-note">We'll get back the same day with a clear quote based on your facility.</p>
           </div>
-        </div>
-
-        <div class="volume-note">
-          <p>Need more than 10 bays or have special requirements?</p>
-          <button @click="scrollToContact" class="cta-button outline">Contact Sales for Volume Pricing</button>
         </div>
       </section>
 
@@ -199,9 +195,6 @@ const router = useRouter();
 const trialSection = ref(null);
 const contactSection = ref(null);
 
-// Trial
-const trialLoading = ref(false);
-
 // Contact form
 const contactForm = ref({
   name: '',
@@ -233,12 +226,6 @@ function scrollToTrialSection() {
 
 function scrollToContact() {
   contactSection.value?.scrollIntoView({ behavior: 'smooth' });
-}
-
-async function startTrial() {
-  // For now, scroll to contact. Will wire up automated trial creation later.
-  scrollToContact();
-  contactForm.value.message = "I'd like to start a free trial for my facility.";
 }
 
 async function submitContact() {
