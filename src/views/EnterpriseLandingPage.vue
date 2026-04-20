@@ -95,7 +95,7 @@
       <!-- Pricing Section -->
       <section class="pricing-section" ref="trialSection">
         <h2>Let's talk pricing</h2>
-        <p class="pricing-subtitle">Every facility is different — bays, member volume, and how much you want to cover vs. let members self-subscribe. We keep it simple by talking it through with you.</p>
+        <p class="pricing-subtitle">Every facility is different - bays, member volume, and how much you want to cover vs. let members self-subscribe. We keep it simple by talking it through with you.</p>
 
         <div class="enterprise-pricing-card">
           <div class="pricing-card-header">
@@ -105,7 +105,7 @@
           <ul class="pricing-features">
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>Every active member has their own SwingNerds subscription.</strong> You choose who pays for it — you can cover some or all members on your monthly bill, or let them self-subscribe with their own card (with a standard free trial).</span>
+              <span><strong>Every active member has their own SwingNerds subscription.</strong> You choose who pays for it - you can cover some or all members on your monthly bill, or let them self-subscribe with their own card (with a standard free trial).</span>
             </li>
             <li>
               <span class="check">&#10003;</span>
@@ -113,11 +113,11 @@
             </li>
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>If you ever cancel or pause, members keep all their data</strong> — shots, videos, AI analyses. They just switch to their own personal plan.</span>
+              <span><strong>If you ever cancel or pause, members keep all their data</strong> - shots, videos, AI analyses. They just switch to their own personal plan.</span>
             </li>
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>Tier is your call.</strong> Cover members at Pro, Premium, or Ultimate — or mix and match per member.</span>
+              <span><strong>Tier is your call.</strong> Cover members at Pro, Premium, or Ultimate - or mix and match per member.</span>
             </li>
           </ul>
 

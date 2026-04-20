@@ -169,7 +169,7 @@
           Questions? Email us at <a href="mailto:support@swingnerds.com">support@swingnerds.com</a>
         </p>
         <p class="lowlight-note">
-          <strong>Note:</strong> Only recommended for dim or poorly lit bays. Well lit bays work great with the stock lens — you don't need this upgrade if your bay has good overhead lighting.
+          <strong>Note:</strong> Only recommended for dim or poorly lit bays. Well lit bays work great with the stock lens - you don't need this upgrade if your bay has good overhead lighting.
         </p>
       </div>
     </div>

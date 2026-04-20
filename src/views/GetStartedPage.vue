@@ -1,34 +1,34 @@
 <template>
   <div class="page">
 
-    <!-- Hero — single clear message, CTA above the fold -->
+    <!-- Hero - single clear message, CTA above the fold -->
     <section class="hero">
       <div class="hero-inner">
         <img src="/swingnerds-logo-white.png" alt="SwingNerds" class="hero-logo" />
         <div class="alpha-pill">Early Alpha &middot; Windows</div>
         <h1>Every swing recorded.<br>Every shot paired.<br><span class="accent">Automatically.</span></h1>
         <p class="hero-sub">
-          Mount any USB camera in your sim bay and SwingNerds Vision captures every swing &mdash;
+          Mount any USB camera in your sim bay and SwingNerds Vision captures every swing ,
           no button presses, no manual recording. Clips sync to your shot data so you can compare
           any two swings side by side, frame by frame.
         </p>
         <div class="hero-cta">
           <a :href="installerUrl" target="_blank" class="btn-primary" @click="onDownload">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download for Windows &mdash; Free
+            Download for Windows - Free
           </a>
           <span class="hero-note">Windows 10/11 &middot; 64-bit &middot; Auto-updates</span>
         </div>
       </div>
     </section>
 
-    <!-- How it works — 3 steps, fast scan -->
+    <!-- How it works - 3 steps, fast scan -->
     <section class="steps-section">
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
           <h3>Mount &amp; launch</h3>
-          <p>Position any USB camera &mdash; even your laptop's built-in webcam. Launch Vision, fire up your sim, and play.</p>
+          <p>Position any USB camera - even your laptop's built-in webcam. Launch Vision, fire up your sim, and play.</p>
         </div>
         <div class="step-arrow">&rarr;</div>
         <div class="step">
@@ -82,37 +82,37 @@
             </tr>
             <tr>
               <td>Shots with cloud video</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">1,000+</td>
             </tr>
             <tr>
               <td>Upload clips to the cloud</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
             <tr>
               <td>Auto-pair videos to shot data</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
             <tr>
               <td>Side-by-side swing comparison</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
             <tr>
               <td>AI-powered swing analysis</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
             <tr>
               <td>All-time performance analytics</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
             <tr>
               <td>Multi-source data import</td>
-              <td class="dash">&mdash;</td>
+              <td class="dash">,</td>
               <td class="yes-pro">&#10003;</td>
             </tr>
           </tbody>
@@ -137,7 +137,7 @@
           <div class="camera-option">
             <div class="camera-label recommended">Recommended</div>
             <strong>Global shutter USB camera</strong>
-            <span class="camera-price">$50&ndash;$100</span>
+            <span class="camera-price">$50-$100</span>
             <p>Sharp freeze-frames at impact. Search Amazon for "global shutter USB camera 60fps".</p>
           </div>
           <div class="camera-option">
@@ -161,7 +161,7 @@
         <div class="feedback-badge">Early Alpha</div>
         <h3>We need your feedback</h3>
         <p>
-          Vision is in early alpha &mdash; your feedback directly shapes what we build next.
+          Vision is in early alpha - your feedback directly shapes what we build next.
           Tell us what works, what doesn't, what you wish it did. We read and respond to every message.
         </p>
         <a href="mailto:support@swingnerds.com" class="feedback-link">support@swingnerds.com &rarr;</a>

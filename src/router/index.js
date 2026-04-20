@@ -9,6 +9,7 @@ import VisionWindowsPage from '../views/VisionWindowsPage.vue'
 import ChangelogPage from '../views/ChangelogPage.vue'
 import GetStartedPage from '../views/GetStartedPage.vue'
 import EnterpriseLandingPage from '../views/EnterpriseLandingPage.vue'
+import DealersLandingPage from '../views/DealersLandingPage.vue'
 import CamerasPage from '../views/CamerasPage.vue'
 import { APP_URL } from '../services/appUrl.js'
 import { trackPageView } from '../services/analyticsService.js'
@@ -38,6 +39,7 @@ const routes = [
   { path: '/vision-windows', redirect: '/vision' },
   { path: '/swingnerds-vision', name: 'VisionLanding', component: VisionLandingPage },
   { path: '/commercial', name: 'EnterpriseLanding', component: EnterpriseLandingPage },
+  { path: '/dealers', name: 'DealersLanding', component: DealersLandingPage },
 
   // App routes → redirect to app.swingnerds.com so old bookmarks still work.
   // These are handled at runtime in the router guard rather than at the Static Web App

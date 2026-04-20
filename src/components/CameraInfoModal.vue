@@ -149,7 +149,7 @@ function handleBackdropClick(e) {
         </div>
 
         <div class="kinovea-callout">
-          <div class="kinovea-callout-icon">&#127919;</div>
+          <div class="kinovea-callout-icon"></div>
           <div class="kinovea-callout-text">
             <strong>Already set up for Kinovea or another swing analysis tool?</strong>
             Your existing camera setup works perfectly with SwingNerds Vision - just plug in and go.
@@ -159,7 +159,7 @@ function handleBackdropClick(e) {
         </div>
 
         <div class="camera-help-callout">
-          <div class="camera-help-icon">&#128172;</div>
+          <div class="camera-help-icon"></div>
           <div class="camera-help-text">
             <strong>Not sure which camera to get?</strong>
             Reach out and we'll help you find the right one for under $100 - based on your setup, angle, and launch monitor.

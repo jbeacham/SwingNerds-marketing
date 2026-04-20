@@ -23,27 +23,24 @@ function getStarted() {
           <div class="about-section">
             <h2>Our Mission</h2>
             <p class="large-text">
-              SwingNerds is a passion project dedicated to making meaningful use of launch monitor swing data. 
-              We believe every golfer should have access to powerful analytics tools to understand and improve their game.
+              Every sim session should give you both the video of your swing and the data behind it - automatically, for every shot, with zero extra effort. SwingNerds is the platform that ties them together.
             </p>
           </div>
 
           <div class="about-section">
             <h2>Why We Built This</h2>
             <p>
-              Golf technology has advanced tremendously - GSPro, Rapsodo, Uneekor, and Square Golf all provide incredibly detailed data about every swing.
-              However, many golfers struggle to interpret this data in a way that actually helps them improve.
+              Golfers have two tools: sim software that gives you great shot data (GSPro, Uneekor, Rapsodo, Square Golf) and camera setups that give you great video. Historically, if you wanted both, you had to manually press record, manually match clips to shots, and manually compare them later. Most people gave up.
             </p>
             <p>
-              That's where SwingNerds comes in. We've created a platform that transforms raw launch monitor data into actionable insights, 
-              beautiful visualizations, and practical recommendations.
+              SwingNerds Vision fixes that. Plug in <strong>any USB camera</strong>, point it at your bay, and every swing you hit is automatically recorded, paired with your launch monitor data, and ready to compare side-by-side in seconds. No button-pressing. No manual workflow. Just hit balls and the analysis is waiting for you when you're done.
             </p>
           </div>
 
           <div class="about-section">
             <h2>Our Community-First Approach</h2>
             <div class="community-card">
-              <div class="community-icon">🤝</div>
+              <div class="community-icon"></div>
               <p class="large-text">
                 <strong>We're building SwingNerds WITH you, not just FOR you.</strong> We believe in complete transparency 
                 and user-driven development.
@@ -68,106 +65,62 @@ function getStarted() {
             <h2>What Makes Us Different</h2>
             <div class="features-grid">
               <div class="feature-card">
-                <div class="feature-icon">📊</div>
-                <h3>Data-Driven Insights</h3>
-                <p>We turn complex launch monitor data into clear, actionable insights that help you understand your swing patterns and identify areas for improvement.</p>
+                <div class="feature-icon"></div>
+                <h3>Auto-capture with USB cameras</h3>
+                <p>Plug in any USB camera (down-the-line, face-on, or both) and SwingNerds Vision auto-records every swing. Motion + ball-strike audio detection handles the timing. No button pressing, session after session.</p>
               </div>
               <div class="feature-card">
-                <div class="feature-icon">🎯</div>
-                <h3>Progress Tracking</h3>
-                <p>Monitor your improvement over time with detailed trend analysis and performance metrics across all your clubs and practice sessions.</p>
+                <div class="feature-icon"></div>
+                <h3>GSPro + launch monitor pairing</h3>
+                <p>Real-time GSPro sync (our primary integration) plus Uneekor, Rapsodo, and Square Golf APIs. Every clip Vision captures is matched to its shot data automatically - carry, ball speed, spin, path, the whole line.</p>
               </div>
               <div class="feature-card">
-                <div class="feature-icon">🔗</div>
-                <h3>Seamless Integration</h3>
-                <p>Direct integration with GSPro (real-time via our Windows app), Rapsodo, Uneekor, and Square Golf means your data flows automatically into our analysis platform.</p>
+                <div class="feature-icon"></div>
+                <h3>Side-by-side comparison</h3>
+                <p>Pull up any two swings - today vs. last month, your good driver vs. your bad one, you vs. your saved "standard" swing - and compare them frame-by-frame, synced to impact, with all the numbers right there.</p>
               </div>
               <div class="feature-card">
-                <div class="feature-icon">🎮</div>
-                <h3>Interactive Analysis</h3>
-                <p>Explore your data with interactive charts, shot dispersion patterns, and detailed swing videos to understand every aspect of your game.</p>
+                <div class="feature-icon"></div>
+                <h3>AI Swing Analysis</h3>
+                <p>Feed your swing to Claude and get strengths, things to work on, and specific drills. Then have a conversation with it - follow-up questions, deeper analysis on any part of the swing.</p>
               </div>
             </div>
           </div>
 
           <div class="about-section">
-            <h2>The Technology</h2>
-            <p>
-              SwingNerds is built with modern web technologies to ensure a fast, responsive experience across all devices. 
-              We prioritize data security and privacy, ensuring your swing data remains yours while providing the analytics you need to improve.
-            </p>
+            <h2>How it all fits together</h2>
             <ul>
-              <li><strong>Real-time data sync</strong> with GSPro, Rapsodo, Uneekor, and Square Golf</li>
-              <li><strong>Advanced analytics</strong> powered by statistical analysis</li>
-              <li><strong>Secure data handling</strong> with industry-standard encryption</li>
-              <li><strong>Cross-platform compatibility</strong> works on desktop, tablet, and mobile</li>
+              <li><strong>SwingNerds Vision (Windows)</strong> - the auto-recording app that runs on your sim PC. Works with any USB camera, no special hardware required.</li>
+              <li><strong>GSPro real-time sync</strong> - your shots flow from GSPro into SwingNerds instantly, paired to the video clip Vision just captured.</li>
+              <li><strong>Multi-monitor support</strong> - Uneekor, Rapsodo, Square Golf, and CSV import for anything else.</li>
+              <li><strong>SwingNerds Web &amp; iOS</strong> - review your swings, compare shots, run AI analysis, and track progress from anywhere.</li>
+              <li><strong>Your data, secure</strong> - encrypted in transit and at rest, and yours forever.</li>
             </ul>
           </div>
 
           <div class="about-section">
             <h2>Our Vision</h2>
             <p class="large-text">
-              We envision a future where every golfer has access to professional-level swing analysis and can make data-driven decisions 
-              to improve their game. Whether you're a weekend warrior or a competitive player, SwingNerds provides the tools you need 
-              to understand your swing and track your progress.
+              Every sim golfer should be able to walk out of a session with the videos, the data, and the insights all in one place, without spending more time editing clips than swinging clubs. That's the bar we're building to.
             </p>
           </div>
 
-          <div class="about-section pricing-section">
-            <h2>Beta Period & Pricing</h2>
-            <div class="pricing-card">
-              <div class="beta-badge">
-                <span class="beta-icon">🚀</span>
-                <span class="beta-text">Currently in Beta</span>
-              </div>
-              
-              <p class="large-text">
-                <strong>SwingNerds is currently free during our beta period.</strong> We're using this time to refine features, 
-                gather feedback, and ensure we're building exactly what golfers need.
-              </p>
-              
-              <div class="community-pricing-note">
-                <p>
-                  <strong>This is community-driven pricing.</strong> We're not some faceless corporation setting arbitrary prices. 
-                  We want to be completely transparent with our community about costs, pricing, and decisions. Your input will 
-                  directly determine our pricing model - because frustrated users help no one.
-                </p>
-              </div>
-              
-              <div class="pricing-info">
-                <h3>Future Subscription Model</h3>
-                <p>
-                  Once we exit beta, SwingNerds will transition to a monthly subscription model. Running a platform that processes 
-                  launch monitor data, provides real-time analytics, and maintains secure data storage requires ongoing infrastructure 
-                  costs that need to be sustainable.
-                </p>
-                
-                <div class="feedback-request">
-                  <h4>💰 We Need Your Input on Pricing!</h4>
-                  <p>
-                    <strong>How much would you be willing to pay per month for SwingNerds?</strong> Your honest feedback 
-                    will directly influence our pricing strategy. We want to keep this accessible while ensuring we can 
-                    continue developing and improving the platform.
-                  </p>
-                  <p>
-                    Whether it's $5, $10, $15, or even "nothing - I'd rather see ads" - we want to hear from you! 
-                    Please share your thoughts through our <router-link to="/support" class="inline-link">Support page</router-link> 
-                    or email us directly at <a href="mailto:support@swingnerds.com" class="inline-link">support@swingnerds.com</a>.
-                  </p>
-                </div>
-                
-                <div class="transparency-note">
-                  <h4>💡 Why We'll Eventually Charge</h4>
-                  <ul>
-                    <li><strong>Server Costs:</strong> Hosting and processing your swing data securely</li>
-                    <li><strong>Development:</strong> Continuing to add features and improvements</li>
-                    <li><strong>Support:</strong> Providing responsive customer service</li>
-                    <li><strong>Integration Costs:</strong> Maintaining connections with launch monitor APIs</li>
-                    <li><strong>Sustainability:</strong> Ensuring SwingNerds can operate long-term</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+          <div class="about-section">
+            <h2>Why Subscription Pricing?</h2>
+            <p>
+              SwingNerds is a subscription because keeping it running honestly has to be. Not because that's trendy, and not because we're optimizing for lifetime revenue. We've priced it as low as we reasonably can while still keeping it reliable and improving, and we'd rather be transparent about where the money goes than pretend it's free.
+            </p>
+            <ul>
+              <li><strong>Servers &amp; storage:</strong> Every swing video you upload lives in the cloud. Every shot gets stored, indexed, and served to you on demand. That costs us every month whether you use SwingNerds that day or not.</li>
+              <li><strong>Ongoing development:</strong> New features, bug fixes, camera support, new launch monitor integrations, and quality-of-life improvements don't build themselves.</li>
+              <li><strong>AI analysis:</strong> Running swing analysis through Claude isn't free. Every analysis costs us in API fees, and we'd rather eat that cost quietly than put a paywall on individual analyses.</li>
+              <li><strong>Responsive support:</strong> Emails get answered by actual humans, usually same-day. That's a deliberate choice.</li>
+              <li><strong>Integration upkeep:</strong> GSPro, Uneekor, Rapsodo, and Square Golf change their APIs. We keep everything in sync so you don't have to care.</li>
+              <li><strong>Actually being around next year:</strong> A one-time-purchase model means the company has to keep selling to new users forever to survive. Subscription means we can focus on making existing users happy instead of chasing acquisition.</li>
+            </ul>
+            <p>
+              If pricing ever feels wrong, tell us. We read every email at <a href="mailto:support@swingnerds.com" class="inline-link">support@swingnerds.com</a>.
+            </p>
           </div>
 
           <div class="cta-section">

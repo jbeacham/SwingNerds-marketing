@@ -36,19 +36,19 @@
         <div class="steps-grid">
           <div class="step-card">
             <div class="step-number">1</div>
-            <div class="step-icon">📱</div>
+            <div class="step-icon"></div>
             <h3>Set Up Your Phone</h3>
             <p>Position your iPhone behind you (DTL) or in front of you (face-on). That's it.</p>
           </div>
           <div class="step-card">
             <div class="step-number">2</div>
-            <div class="step-icon">🎯</div>
+            <div class="step-icon"></div>
             <h3>Swing Away</h3>
             <p>SwingNerds Vision automatically detects and records your swings. No buttons to press.</p>
           </div>
           <div class="step-card">
             <div class="step-number">3</div>
-            <div class="step-icon">🔗</div>
+            <div class="step-icon"></div>
             <h3>Auto-Sync</h3>
             <p>Video clips are automatically attached to your shots in SwingNerds. Like magic.</p>
           </div>
@@ -60,42 +60,42 @@
         <h2>Everything You Need</h2>
         <div class="features-grid">
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>Automatic Swing Detection</h4>
               <p>AI-powered detection starts and stops recording at exactly the right moment.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>Clips Attached to Shots</h4>
               <p>Videos sync to your GSPro, Uneekor, or Rapsodo shots automatically.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>Side-by-Side Comparison</h4>
               <p>Compare any two swings with synchronized playback and ghost overlay.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>Slow Motion Recording</h4>
               <p>Record at 60, 120, or 240fps depending on your iPhone model.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>Frame-by-Frame Analysis</h4>
               <p>Step through your swing frame by frame to see exactly what's happening.</p>
             </div>
           </div>
           <div class="feature-item">
-            <span class="feature-check">✓</span>
+            <span class="feature-check"></span>
             <div class="feature-content">
               <h4>No Extra Hardware</h4>
               <p>No expensive cameras or tripods required. Just your iPhone.</p>
@@ -124,17 +124,17 @@
         <h2>Requirements</h2>
         <div class="requirements-grid">
           <div class="requirement-item">
-            <div class="requirement-icon">📱</div>
+            <div class="requirement-icon"></div>
             <h4>iPhone</h4>
             <p>iOS 16 or later. Works best with iPhone 12 or newer for slow-mo recording.</p>
           </div>
           <div class="requirement-item">
-            <div class="requirement-icon">💡</div>
+            <div class="requirement-icon"></div>
             <h4>Good Lighting</h4>
             <p>Works best in well-lit environments. Indoor sim bays with good lighting work great.</p>
           </div>
           <div class="requirement-item">
-            <div class="requirement-icon">🎫</div>
+            <div class="requirement-icon"></div>
             <h4>SwingNerds Subscription</h4>
             <p>Active SwingNerds subscription to sync videos to your shot data.</p>
           </div>
@@ -158,7 +158,7 @@
       <!-- Contact Section -->
       <section class="contact-section">
         <div class="contact-card">
-          <div class="contact-icon">💬</div>
+          <div class="contact-icon"></div>
           <h2>Questions? Feedback? Integration Ideas?</h2>
           <p>We're building this for you. Whether you have questions about the alpha, feedback on what's working (or not), or ideas for new integrations - we want to hear from you.</p>
           <a href="mailto:support@swingnerds.com" class="contact-email">

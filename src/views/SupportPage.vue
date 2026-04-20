@@ -77,7 +77,7 @@ function resetSuccess() {
           
           <div class="intro-section">
             <div class="feedback-card">
-              <div class="feedback-icon">💬</div>
+              <div class="feedback-icon"></div>
               <h2>We Want to Hear From You!</h2>
               <p class="large-text">
                 Your feedback is the driving force behind SwingNerds. Whether you love something, hate something, 
@@ -93,25 +93,25 @@ function resetSuccess() {
           <div class="support-sections">
             <div class="support-grid">
               <div class="support-card">
-                <div class="support-icon">🚀</div>
+                <div class="support-icon"></div>
                 <h3>Feature Requests</h3>
                 <p>Have an idea for a new feature? We'd love to hear it! From new chart types to advanced analytics, your suggestions shape our roadmap.</p>
               </div>
               
               <div class="support-card">
-                <div class="support-icon">🐛</div>
+                <div class="support-icon"></div>
                 <h3>Bug Reports</h3>
                 <p>Found something that's not working right? Let us know! The more details you can provide, the faster we can fix it.</p>
               </div>
               
               <div class="support-card">
-                <div class="support-icon">💡</div>
+                <div class="support-icon"></div>
                 <h3>General Feedback</h3>
                 <p>Love the app? Frustrated with something? We want to hear all of it. Your honest feedback is invaluable to us.</p>
               </div>
               
               <div class="support-card">
-                <div class="support-icon">🔧</div>
+                <div class="support-icon"></div>
                 <h3>Technical Support</h3>
                 <p>Having trouble connecting your Rapsodo or accessing your data? We're here to help you get back on track.</p>
               </div>
@@ -123,14 +123,14 @@ function resetSuccess() {
             
             <div class="contact-methods">
               <div class="contact-card">
-                <div class="contact-icon">📧</div>
+                <div class="contact-icon"></div>
                 <h3>Email Support</h3>
                 <p>For direct support or detailed feedback</p>
                 <a href="mailto:support@swingnerds.com" class="email-link">support@swingnerds.com</a>
               </div>
               
               <div class="contact-card">
-                <div class="contact-icon">📝</div>
+                <div class="contact-icon"></div>
                 <h3>Quick Feedback Form</h3>
                 <p>Send us a message using the form below</p>
               </div>
@@ -142,7 +142,7 @@ function resetSuccess() {
               <h3>Send Us a Message</h3>
               
               <div v-if="success" class="success-message">
-                <div class="success-icon">✅</div>
+                <div class="success-icon"></div>
                 <h4>Thank You!</h4>
                 <p>Your message has been sent successfully. We'll get back to you soon!</p>
                 <button class="btn-secondary" @click="success = false">Send Another Message</button>
@@ -194,14 +194,14 @@ function resetSuccess() {
                     required
                   >
                     <option value="">Select a topic</option>
-                    <option value="I Love This Feature!">I Love This Feature! 💖</option>
-                    <option value="This Needs Improvement">This Needs Improvement 🔧</option>
-                    <option value="Feature Request">Feature Request 🚀</option>
-                    <option value="Bug Report">Bug Report 🐛</option>
-                    <option value="Technical Support">Technical Support 🛠️</option>
-                    <option value="Rapsodo Connection Issues">Rapsodo Connection Issues 📡</option>
-                    <option value="Data Analysis Question">Data Analysis Question 📊</option>
-                    <option value="General Feedback">General Feedback 💬</option>
+                    <option value="I Love This Feature!">I Love This Feature! </option>
+                    <option value="This Needs Improvement">This Needs Improvement </option>
+                    <option value="Feature Request">Feature Request </option>
+                    <option value="Bug Report">Bug Report </option>
+                    <option value="Technical Support">Technical Support ️</option>
+                    <option value="Rapsodo Connection Issues">Rapsodo Connection Issues </option>
+                    <option value="Data Analysis Question">Data Analysis Question </option>
+                    <option value="General Feedback">General Feedback </option>
                     <option value="Other">Other</option>
                   </select>
                 </div>
@@ -219,7 +219,7 @@ function resetSuccess() {
                     required
                   ></textarea>
                   <div class="form-hint">
-                    💡 <strong>Tip:</strong> The more specific you are, the better we can help! Include screenshots, 
+                     <strong>Tip:</strong> The more specific you are, the better we can help! Include screenshots, 
                     steps to reproduce issues, or examples of what you'd like to see.
                   </div>
                 </div>

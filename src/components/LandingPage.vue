@@ -69,7 +69,7 @@
 
         <!-- Desktop: Shot Comparison -->
         <div class="showcase-row showcase-desktop">
-          <p class="showcase-caption">In-depth shot analysis from every angle &mdash; right in your browser</p>
+          <p class="showcase-caption">In-depth shot analysis from every angle - right in your browser</p>
           <div class="lp-browser-mockup">
             <div class="lp-browser-titlebar">
               <span class="lp-browser-dot red"></span>

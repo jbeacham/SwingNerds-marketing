@@ -42,7 +42,8 @@ const isActive = (name) => computed(() => route.name === name).value;
         <button class="nav-link" :class="{ active: isActive('Vision') }" @click="goTo('Vision')">Vision</button>
         <button class="nav-link" :class="{ active: isActive('Cameras') }" @click="goTo('Cameras')">Cameras</button>
         <button class="nav-link" :class="{ active: isActive('Pricing') }" @click="goTo('Pricing')">Pricing</button>
-        <button class="nav-link" :class="{ active: isActive('EnterpriseLanding') }" @click="goTo('EnterpriseLanding')">For Facilities</button>
+        <button class="nav-link" :class="{ active: isActive('Facilities') || isActive('EnterpriseLanding') }" @click="goTo('EnterpriseLanding')">Facilities</button>
+        <button class="nav-link" :class="{ active: isActive('DealersLanding') }" @click="goTo('DealersLanding')">Dealers</button>
         <button class="nav-link" :class="{ active: isActive('About') }" @click="goTo('About')">About</button>
         <button class="nav-link" :class="{ active: isActive('Support') }" @click="goTo('Support')">Support</button>
 

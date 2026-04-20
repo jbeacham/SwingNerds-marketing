@@ -42,22 +42,22 @@
       <section class="value-prop">
         <div class="value-grid">
           <div class="value-item">
-            <div class="value-icon">🎥</div>
+            <div class="value-icon"></div>
             <h3>Auto-capture every swing</h3>
             <p>Sound + motion detection triggers a clip on every shot in your sim bay. Mount once - runs every session automatically.</p>
           </div>
           <div class="value-item">
-            <div class="value-icon">🔗</div>
+            <div class="value-icon"></div>
             <h3>Paired to your shot data</h3>
             <p>Clips upload automatically and match to your GSPro, Uneekor, Rapsodo, or Square Golf data by timestamp.</p>
           </div>
           <div class="value-item value-item-highlight">
-            <div class="value-icon">⚡</div>
+            <div class="value-icon"></div>
             <h3>Compare side by side</h3>
             <p>Open any two shots in SwingNerds and compare the videos synchronized frame by frame - alongside all the numbers.</p>
           </div>
           <div class="value-item">
-            <div class="value-icon">📱</div>
+            <div class="value-icon"></div>
             <h3>Works with the iOS app too</h3>
             <p>Swings recorded on iPhone pair with your data the same way - use one device or both, however works best for your setup.</p>
           </div>
@@ -80,22 +80,22 @@
             <div class="compare-col">
               <div class="compare-heading free">Free</div>
               <ul>
-                <li>✓ Automatic swing detection</li>
-                <li>✓ Record 1 or 2 <a href="#" class="camera-link" @click.prevent="showCameraModal = true">USB cameras</a></li>
-                <li>✓ Save clips locally</li>
-                <li>✓ Adjust exposure, gain, FPS</li>
-                <li>✓ Club detection (alpha)</li>
+                <li> Automatic swing detection</li>
+                <li> Record 1 or 2 <a href="#" class="camera-link" @click.prevent="showCameraModal = true">USB cameras</a></li>
+                <li> Save clips locally</li>
+                <li> Adjust exposure, gain, FPS</li>
+                <li> Club detection (alpha)</li>
               </ul>
             </div>
             <div class="compare-col">
               <div class="compare-heading pro">Pro · 7-day free trial</div>
               <ul>
-                <li>✓ Everything in Free</li>
-                <li>✓ Upload clips to the cloud</li>
-                <li>✓ Auto-pair videos to shot data</li>
-                <li>✓ Side-by-side swing comparison</li>
-                <li>✓ AI swing analysis</li>
-                <li>✓ Full analytics dashboard</li>
+                <li> Everything in Free</li>
+                <li> Upload clips to the cloud</li>
+                <li> Auto-pair videos to shot data</li>
+                <li> Side-by-side swing comparison</li>
+                <li> AI swing analysis</li>
+                <li> Full analytics dashboard</li>
               </ul>
             </div>
           </div>
@@ -265,7 +265,7 @@
 
         <!-- Kinovea callout -->
         <div class="kinovea-callout">
-          <div class="kinovea-callout-icon">🎯</div>
+          <div class="kinovea-callout-icon"></div>
           <div class="kinovea-callout-text">
             <strong>Already set up for Kinovea or another swing analysis tool?</strong>
             Your existing camera setup works perfectly with SwingNerds Vision - just plug in and go.
@@ -275,7 +275,7 @@
         </div>
 
         <div class="camera-help-callout">
-          <div class="camera-help-icon">💬</div>
+          <div class="camera-help-icon"></div>
           <div class="camera-help-text">
             <strong>Not sure which camera to get?</strong>
             Reach out and we'll help you find the right one for under $100 - based on your setup, angle, and launch monitor.
@@ -405,22 +405,22 @@
         <h2>Requirements</h2>
         <div class="requirements-grid">
           <div class="req-item">
-            <div class="req-icon">🖥️</div>
+            <div class="req-icon">️</div>
             <h4>Windows 10 or 11</h4>
             <p>64-bit. Built on .NET 8.</p>
           </div>
           <div class="req-item">
-            <div class="req-icon">📷</div>
+            <div class="req-icon"></div>
             <h4><a href="#" class="camera-link" @click.prevent="showCameraModal = true">Any USB Camera</a></h4>
             <p>USB webcam, global shutter camera, or your laptop's built-in camera. Global shutter recommended for best impact footage.</p>
           </div>
           <div class="req-item">
-            <div class="req-icon">🎤</div>
+            <div class="req-icon"></div>
             <h4>Microphone</h4>
             <p>Any microphone - a simple USB mic or headset works great for impact detection.</p>
           </div>
           <div class="req-item">
-            <div class="req-icon">🌐</div>
+            <div class="req-icon"></div>
             <h4>Internet (for cloud features)</h4>
             <p>Required for upload and shot pairing. Local recording works offline.</p>
           </div>
@@ -430,7 +430,7 @@
       <!-- Alpha feedback CTA -->
       <section class="alpha-cta-section">
         <div class="alpha-cta-card">
-          <div class="alpha-cta-icon">🚧</div>
+          <div class="alpha-cta-icon"></div>
           <h2>This is an early alpha - and that matters.</h2>
           <p>
             SwingNerds Vision is actively being built. Features are added fast, things get improved week to week,
@@ -463,7 +463,7 @@
       <!-- Contact -->
       <section class="contact-section">
         <div class="contact-card">
-          <div class="contact-icon">💬</div>
+          <div class="contact-icon"></div>
           <h2>Questions or feedback?</h2>
           <p>We're actively improving the app. Tell us what works, what doesn't, and what cameras you're using.</p>
           <a href="mailto:support@swingnerds.com" class="contact-email">support@swingnerds.com</a>
