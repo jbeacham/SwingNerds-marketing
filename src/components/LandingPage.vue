@@ -1,34 +1,5 @@
 <template>
   <div class="landing">
-    <!-- Nav -->
-    <nav class="nav">
-      <div class="nav-inner">
-        <div class="nav-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds" class="nav-logo" />
-          <span class="nav-name">SwingNerds</span>
-        </div>
-        <div class="nav-links">
-          <a href="#pricing" @click.prevent="scrollToSection('pricing')" class="nav-link-tab">Pricing</a>
-          <router-link to="/cameras" class="nav-link-tab">Cameras</router-link>
-          <router-link to="/vision" class="nav-link-tab" style="font-weight: 700;">Vision</router-link>
-          <a href="#contact" @click.prevent="scrollToSection('contact')" class="nav-link-tab">Contact Us</a>
-        </div>
-        <div class="nav-actions">
-          <button @click="goToLogin" class="btn-ghost">Log In</button>
-        </div>
-        <button class="hamburger" @click="mobileMenuOpen = !mobileMenuOpen" aria-label="Menu">
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-      <div v-if="mobileMenuOpen" class="mobile-menu">
-        <a href="#pricing" @click.prevent="scrollToSection('pricing'); mobileMenuOpen = false" class="mobile-menu-link">Pricing</a>
-        <router-link to="/cameras" class="mobile-menu-link" @click="mobileMenuOpen = false">Cameras</router-link>
-        <router-link to="/vision" class="mobile-menu-link" @click="mobileMenuOpen = false">Vision</router-link>
-        <a href="#contact" @click.prevent="scrollToSection('contact'); mobileMenuOpen = false" class="mobile-menu-link">Contact Us</a>
-        <button @click="goToLogin(); mobileMenuOpen = false" class="mobile-menu-link">Log In</button>
-      </div>
-    </nav>
-
     <!-- Hero -->
     <section class="hero">
       <div class="hero-inner">
@@ -370,7 +341,7 @@
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds" class="footer-logo" />
+          <img src="/swingnerds-logo-white.png" alt="SwingNerds" class="footer-logo" />
           <span>SwingNerds</span>
         </div>
         <div class="footer-links">

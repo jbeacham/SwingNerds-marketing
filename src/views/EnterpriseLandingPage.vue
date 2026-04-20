@@ -1,18 +1,6 @@
 <template>
   <div class="enterprise-page">
     <div class="enterprise-container">
-      <!-- Header -->
-      <header class="enterprise-header">
-        <div class="logo-section" @click="goHome">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <span class="logo-text">Swing Nerds</span>
-        </div>
-        <nav class="header-nav">
-          <button @click="goToPricing" class="nav-link">Individual Pricing</button>
-          <button @click="goToSignIn" class="nav-link sign-in">Sign In</button>
-        </nav>
-      </header>
-
       <!-- Hero Section -->
       <section class="hero-section">
         <div class="hero-badge">For Commercial Facilities</div>

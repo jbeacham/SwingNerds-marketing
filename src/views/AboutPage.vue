@@ -16,24 +16,14 @@ function getStarted() {
 <template>
   <div class="public-page">
     <div class="page-container">
-      <header class="page-header">
-        <div class="header-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <h1>Swing Nerds</h1>
-        </div>
-        <button class="back-btn" @click="goHome">
-          ← Back to Home
-        </button>
-      </header>
-
       <main class="page-content">
         <div class="content-wrapper">
-          <h1>About Swing Nerds</h1>
+          <h1>About SwingNerds</h1>
           
           <div class="about-section">
             <h2>Our Mission</h2>
             <p class="large-text">
-              Swing Nerds is a passion project dedicated to making meaningful use of launch monitor swing data. 
+              SwingNerds is a passion project dedicated to making meaningful use of launch monitor swing data. 
               We believe every golfer should have access to powerful analytics tools to understand and improve their game.
             </p>
           </div>
@@ -45,7 +35,7 @@ function getStarted() {
               However, many golfers struggle to interpret this data in a way that actually helps them improve.
             </p>
             <p>
-              That's where Swing Nerds comes in. We've created a platform that transforms raw launch monitor data into actionable insights, 
+              That's where SwingNerds comes in. We've created a platform that transforms raw launch monitor data into actionable insights, 
               beautiful visualizations, and practical recommendations.
             </p>
           </div>
@@ -55,7 +45,7 @@ function getStarted() {
             <div class="community-card">
               <div class="community-icon">🤝</div>
               <p class="large-text">
-                <strong>We're building Swing Nerds WITH you, not just FOR you.</strong> We believe in complete transparency 
+                <strong>We're building SwingNerds WITH you, not just FOR you.</strong> We believe in complete transparency 
                 and user-driven development.
               </p>
               <p>
@@ -103,7 +93,7 @@ function getStarted() {
           <div class="about-section">
             <h2>The Technology</h2>
             <p>
-              Swing Nerds is built with modern web technologies to ensure a fast, responsive experience across all devices. 
+              SwingNerds is built with modern web technologies to ensure a fast, responsive experience across all devices. 
               We prioritize data security and privacy, ensuring your swing data remains yours while providing the analytics you need to improve.
             </p>
             <ul>
@@ -118,7 +108,7 @@ function getStarted() {
             <h2>Our Vision</h2>
             <p class="large-text">
               We envision a future where every golfer has access to professional-level swing analysis and can make data-driven decisions 
-              to improve their game. Whether you're a weekend warrior or a competitive player, Swing Nerds provides the tools you need 
+              to improve their game. Whether you're a weekend warrior or a competitive player, SwingNerds provides the tools you need 
               to understand your swing and track your progress.
             </p>
           </div>
@@ -132,7 +122,7 @@ function getStarted() {
               </div>
               
               <p class="large-text">
-                <strong>Swing Nerds is currently free during our beta period.</strong> We're using this time to refine features, 
+                <strong>SwingNerds is currently free during our beta period.</strong> We're using this time to refine features, 
                 gather feedback, and ensure we're building exactly what golfers need.
               </p>
               
@@ -147,7 +137,7 @@ function getStarted() {
               <div class="pricing-info">
                 <h3>Future Subscription Model</h3>
                 <p>
-                  Once we exit beta, Swing Nerds will transition to a monthly subscription model. Running a platform that processes 
+                  Once we exit beta, SwingNerds will transition to a monthly subscription model. Running a platform that processes 
                   launch monitor data, provides real-time analytics, and maintains secure data storage requires ongoing infrastructure 
                   costs that need to be sustainable.
                 </p>
@@ -155,7 +145,7 @@ function getStarted() {
                 <div class="feedback-request">
                   <h4>💰 We Need Your Input on Pricing!</h4>
                   <p>
-                    <strong>How much would you be willing to pay per month for Swing Nerds?</strong> Your honest feedback 
+                    <strong>How much would you be willing to pay per month for SwingNerds?</strong> Your honest feedback 
                     will directly influence our pricing strategy. We want to keep this accessible while ensuring we can 
                     continue developing and improving the platform.
                   </p>
@@ -173,7 +163,7 @@ function getStarted() {
                     <li><strong>Development:</strong> Continuing to add features and improvements</li>
                     <li><strong>Support:</strong> Providing responsive customer service</li>
                     <li><strong>Integration Costs:</strong> Maintaining connections with launch monitor APIs</li>
-                    <li><strong>Sustainability:</strong> Ensuring Swing Nerds can operate long-term</li>
+                    <li><strong>Sustainability:</strong> Ensuring SwingNerds can operate long-term</li>
                   </ul>
                 </div>
               </div>
@@ -194,8 +184,8 @@ function getStarted() {
         <div class="footer-content">
           <div class="footer-brand">
             <div class="footer-logo-container">
-              <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="footer-logo-img" />
-              <span class="footer-logo-text">Swing Nerds</span>
+              <img src="/swingnerds-logo-white.png" alt="SwingNerds Logo" class="footer-logo-img" />
+              <span class="footer-logo-text">SwingNerds</span>
             </div>
             <span class="footer-tagline">Empowering golfers with data</span>
           </div>
@@ -205,7 +195,7 @@ function getStarted() {
             <router-link to="/support" class="footer-link">Support</router-link>
           </div>
           <div class="footer-copyright">
-            &copy; {{ new Date().getFullYear() }} Swing Nerds. All rights reserved.
+            &copy; {{ new Date().getFullYear() }} SwingNerds. All rights reserved.
           </div>
         </div>
       </footer>

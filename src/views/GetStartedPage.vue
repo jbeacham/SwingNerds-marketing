@@ -4,7 +4,7 @@
     <!-- Hero — single clear message, CTA above the fold -->
     <section class="hero">
       <div class="hero-inner">
-        <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds" class="hero-logo" />
+        <img src="/swingnerds-logo-white.png" alt="SwingNerds" class="hero-logo" />
         <div class="alpha-pill">Early Alpha &middot; Windows</div>
         <h1>Every swing recorded.<br>Every shot paired.<br><span class="accent">Automatically.</span></h1>
         <p class="hero-sub">

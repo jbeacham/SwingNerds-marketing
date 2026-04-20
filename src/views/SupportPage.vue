@@ -71,16 +71,6 @@ function resetSuccess() {
 <template>
   <div class="public-page">
     <div class="page-container">
-      <header class="page-header">
-        <div class="header-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <h1>Swing Nerds</h1>
-        </div>
-        <button class="back-btn" @click="goHome">
-          ← Back to Home
-        </button>
-      </header>
-
       <main class="page-content">
         <div class="content-wrapper">
           <h1>Support & Feedback</h1>
@@ -90,7 +80,7 @@ function resetSuccess() {
               <div class="feedback-icon">💬</div>
               <h2>We Want to Hear From You!</h2>
               <p class="large-text">
-                Your feedback is the driving force behind Swing Nerds. Whether you love something, hate something, 
+                Your feedback is the driving force behind SwingNerds. Whether you love something, hate something, 
                 or have ideas for improvement - we want to know about it!
               </p>
               <div class="feedback-emphasis">
@@ -251,13 +241,13 @@ function resetSuccess() {
             <div class="encourage-card">
               <h3>Your Voice Matters</h3>
               <p>
-                Swing Nerds is built by golfers, for golfers. Every feature, every improvement, and every fix 
+                SwingNerds is built by golfers, for golfers. Every feature, every improvement, and every fix 
                 comes from feedback like yours. We're not just building software - we're building a community 
                 of data-driven golfers who want to improve their game.
               </p>
               <div class="testimonial-style">
                 <p><em>"The best feedback is honest feedback. Don't hold back - tell us exactly what you think!"</em></p>
-                <p class="signature">- The Swing Nerds Team</p>
+                <p class="signature">- The SwingNerds Team</p>
               </div>
             </div>
           </div>
@@ -268,8 +258,8 @@ function resetSuccess() {
         <div class="footer-content">
           <div class="footer-brand">
             <div class="footer-logo-container">
-              <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="footer-logo-img" />
-              <span class="footer-logo-text">Swing Nerds</span>
+              <img src="/swingnerds-logo-white.png" alt="SwingNerds Logo" class="footer-logo-img" />
+              <span class="footer-logo-text">SwingNerds</span>
             </div>
             <span class="footer-tagline">Empowering golfers with data</span>
           </div>
@@ -279,7 +269,7 @@ function resetSuccess() {
             <router-link to="/support" class="footer-link">Support</router-link>
           </div>
           <div class="footer-copyright">
-            &copy; {{ new Date().getFullYear() }} Swing Nerds. All rights reserved.
+            &copy; {{ new Date().getFullYear() }} SwingNerds. All rights reserved.
           </div>
         </div>
       </footer>

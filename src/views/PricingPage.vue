@@ -1,19 +1,6 @@
 <template>
   <div class="pricing-page">
     <div class="pricing-container">
-      <!-- Header -->
-      <header class="pricing-header">
-        <div class="logo-section" @click="goHome">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <span class="logo-text">Swing Nerds</span>
-          <span class="beta-badge">BETA</span>
-        </div>
-        <nav class="header-nav">
-          <button @click="goHome" class="nav-link">Home</button>
-          <button @click="goToLogin" class="nav-link sign-in">Sign In</button>
-        </nav>
-      </header>
-
       <!-- Hero Section -->
       <section class="hero-section">
         <h1>Simple, Transparent Pricing</h1>
@@ -163,7 +150,7 @@
         <p class="pricing-feedback">
           Think this pricing is unfair? <a href="mailto:support@swingnerds.com">Let us know</a>
         </p>
-        <p class="copyright">© {{ currentYear }} Swing Nerds. All rights reserved.</p>
+        <p class="copyright">© {{ currentYear }} SwingNerds. All rights reserved.</p>
       </footer>
     </div>
   </div>

@@ -13,18 +13,6 @@
         </div>
       </div>
 
-      <!-- Header -->
-      <header class="header">
-        <div class="logo-section" @click="goHome">
-          <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds Logo" class="header-logo" />
-          <span class="logo-text">SwingNerds</span>
-        </div>
-        <nav class="header-nav">
-          <button @click="goToPricing" class="nav-link">Pricing</button>
-          <button @click="goToSignIn" class="nav-link sign-in">Sign In</button>
-        </nav>
-      </header>
-
       <!-- Hero -->
       <section class="hero">
         <div class="hero-badge">Early Alpha · Windows</div>

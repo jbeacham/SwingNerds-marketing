@@ -2,18 +2,6 @@
   <div class="page">
     <div class="container">
 
-      <!-- Header -->
-      <header class="header">
-        <div class="logo-section" @click="$router.push('/')">
-          <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds" class="header-logo" />
-          <span class="logo-text">SwingNerds</span>
-        </div>
-        <nav class="header-nav">
-          <router-link to="/vision" class="nav-link">Download Vision</router-link>
-          <router-link to="/" class="nav-link">Home</router-link>
-        </nav>
-      </header>
-
       <!-- Hero -->
       <section class="hero">
         <h1>Camera Guide</h1>

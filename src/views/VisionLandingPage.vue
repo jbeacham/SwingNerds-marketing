@@ -1,18 +1,6 @@
 <template>
   <div class="vision-page">
     <div class="vision-container">
-      <!-- Header -->
-      <header class="vision-header">
-        <div class="logo-section" @click="goHome">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <span class="logo-text">Swing Nerds</span>
-        </div>
-        <nav class="header-nav">
-          <button @click="goToPricing" class="nav-link">Pricing</button>
-          <button @click="goToSignIn" class="nav-link sign-in">Sign In</button>
-        </nav>
-      </header>
-
       <!-- Hero Section -->
       <section class="hero-section">
         <div class="hero-badge">iOS App - Alpha Testers Wanted</div>
@@ -207,7 +195,7 @@
           <a href="/support">Support</a>
           <a href="mailto:support@swingnerds.com">Contact</a>
         </div>
-        <p class="copyright">© {{ currentYear }} Swing Nerds. All rights reserved.</p>
+        <p class="copyright">© {{ currentYear }} SwingNerds. All rights reserved.</p>
       </footer>
     </div>
   </div>

@@ -11,16 +11,6 @@ function goHome() {
 <template>
   <div class="public-page">
     <div class="page-container">
-      <header class="page-header">
-        <div class="header-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="header-logo" />
-          <h1>Swing Nerds</h1>
-        </div>
-        <button class="back-btn" @click="goHome">
-          ← Back to Home
-        </button>
-      </header>
-
       <main class="page-content">
         <div class="content-wrapper">
           <h1>Privacy Policy</h1>
@@ -32,7 +22,7 @@ function goHome() {
           <div class="privacy-section">
             <h2>Introduction</h2>
             <p>
-              At Swing Nerds, we are committed to protecting your privacy and ensuring the security of your personal information. 
+              At SwingNerds, we are committed to protecting your privacy and ensuring the security of your personal information. 
               This Privacy Policy explains how we collect, use, and safeguard your data when you use our golf swing analysis platform.
             </p>
           </div>
@@ -107,7 +97,7 @@ function goHome() {
             <h3>Launch Monitor Integrations</h3>
             <p>
               We integrate with Rapsodo, Uneekor, GSPro, and Square Golf to import your shot data.
-              <strong>Important:</strong> Swing Nerds does not permanently store your launch monitor login credentials.
+              <strong>Important:</strong> SwingNerds does not permanently store your launch monitor login credentials.
               We use secure authentication to connect to your accounts, and you can disconnect any data source at any time
               through your SwingNerds settings.
             </p>
@@ -211,8 +201,8 @@ function goHome() {
         <div class="footer-content">
           <div class="footer-brand">
             <div class="footer-logo-container">
-              <img src="../assets/SwingNerdsLogo.png" alt="Swing Nerds Logo" class="footer-logo-img" />
-              <span class="footer-logo-text">Swing Nerds</span>
+              <img src="/swingnerds-logo-white.png" alt="SwingNerds Logo" class="footer-logo-img" />
+              <span class="footer-logo-text">SwingNerds</span>
             </div>
             <span class="footer-tagline">Empowering golfers with data</span>
           </div>
@@ -222,7 +212,7 @@ function goHome() {
             <router-link to="/support" class="footer-link">Support</router-link>
           </div>
           <div class="footer-copyright">
-            &copy; {{ new Date().getFullYear() }} Swing Nerds. All rights reserved.
+            &copy; {{ new Date().getFullYear() }} SwingNerds. All rights reserved.
           </div>
         </div>
       </footer>

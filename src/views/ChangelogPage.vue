@@ -194,14 +194,6 @@ function goHome() {
 <template>
   <div class="public-page">
     <div class="page-container">
-      <header class="page-header">
-        <div class="header-brand">
-          <img src="../assets/SwingNerdsLogo.png" alt="SwingNerds Logo" class="header-logo" />
-          <h1>SwingNerds</h1>
-        </div>
-        <button class="back-btn" @click="goHome">← Back to Home</button>
-      </header>
-
       <main class="page-content">
         <div class="content-wrapper">
           <h1>Changelog</h1>
