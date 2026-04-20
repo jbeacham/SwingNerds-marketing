@@ -6,15 +6,10 @@
         <div class="hero-badge">For Commercial Facilities</div>
         <h1>SwingNerds<br>for Your Sim Bays</h1>
         <p class="hero-subtitle">
-          Give every customer automatic swing video with zero staff required.
-        </p>
-        <p class="hero-description">
-          Leave SwingNerds Vision running on every bay. Customers log in with their email,
-          swing, and their videos sync automatically. You manage it all from one dashboard.
+          Give every member automatic swing video with zero staff required. Leave SwingNerds Vision running on every bay, members log in with their email, and their videos sync automatically. You manage it all from one dashboard.
         </p>
         <div class="hero-cta">
-          <button @click="scrollToTrialSection" class="cta-button primary large">Start Free Trial</button>
-          <button @click="scrollToContact" class="cta-button outline large">Contact Sales</button>
+          <button @click="scrollToContact" class="cta-button primary large">Contact Sales</button>
         </div>
       </section>
 
@@ -358,24 +353,19 @@ async function submitContact() {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 173, 181, 0.15);
+  background: rgba(6, 182, 212, 0.15);
   color: var(--primary);
   padding: 8px 20px;
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 24px;
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
   margin: 0 0 16px 0;
-  background: linear-gradient(135deg, var(--primary) 0%, #0dd3e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
@@ -420,7 +410,7 @@ async function submitContact() {
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 173, 181, 0.4);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
 }
 
 .cta-button.primary:disabled {
@@ -437,7 +427,7 @@ async function submitContact() {
 }
 
 .cta-button.outline:hover {
-  background: rgba(0, 173, 181, 0.1);
+  background: rgba(6, 182, 212, 0.1);
 }
 
 .cta-button.large {
@@ -587,10 +577,7 @@ async function submitContact() {
 .price-amount {
   font-size: 3rem;
   font-weight: 800;
-  background: linear-gradient(135deg, var(--primary) 0%, #0dd3e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--primary);
 }
 
 .price-period {

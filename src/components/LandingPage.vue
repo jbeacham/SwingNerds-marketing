@@ -920,24 +920,24 @@ function scrollToSection(id) {
   transition: border-color 0.15s, transform 0.15s;
 }
 .ds-card-link:hover {
-  border-color: var(--primary, #00adb5);
+  border-color: var(--primary, #06b6d4);
   transform: translateY(-1px);
 }
 .ds-card-link:hover .ds-csv-note {
-  color: var(--primary, #00adb5);
+  color: var(--primary, #06b6d4);
 }
 .ds-card-featured {
   position: relative;
-  border-color: rgba(0, 173, 181, 0.45);
-  box-shadow: 0 6px 22px rgba(0, 173, 181, 0.12);
-  background: linear-gradient(180deg, rgba(0, 173, 181, 0.05), transparent);
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 6px 22px rgba(6, 182, 212, 0.12);
+  background: linear-gradient(180deg, rgba(6, 182, 212, 0.05), transparent);
 }
 .ds-top-pick {
   position: absolute;
   top: -10px;
   left: 50%;
   transform: translateX(-50%);
-  background: #00adb5;
+  background: #06b6d4;
   color: #fff;
   font-size: 0.65rem;
   font-weight: 800;

@@ -3,7 +3,7 @@
     <div class="vision-container">
       <!-- Hero Section -->
       <section class="hero-section">
-        <div class="hero-badge">iOS App - Alpha Testers Wanted</div>
+        <div class="hero-badge">iOS App - Beta Testers Wanted</div>
         <h1>GSPro Swing Videos<br>with just an iPhone</h1>
         <p class="hero-subtitle">
           SwingNerds Vision automatically records your swings and syncs them to your shots.
@@ -13,7 +13,7 @@
         </p>
         <div class="hero-cta">
           <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="cta-button primary">
-            Join the Alpha on TestFlight
+            Join the Beta on TestFlight
           </a>
         </div>
       </section>
@@ -109,12 +109,12 @@
         <div class="alpha-card">
           <h3>We Need Your Feedback!</h3>
           <p>
-            This is an <strong>alpha release</strong> and we're actively looking for feedback to make it better.
+            This is a <strong>beta release</strong> and we're actively looking for feedback to make it better.
             The app is <strong>free to use</strong> during testing. Tell us what works, what doesn't,
             and what you'd like to see - we're listening!
           </p>
           <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="cta-button secondary">
-            Join TestFlight Alpha
+            Join TestFlight Beta
           </a>
         </div>
       </section>
@@ -160,7 +160,7 @@
         <div class="contact-card">
           <div class="contact-icon"></div>
           <h2>Questions? Feedback? Integration Ideas?</h2>
-          <p>We're building this for you. Whether you have questions about the alpha, feedback on what's working (or not), or ideas for new integrations - we want to hear from you.</p>
+          <p>We're building this for you. Whether you have questions about the beta, feedback on what's working (or not), or ideas for new integrations - we want to hear from you.</p>
           <a href="mailto:support@swingnerds.com" class="contact-email">
             support@swingnerds.com
           </a>
@@ -171,11 +171,11 @@
       <!-- Final CTA Section -->
       <section class="final-cta-section">
         <h2>Ready to See Your Swing?</h2>
-        <p>Join the alpha and help us build the best swing video tool for sim golfers.</p>
+        <p>Join the beta and help us build the best swing video tool for sim golfers.</p>
         <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="cta-button primary large">
-          Join the Alpha on TestFlight
+          Join the Beta on TestFlight
         </a>
-        <p class="cta-note">Free during alpha testing. iOS only.</p>
+        <p class="cta-note">Free during beta testing. iOS only.</p>
       </section>
 
       <!-- Feedback Banner -->
@@ -225,22 +225,23 @@ function goToSignIn() {
 
 <style scoped>
 .vision-page {
-  --background: #0f172a;
-  --background-alt: #1e293b;
-  --surface: #1e293b;
+  --background: var(--mk-bg-dark);
+  --background-alt: var(--mk-bg-dark-alt);
+  --surface: var(--mk-bg-dark-alt);
   --surface-elevated: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
+  --text-primary: var(--mk-text-on-dark);
+  --text-secondary: var(--mk-text-3);
   --text-tertiary: #64748b;
-  --border: #334155;
-  --primary: #00adb5;
-  --primary-dark: #0891b2;
-  --success: #10b981;
+  --border: var(--mk-border-dark);
+  --primary: var(--mk-accent);
+  --primary-dark: var(--mk-accent-dark);
+  --success: var(--mk-green);
   --warning: #f59e0b;
 
   min-height: 100vh;
   background: var(--background);
   color: var(--text-primary);
+  font-family: var(--mk-font);
 }
 
 .vision-container {
@@ -307,7 +308,7 @@ function goToSignIn() {
 
 .nav-link.sign-in:hover {
   transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(0, 173, 181, 0.3);
+  box-shadow: 0 4px 12px rgba(6, 182, 212, 0.3);
 }
 
 /* Hero Section */
@@ -318,24 +319,19 @@ function goToSignIn() {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 173, 181, 0.15);
+  background: rgba(6, 182, 212, 0.15);
   color: var(--primary);
   padding: 8px 20px;
   border-radius: 999px;
   font-size: 0.9rem;
   font-weight: 600;
   margin-bottom: 24px;
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .hero-section h1 {
-  font-size: 3.5rem;
-  font-weight: 800;
   margin: 0 0 16px 0;
-  background: linear-gradient(135deg, var(--primary) 0%, #0dd3e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {
@@ -377,7 +373,7 @@ function goToSignIn() {
 
 .cta-button.primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 173, 181, 0.4);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
 }
 
 .cta-button.secondary {
@@ -397,7 +393,7 @@ function goToSignIn() {
 }
 
 .cta-button.outline:hover {
-  background: rgba(0, 173, 181, 0.1);
+  background: rgba(6, 182, 212, 0.1);
 }
 
 .cta-button.large {
@@ -551,8 +547,8 @@ function goToSignIn() {
 }
 
 .alpha-card {
-  background: linear-gradient(135deg, rgba(0, 173, 181, 0.1) 0%, rgba(0, 173, 181, 0.05) 100%);
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0.05) 100%);
+  border: 1px solid rgba(6, 182, 212, 0.3);
   border-left: 4px solid var(--primary);
   border-radius: 12px;
   padding: 40px;
@@ -661,7 +657,7 @@ function goToSignIn() {
   color: var(--primary);
   font-family: monospace;
   font-size: 1.5rem;
-  background: rgba(0, 173, 181, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   padding: 4px 12px;
   border-radius: 6px;
 }
@@ -678,8 +674,8 @@ function goToSignIn() {
 }
 
 .contact-card {
-  background: linear-gradient(135deg, rgba(0, 173, 181, 0.1) 0%, rgba(0, 173, 181, 0.02) 100%);
-  border: 2px solid rgba(0, 173, 181, 0.3);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(6, 182, 212, 0.02) 100%);
+  border: 2px solid rgba(6, 182, 212, 0.3);
   border-radius: 24px;
   padding: 60px 40px;
   text-align: center;
@@ -713,7 +709,7 @@ function goToSignIn() {
   color: var(--primary);
   text-decoration: none;
   padding: 16px 40px;
-  background: rgba(0, 173, 181, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   border: 2px solid var(--primary);
   border-radius: 12px;
   transition: all 0.3s ease;
@@ -723,7 +719,7 @@ function goToSignIn() {
   background: var(--primary);
   color: white;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(0, 173, 181, 0.4);
+  box-shadow: 0 8px 24px rgba(6, 182, 212, 0.4);
 }
 
 .contact-note {

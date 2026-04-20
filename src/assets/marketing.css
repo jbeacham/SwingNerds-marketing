@@ -1,16 +1,21 @@
 /* ================================================================
    SwingNerds marketing shared design system
    Matches the home page (LandingPage) aesthetic across every page.
+   Dark-variant pages opt in via <wrapper>.dark-page.
    ================================================================ */
 
 :root {
   --mk-bg: #ffffff;
   --mk-bg-alt: #f8fafc;
-  --mk-bg-dark: #0b1120;
+  --mk-bg-dark: #0f172a;
+  --mk-bg-dark-alt: #1e293b;
   --mk-text: #0f172a;
   --mk-text-2: #475569;
   --mk-text-3: #94a3b8;
+  --mk-text-on-dark: #f8fafc;
+  --mk-text-on-dark-2: #cbd5e1;
   --mk-border: #e2e8f0;
+  --mk-border-dark: #334155;
   --mk-accent: #06b6d4;
   --mk-accent-dark: #0891b2;
   --mk-green: #10b981;
@@ -18,6 +23,12 @@
   --mk-max-width: 1120px;
   --mk-radius: 12px;
   --mk-radius-sm: 8px;
+
+  --mk-font: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --mk-h1-size: clamp(2rem, 5vw, 2.8rem);
+  --mk-h2-size: clamp(1.5rem, 3.5vw, 2rem);
+  --mk-h3-size: 1.2rem;
 }
 
 html, body {
@@ -26,54 +37,53 @@ html, body {
 }
 
 body {
-  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  font-family: var(--mk-font);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Unified typography across all marketing pages.
-   Uses wrapper-class chaining to beat Vue's scoped-style specificity. */
-.landing h1,
-.public-page h1,
-.page h1,
-.pricing-page h1,
-.vision-page h1,
-.enterprise-page h1,
-.dealers-page h1 {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  font-size: clamp(2rem, 5vw, 2.8rem);
+/* ---- Unified typography across every marketing page ----
+   Wrapper-class chaining beats Vue's scoped-style specificity. */
+.landing, .public-page, .page, .pricing-page,
+.vision-page, .enterprise-page, .dealers-page {
+  font-family: var(--mk-font);
+}
+
+.landing h1, .public-page h1, .page h1, .pricing-page h1,
+.vision-page h1, .enterprise-page h1, .dealers-page h1 {
+  font-family: var(--mk-font);
+  font-size: var(--mk-h1-size);
   font-weight: 800;
   line-height: 1.15;
   letter-spacing: -0.03em;
   color: var(--mk-text);
   margin: 0 0 20px;
+  /* Kill any gradient/text-clip treatment from legacy scoped styles. */
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
 }
 
-.landing h2,
-.public-page h2,
-.page h2,
-.pricing-page h2,
-.vision-page h2,
-.enterprise-page h2,
-.dealers-page h2 {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  font-size: clamp(1.5rem, 3.5vw, 2rem);
+.landing h2, .public-page h2, .page h2, .pricing-page h2,
+.vision-page h2, .enterprise-page h2, .dealers-page h2 {
+  font-family: var(--mk-font);
+  font-size: var(--mk-h2-size);
   font-weight: 800;
   line-height: 1.2;
   letter-spacing: -0.02em;
   color: var(--mk-text);
   margin: 0 0 16px;
+  background: none;
+  -webkit-background-clip: border-box;
+  background-clip: border-box;
+  -webkit-text-fill-color: currentColor;
 }
 
-.landing h3,
-.public-page h3,
-.page h3,
-.pricing-page h3,
-.vision-page h3,
-.enterprise-page h3,
-.dealers-page h3 {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
-  font-size: 1.2rem;
+.landing h3, .public-page h3, .page h3, .pricing-page h3,
+.vision-page h3, .enterprise-page h3, .dealers-page h3 {
+  font-family: var(--mk-font);
+  font-size: var(--mk-h3-size);
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.01em;
@@ -81,17 +91,28 @@ body {
   margin: 0 0 10px;
 }
 
-.landing p,
-.public-page p,
-.page p,
-.pricing-page p,
-.vision-page p,
-.enterprise-page p,
-.dealers-page p {
-  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+.landing p, .public-page p, .page p, .pricing-page p,
+.vision-page p, .enterprise-page p, .dealers-page p {
+  font-family: var(--mk-font);
   line-height: 1.6;
+}
+
+/* ---- Dark-variant pages (opt-in with `.dark-page` on the root wrapper) ----
+   Used by product-showcase pages: Cameras, Vision iOS, Get Started. */
+.dark-page {
+  background: var(--mk-bg-dark);
+  color: var(--mk-text-on-dark);
+}
+
+.dark-page h1,
+.dark-page h2,
+.dark-page h3 {
+  color: var(--mk-text-on-dark);
+}
+
+.dark-page p {
+  color: var(--mk-text-on-dark-2);
 }
 
 /* Anchor buttons default */
 a { color: var(--mk-accent); }
-

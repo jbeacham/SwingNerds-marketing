@@ -18,7 +18,13 @@ function getStarted() {
     <div class="page-container">
       <main class="page-content">
         <div class="content-wrapper">
-          <h1>About SwingNerds</h1>
+          <section class="page-hero">
+            <div class="hero-badge">About Us</div>
+            <h1>About SwingNerds</h1>
+            <p class="hero-subtitle">
+              A small team building the tool we always wanted for sim golf: automatic swing video, paired to shot data, with zero manual workflow.
+            </p>
+          </section>
           
           <div class="about-section">
             <h2>Our Mission</h2>
@@ -158,9 +164,15 @@ function getStarted() {
 
 <style scoped>
 .public-page {
+  --primary: var(--mk-accent);
+  --primary-dark: var(--mk-accent-dark);
+  --surface: var(--mk-bg);
+  --background-alt: var(--mk-bg-alt);
+  --border: var(--mk-border);
+
   min-height: 100vh;
-  background-color: var(--background);
-  color: var(--text-primary);
+  background-color: var(--mk-bg);
+  color: var(--mk-text);
 }
 
 .page-container {
@@ -218,42 +230,51 @@ function getStarted() {
 }
 
 .content-wrapper {
-  max-width: 800px;
+  max-width: 820px;
   margin: 0 auto;
 }
 
-.content-wrapper > h1 {
+.page-hero {
+  padding: 64px 0 48px;
   text-align: center;
-  font-size: 2.5rem;
+  border-bottom: 1px solid #e2e8f0;
+  margin-bottom: 48px;
+}
+.page-hero .hero-badge {
+  display: inline-block;
+  background: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 12px;
   font-weight: 700;
-  color: var(--primary);
-  margin-bottom: var(--space-xl);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.page-hero .hero-subtitle {
+  font-size: 1.15rem;
+  color: #475569;
+  max-width: 640px;
+  margin: 0 auto;
+  line-height: 1.65;
 }
 
 .about-section {
-  margin-bottom: var(--space-xl);
-}
-
-.about-section h2 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--text-primary);
-  margin-bottom: var(--space-lg);
-  border-bottom: 2px solid var(--primary);
-  padding-bottom: var(--space-sm);
+  margin-bottom: 48px;
 }
 
 .about-section p {
-  font-size: 1.1rem;
-  line-height: 1.7;
-  color: var(--text-secondary);
-  margin-bottom: var(--space-md);
+  color: #475569;
+  margin-bottom: 14px;
+  font-size: 1rem;
+  line-height: 1.65;
 }
 
 .large-text {
-  font-size: 1.2rem !important;
-  font-weight: 500;
-  color: var(--text-primary) !important;
+  font-size: 1.15rem !important;
+  color: #0f172a !important;
+  line-height: 1.65;
 }
 
 .features-grid {

@@ -204,20 +204,20 @@ onUnmounted(() => {
 
 <style scoped>
 .page {
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --border: #334155;
-  --text: #f8fafc;
-  --muted: #94a3b8;
+  --bg: var(--mk-bg-dark);
+  --surface: var(--mk-bg-dark-alt);
+  --border: var(--mk-border-dark);
+  --text: var(--mk-text-on-dark);
+  --muted: var(--mk-text-3);
   --faint: #64748b;
-  --primary: #00adb5;
-  --success: #10b981;
+  --primary: var(--mk-accent);
+  --success: var(--mk-green);
   --warn: #f59e0b;
 
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--mk-font);
 }
 .container { max-width: 800px; margin: 0 auto; padding: 0 24px; }
 
@@ -231,8 +231,8 @@ onUnmounted(() => {
 .nav-link:hover { color: var(--text); }
 
 /* Hero */
-.hero { text-align: center; margin-bottom: 48px; }
-.hero h1 { font-size: 2.4rem; font-weight: 800; letter-spacing: -0.03em; margin: 0 0 12px; }
+.hero { text-align: center; padding: 64px 0 0; margin-bottom: 48px; }
+.hero h1 { margin: 0 0 12px; color: var(--text); }
 .hero-sub { font-size: 1.1rem; color: var(--muted); line-height: 1.6; margin: 0; }
 
 /* Sections */
@@ -257,7 +257,7 @@ onUnmounted(() => {
 .compare-verdict { font-size: 0.85rem; color: var(--faint); margin: 0; font-style: italic; }
 
 /* Tip box */
-.tip-box { background: rgba(0, 173, 181, 0.06); border: 1px solid rgba(0, 173, 181, 0.2); border-radius: 10px; padding: 16px 20px; font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
+.tip-box { background: rgba(6, 182, 212, 0.06); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 10px; padding: 16px 20px; font-size: 0.92rem; color: var(--muted); line-height: 1.6; }
 .tip-box strong { color: var(--text); }
 
 /* Camera links */

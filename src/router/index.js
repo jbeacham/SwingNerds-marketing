@@ -30,6 +30,7 @@ const routes = [
   { path: '/about', name: 'About', component: AboutPage },
   { path: '/privacy', name: 'Privacy', component: PrivacyPage },
   { path: '/support', name: 'Support', component: SupportPage },
+  { path: '/contact', redirect: '/support' },
   { path: '/pricing', name: 'Pricing', component: PricingPage },
   { path: '/changelog', name: 'Changelog', component: ChangelogPage },
   { path: '/cameras', name: 'Cameras', component: CamerasPage },

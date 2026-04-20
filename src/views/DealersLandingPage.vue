@@ -6,12 +6,7 @@
         <div class="hero-badge">For Partners &amp; Resellers</div>
         <h1>SwingNerds<br>for Dealers</h1>
         <p class="hero-subtitle">
-          Offer SwingNerds with your sim installs, bundle it in your packages, or sell it at your own price.
-        </p>
-        <p class="hero-description">
-          Buy SwingNerds subscription licenses in bulk at a wholesale rate and hand them to your own customers.
-          They activate with a code - no credit card required, full Premium access for a year.
-          You keep the margin, and your customers get the best swing analysis platform on the market.
+          Offer SwingNerds with your sim installs, bundle it in your packages, or sell it at your own price. Buy licenses in bulk at a wholesale rate; your customers activate with a code, no credit card required, and get a full year of Premium access. You keep the margin.
         </p>
         <div class="hero-cta">
           <button @click="scrollToContact" class="cta-button primary large">Become a Dealer</button>
@@ -290,7 +285,7 @@ async function submitContact() {
 }
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 173, 181, 0.15);
+  background: rgba(6, 182, 212, 0.15);
   color: var(--primary);
   padding: 6px 16px;
   border-radius: 999px;
@@ -301,9 +296,6 @@ async function submitContact() {
   margin-bottom: 20px;
 }
 .hero-section h1 {
-  font-size: 3rem;
-  font-weight: 800;
-  line-height: 1.1;
   margin: 0 0 20px;
   color: var(--text-primary);
 }

@@ -258,8 +258,8 @@ function handleBackdropClick(e) {
 }
 
 .camera-card.highlight {
-  border-color: var(--primary, #00adb5);
-  box-shadow: 0 0 0 1px var(--primary, #00adb5), 0 4px 24px var(--primary-glow, rgba(0, 173, 181, 0.15));
+  border-color: var(--primary, #06b6d4);
+  box-shadow: 0 0 0 1px var(--primary, #06b6d4), 0 4px 24px var(--primary-glow, rgba(6, 182, 212, 0.15));
 }
 
 .camera-card.laptop-card {
@@ -281,9 +281,9 @@ function handleBackdropClick(e) {
 }
 
 .camera-badge.recommended {
-  background: rgba(0, 173, 181, 0.15);
-  color: var(--primary, #00adb5);
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  background: rgba(6, 182, 212, 0.15);
+  color: var(--primary, #06b6d4);
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .camera-badge.starter {
@@ -319,7 +319,7 @@ function handleBackdropClick(e) {
 .shutter-explainer {
   background: var(--surface, #1a1a2e);
   border: 1px solid var(--border, #2a2a3e);
-  border-left: 3px solid var(--primary, #00adb5);
+  border-left: 3px solid var(--primary, #06b6d4);
   border-radius: 8px;
   padding: 20px 24px;
   margin-bottom: 20px;
@@ -332,8 +332,8 @@ function handleBackdropClick(e) {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: rgba(0, 173, 181, 0.06);
-  border: 1px solid rgba(0, 173, 181, 0.2);
+  background: rgba(6, 182, 212, 0.06);
+  border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 10px;
   padding: 18px 24px;
   margin-bottom: 16px;
@@ -372,7 +372,7 @@ function handleBackdropClick(e) {
 .camera-help-text strong { color: var(--text, #e0e0e0); }
 
 .camera-help-link {
-  color: var(--primary, #00adb5);
+  color: var(--primary, #06b6d4);
   font-weight: 600;
   font-size: 0.9rem;
   text-decoration: none;
@@ -395,7 +395,7 @@ function handleBackdropClick(e) {
 .camera-buy-link {
   display: block;
   font-size: 0.85rem;
-  color: var(--primary, #00adb5);
+  color: var(--primary, #06b6d4);
   text-decoration: none;
   padding: 6px 0;
   border-bottom: 1px solid var(--border, rgba(42, 42, 62, 0.5));
@@ -492,7 +492,7 @@ function handleBackdropClick(e) {
   margin: 0;
   line-height: 1.5;
 }
-.lens-tip strong { color: var(--primary, #00adb5); }
+.lens-tip strong { color: var(--primary, #06b6d4); }
 
 @media (max-width: 768px) {
   .camera-cards { grid-template-columns: 1fr; }

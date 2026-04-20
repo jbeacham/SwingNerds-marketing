@@ -194,7 +194,7 @@ function startTrial() {
   --success: #10b981;
 
   min-height: 100vh;
-  background: linear-gradient(180deg, var(--background) 0%, var(--background-alt) 100%);
+  background: var(--background);
   color: var(--text-primary);
 }
 
@@ -278,17 +278,12 @@ function startTrial() {
 /* Hero Section */
 .hero-section {
   text-align: center;
-  padding: var(--space-xxl) 0;
+  padding: 80px 0 60px;
 }
 
 .hero-section h1 {
-  font-size: 2.5rem;
-  font-weight: 800;
   margin: 0 0 var(--space-md) 0;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .hero-subtitle {

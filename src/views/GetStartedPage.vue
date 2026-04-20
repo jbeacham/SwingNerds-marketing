@@ -5,7 +5,7 @@
     <section class="hero">
       <div class="hero-inner">
         <img src="/swingnerds-logo-white.png" alt="SwingNerds" class="hero-logo" />
-        <div class="alpha-pill">Early Alpha &middot; Windows</div>
+        <div class="alpha-pill">Beta &middot; Windows</div>
         <h1>Every swing recorded.<br>Every shot paired.<br><span class="accent">Automatically.</span></h1>
         <p class="hero-sub">
           Mount any USB camera in your sim bay and SwingNerds Vision captures every swing ,
@@ -158,10 +158,10 @@
     <!-- Alpha feedback -->
     <section class="feedback-section">
       <div class="feedback-card">
-        <div class="feedback-badge">Early Alpha</div>
+        <div class="feedback-badge">Beta</div>
         <h3>We need your feedback</h3>
         <p>
-          Vision is in early alpha - your feedback directly shapes what we build next.
+          Vision is in beta - your feedback directly shapes what we build next.
           Tell us what works, what doesn't, what you wish it did. We read and respond to every message.
         </p>
         <a href="mailto:support@swingnerds.com" class="feedback-link">support@swingnerds.com &rarr;</a>
@@ -202,20 +202,20 @@ function onDownload() {
 
 <style scoped>
 .page {
-  --bg: #0f172a;
-  --surface: #1e293b;
-  --border: #334155;
-  --text: #f8fafc;
-  --muted: #94a3b8;
+  --bg: var(--mk-bg-dark);
+  --surface: var(--mk-bg-dark-alt);
+  --border: var(--mk-border-dark);
+  --text: var(--mk-text-on-dark);
+  --muted: var(--mk-text-3);
   --faint: #64748b;
-  --primary: #00adb5;
-  --success: #10b981;
+  --primary: var(--mk-accent);
+  --success: var(--mk-green);
   --warn: #f59e0b;
 
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--mk-font);
 }
 
 /* ── Hero ── */
@@ -247,11 +247,8 @@ function onDownload() {
   margin-bottom: 24px;
 }
 .hero h1 {
-  font-size: 2.8rem;
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.03em;
   margin: 0 0 20px;
+  color: var(--text);
 }
 .accent { color: var(--primary); }
 .hero-sub {

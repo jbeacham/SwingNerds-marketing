@@ -222,9 +222,15 @@ function goHome() {
 
 <style scoped>
 .public-page {
+  --primary: var(--mk-accent);
+  --primary-dark: var(--mk-accent-dark);
+  --surface: var(--mk-bg);
+  --background-alt: var(--mk-bg-alt);
+  --border: var(--mk-border);
+
   min-height: 100vh;
-  background-color: var(--background);
-  color: var(--text-primary);
+  background-color: var(--mk-bg);
+  color: var(--mk-text);
 }
 
 .page-container {
@@ -288,9 +294,7 @@ function goHome() {
 
 .content-wrapper > h1 {
   text-align: center;
-  font-size: 2.5rem;
-  font-weight: 700;
-  color: var(--primary);
+  color: var(--mk-text);
   margin-bottom: var(--space-lg);
 }
 

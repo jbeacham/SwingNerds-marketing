@@ -239,10 +239,14 @@ function goHome() {
 
 <style scoped>
 .public-page {
+  --primary: var(--mk-accent);
+  --primary-dark: var(--mk-accent-dark);
+  --border: var(--mk-border);
+
   min-height: 100vh;
-  background-color: var(--background);
-  color: var(--text-primary);
-  font-family: var(--font-primary, 'Inter', sans-serif);
+  background-color: var(--mk-bg);
+  color: var(--mk-text);
+  font-family: var(--mk-font);
 }
 
 .page-container {

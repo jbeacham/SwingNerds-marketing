@@ -5,9 +5,9 @@
       <!-- Alpha banner -->
       <div class="alpha-banner">
         <div class="alpha-banner-inner">
-          <span class="alpha-banner-badge">Early Alpha</span>
+          <span class="alpha-banner-badge">Beta</span>
           <span class="alpha-banner-text">
-            SwingNerds Vision is in early alpha - your feedback directly shapes what we build next.
+            SwingNerds Vision is in beta - your feedback directly shapes what we build next.
           </span>
           <a href="mailto:support@swingnerds.com" class="alpha-banner-link">Send feedback →</a>
         </div>
@@ -15,7 +15,7 @@
 
       <!-- Hero -->
       <section class="hero">
-        <div class="hero-badge">Early Alpha · Windows</div>
+        <div class="hero-badge">Beta · Windows</div>
         <h1>SwingNerds Vision</h1>
         <p class="hero-subtitle">All your shot data. All your swing videos. Automatically in one place.</p>
         <p class="hero-desc">
@@ -84,7 +84,7 @@
                 <li> Record 1 or 2 <a href="#" class="camera-link" @click.prevent="showCameraModal = true">USB cameras</a></li>
                 <li> Save clips locally</li>
                 <li> Adjust exposure, gain, FPS</li>
-                <li> Club detection (alpha)</li>
+                <li> Club detection (beta)</li>
               </ul>
             </div>
             <div class="compare-col">
@@ -431,7 +431,7 @@
       <section class="alpha-cta-section">
         <div class="alpha-cta-card">
           <div class="alpha-cta-icon"></div>
-          <h2>This is an early alpha - and that matters.</h2>
+          <h2>This is a beta - and that matters.</h2>
           <p>
             SwingNerds Vision is actively being built. Features are added fast, things get improved week to week,
             and your feedback is the single biggest driver of what gets built next.
@@ -514,7 +514,7 @@ function onDownloadClick() {
 
 <style scoped>
 .camera-link {
-  color: var(--primary, #00adb5);
+  color: var(--primary, #06b6d4);
   text-decoration: underline;
   text-decoration-style: dotted;
   text-underline-offset: 3px;
@@ -523,7 +523,7 @@ function onDownloadClick() {
 }
 .camera-link:hover {
   text-decoration-style: solid;
-  color: var(--primary, #00adb5);
+  color: var(--primary, #06b6d4);
 }
 .page {
   --bg: #ffffff;
@@ -717,26 +717,21 @@ h2 {
 
 .hero-badge {
   display: inline-block;
-  background: rgba(0, 173, 181, 0.12);
+  background: rgba(6, 182, 212, 0.12);
   color: var(--primary);
   padding: 6px 18px;
   border-radius: 999px;
   font-size: 0.85rem;
   font-weight: 600;
   margin-bottom: 20px;
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.3);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
 
 .hero h1 {
-  font-size: clamp(2.5rem, 6vw, 4rem);
-  font-weight: 800;
   margin: 0 0 16px 0;
-  background: linear-gradient(135deg, var(--primary) 0%, #0dd3e0 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text);
 }
 
 .hero-subtitle {
@@ -964,7 +959,7 @@ h2 {
   box-shadow:
     0 0 0 1px #1a1a1a,
     0 20px 60px rgba(0, 0, 0, 0.6),
-    0 4px 20px rgba(0, 173, 181, 0.1);
+    0 4px 20px rgba(6, 182, 212, 0.1);
   overflow: hidden;
   position: relative;
 }
@@ -1008,8 +1003,8 @@ h2 {
 }
 
 .loop-callout {
-  background: linear-gradient(135deg, rgba(0, 173, 181, 0.08), rgba(0, 173, 181, 0.04));
-  border: 1px solid rgba(0, 173, 181, 0.2);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.08), rgba(6, 182, 212, 0.04));
+  border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 12px;
   padding: 32px 40px;
   display: flex;
@@ -1074,9 +1069,9 @@ h2 {
 }
 
 .camera-badge.recommended {
-  background: rgba(0, 173, 181, 0.15);
+  background: rgba(6, 182, 212, 0.15);
   color: var(--primary);
-  border: 1px solid rgba(0, 173, 181, 0.3);
+  border: 1px solid rgba(6, 182, 212, 0.3);
 }
 
 .camera-badge.starter {
@@ -1126,8 +1121,8 @@ h2 {
   display: flex;
   align-items: flex-start;
   gap: 16px;
-  background: rgba(0, 173, 181, 0.06);
-  border: 1px solid rgba(0, 173, 181, 0.2);
+  background: rgba(6, 182, 212, 0.06);
+  border: 1px solid rgba(6, 182, 212, 0.2);
   border-radius: 10px;
   padding: 18px 24px;
   margin-bottom: 16px;
@@ -1291,7 +1286,7 @@ h2 {
 .angle-icon {
   width: 56px;
   height: 56px;
-  background: rgba(0, 173, 181, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   border-radius: 12px;
   display: flex;
   align-items: center;
