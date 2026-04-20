@@ -526,25 +526,25 @@ function onDownloadClick() {
   color: var(--primary, #00adb5);
 }
 .page {
-  --bg: #0f172a;
-  --bg-alt: #1e293b;
-  --surface: #1e293b;
-  --surface-raised: #273549;
-  --border: #334155;
-  --text: #f8fafc;
-  --muted: #94a3b8;
-  --faint: #64748b;
-  --primary: #00adb5;
+  --bg: #ffffff;
+  --bg-alt: #f8fafc;
+  --surface: #ffffff;
+  --surface-raised: #f8fafc;
+  --border: #e2e8f0;
+  --text: #0f172a;
+  --muted: #475569;
+  --faint: #94a3b8;
+  --primary: #06b6d4;
   --primary-dark: #0891b2;
-  --primary-glow: rgba(0, 173, 181, 0.25);
+  --primary-glow: rgba(6, 182, 212, 0.15);
   --success: #10b981;
-  --gold: #f59e0b;
-  --warn: #f59e0b;
+  --gold: #d97706;
+  --warn: #d97706;
 
   min-height: 100vh;
   background: var(--bg);
   color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
 }
 
 .container {

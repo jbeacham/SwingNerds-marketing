@@ -4,6 +4,7 @@
     <section class="hero">
       <div class="hero-inner">
         <div class="hero-text">
+          <img src="/swingnerds-logo-black.png" alt="SwingNerds" class="hero-big-logo" />
           <h1 class="hero-headline">
             All your shot data. All your swing videos. Automatically in one place.
           </h1>
@@ -539,6 +540,12 @@ function scrollToSection(id) {
   letter-spacing: 2px;
   color: var(--accent);
   margin: 0 0 16px;
+}
+.hero-big-logo {
+  display: block;
+  width: 160px;
+  height: auto;
+  margin: 0 auto 28px;
 }
 .hero-headline {
   font-size: 2.8rem;

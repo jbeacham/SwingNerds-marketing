@@ -1,0 +1,97 @@
+/* ================================================================
+   SwingNerds marketing shared design system
+   Matches the home page (LandingPage) aesthetic across every page.
+   ================================================================ */
+
+:root {
+  --mk-bg: #ffffff;
+  --mk-bg-alt: #f8fafc;
+  --mk-bg-dark: #0b1120;
+  --mk-text: #0f172a;
+  --mk-text-2: #475569;
+  --mk-text-3: #94a3b8;
+  --mk-border: #e2e8f0;
+  --mk-accent: #06b6d4;
+  --mk-accent-dark: #0891b2;
+  --mk-green: #10b981;
+
+  --mk-max-width: 1120px;
+  --mk-radius: 12px;
+  --mk-radius-sm: 8px;
+}
+
+html, body {
+  background: var(--mk-bg);
+  color: var(--mk-text);
+}
+
+body {
+  font-family: 'DM Sans', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Unified typography across all marketing pages.
+   Uses wrapper-class chaining to beat Vue's scoped-style specificity. */
+.landing h1,
+.public-page h1,
+.page h1,
+.pricing-page h1,
+.vision-page h1,
+.enterprise-page h1,
+.dealers-page h1 {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  color: var(--mk-text);
+  margin: 0 0 20px;
+}
+
+.landing h2,
+.public-page h2,
+.page h2,
+.pricing-page h2,
+.vision-page h2,
+.enterprise-page h2,
+.dealers-page h2 {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: clamp(1.5rem, 3.5vw, 2rem);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--mk-text);
+  margin: 0 0 16px;
+}
+
+.landing h3,
+.public-page h3,
+.page h3,
+.pricing-page h3,
+.vision-page h3,
+.enterprise-page h3,
+.dealers-page h3 {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: -0.01em;
+  color: var(--mk-text);
+  margin: 0 0 10px;
+}
+
+.landing p,
+.public-page p,
+.page p,
+.pricing-page p,
+.vision-page p,
+.enterprise-page p,
+.dealers-page p {
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
+  line-height: 1.6;
+}
+
+/* Anchor buttons default */
+a { color: var(--mk-accent); }
+

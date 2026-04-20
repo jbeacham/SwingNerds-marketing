@@ -259,21 +259,22 @@ async function submitContact() {
 
 <style scoped>
 .dealers-page {
-  --background: #0f172a;
-  --background-alt: #1e293b;
-  --surface: #1e293b;
-  --surface-elevated: #334155;
-  --text-primary: #f8fafc;
-  --text-secondary: #94a3b8;
-  --text-tertiary: #64748b;
-  --border: #334155;
-  --primary: #00adb5;
+  --background: #ffffff;
+  --background-alt: #f8fafc;
+  --surface: #ffffff;
+  --surface-elevated: #f8fafc;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-tertiary: #94a3b8;
+  --border: #e2e8f0;
+  --primary: #06b6d4;
   --primary-dark: #0891b2;
   --success: #10b981;
 
   min-height: 100vh;
   background: var(--background);
   color: var(--text-primary);
+  font-family: 'DM Sans', system-ui, -apple-system, sans-serif;
 }
 
 .dealers-container {
