@@ -34,13 +34,13 @@ const routes = [
   { path: '/pricing', name: 'Pricing', component: PricingPage },
   { path: '/changelog', name: 'Changelog', component: ChangelogPage },
   { path: '/cameras', name: 'Cameras', component: CamerasPage },
-  { path: '/get-started', name: 'GetStarted', component: GetStartedPage },
+  { path: '/get-started', name: 'GetStarted', component: GetStartedPage, meta: { title: 'Get Started' } },
   { path: '/try', redirect: '/get-started' },
-  { path: '/vision', name: 'Vision', component: VisionWindowsPage },
+  { path: '/vision', name: 'Vision', component: VisionWindowsPage, meta: { title: 'Vision for Windows' } },
   { path: '/vision-windows', redirect: '/vision' },
-  { path: '/swingnerds-vision', name: 'VisionLanding', component: VisionLandingPage },
-  { path: '/commercial', name: 'EnterpriseLanding', component: EnterpriseLandingPage },
-  { path: '/dealers', name: 'DealersLanding', component: DealersLandingPage },
+  { path: '/swingnerds-vision', name: 'VisionLanding', component: VisionLandingPage, meta: { title: 'SwingNerds Vision' } },
+  { path: '/commercial', name: 'EnterpriseLanding', component: EnterpriseLandingPage, meta: { title: 'Facilities' } },
+  { path: '/dealers', name: 'DealersLanding', component: DealersLandingPage, meta: { title: 'Dealers' } },
 
   // App routes → redirect to app.swingnerds.com so old bookmarks still work.
   // These are handled at runtime in the router guard rather than at the Static Web App
@@ -85,9 +85,11 @@ const router = createRouter({
 })
 
 router.beforeEach((to, _from, next) => {
-  const pageName = to.name || 'Page'
-  document.title = `SwingNerds - ${pageName}`
-  trackPageView(pageName, `SwingNerds - ${pageName}`)
+  const analyticsName = to.name || 'Page'
+  const displayTitle = to.meta?.title || to.name || 'Page'
+  // Home keeps a bare "SwingNerds" title — everything else gets the suffix.
+  document.title = to.name === 'Home' ? 'SwingNerds' : `SwingNerds - ${displayTitle}`
+  trackPageView(analyticsName, document.title)
   next()
 })
 
