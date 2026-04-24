@@ -229,9 +229,17 @@ function onDownload() {
   margin: 0 auto;
 }
 .hero-logo {
+  /* `display: block` + auto horizontal margins replaces the default inline
+     positioning of <img>. With default inline, the logo sits on a text baseline
+     inside the hero's `text-align: center` box — any trailing whitespace in the
+     template (newlines, indentation before the next element) contributes a
+     whitespace text node that shifts the centered line horizontally by a few
+     pixels. Block + margin:auto makes the logo independent of surrounding
+     inline content, so it's dead-centered regardless of markup formatting. */
+  display: block;
   width: 56px;
   height: 56px;
-  margin-bottom: 16px;
+  margin: 0 auto 16px;
 }
 .alpha-pill {
   display: inline-block;
