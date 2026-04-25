@@ -6,7 +6,7 @@
         <div class="hero-badge">For Partners &amp; Resellers</div>
         <h1>SwingNerds<br>for Dealers</h1>
         <p class="hero-subtitle">
-          Offer SwingNerds with your sim installs, bundle it in your packages, or sell it at your own price. Buy licenses in bulk at a wholesale rate; your customers activate with a code, no credit card required, and get a full year of Premium access. You keep the margin.
+          Offer SwingNerds with your sim installs, bundle it in your packages, or sell it at your own price. Premium retails at $99.99/yr — you buy in bulk for as little as $79.99/license and keep the margin. Customers activate with a code, no credit card required, and get a full year of Premium.
         </p>
         <div class="hero-cta">
           <button @click="scrollToContact" class="cta-button primary large">Become a Dealer</button>
@@ -81,25 +81,30 @@
       <!-- Pricing Section -->
       <section class="pricing-section" ref="pricingSection">
         <h2>Volume Pricing</h2>
-        <p class="pricing-subtitle">Bigger batches mean bigger discounts. Applied automatically at checkout.</p>
+        <p class="pricing-subtitle">Premium retails at <strong>$99.99/yr</strong>. Bigger batches mean bigger discounts. Applied automatically at checkout.</p>
 
         <div class="pricing-tiers-grid">
           <div class="pricing-tier-card">
-            <div class="tier-label">1-9 licenses</div>
-            <div class="tier-discount">10% off retail</div>
+            <div class="tier-label">1–9 licenses</div>
+            <div class="tier-discount">10% off</div>
+            <div class="tier-price">$89.99 <span class="tier-price-unit">/ license</span></div>
             <div class="tier-note">Great for getting started</div>
           </div>
           <div class="pricing-tier-card featured">
-            <div class="tier-label">10-19 licenses</div>
-            <div class="tier-discount">15% off retail</div>
+            <div class="tier-label">10–19 licenses</div>
+            <div class="tier-discount">15% off</div>
+            <div class="tier-price">$84.99 <span class="tier-price-unit">/ license</span></div>
             <div class="tier-note">Most popular</div>
           </div>
           <div class="pricing-tier-card">
             <div class="tier-label">20+ licenses</div>
-            <div class="tier-discount">20% off retail</div>
+            <div class="tier-discount">20% off</div>
+            <div class="tier-price">$79.99 <span class="tier-price-unit">/ license</span></div>
             <div class="tier-note">Best for larger installs</div>
           </div>
         </div>
+
+        <p class="margin-callout">Sell at retail and keep <strong>$10–$20 per license</strong>, or bundle into your sim install at any price you set.</p>
 
         <div class="pricing-details">
           <h3>What you get per license</h3>
@@ -116,7 +121,7 @@
 
         <div class="pricing-cta">
           <button @click="scrollToContact" class="cta-button primary large">Apply to Become a Dealer</button>
-          <p class="pricing-note">Dealer accounts are onboarded by our team. Reach out and we'll get you set up.</p>
+          <p class="pricing-note">Dealer accounts are onboarded by our team — typically same-day. Tell us a little about your business and we'll get you set up with codes and your dashboard.</p>
         </div>
       </section>
 
@@ -441,14 +446,37 @@ async function submitContact() {
   margin-bottom: 8px;
 }
 .tier-discount {
-  font-size: 1.5rem;
-  font-weight: 800;
+  font-size: 1.1rem;
+  font-weight: 700;
   color: var(--primary);
-  margin-bottom: 6px;
+  margin-bottom: 4px;
+}
+.tier-price {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  line-height: 1.1;
+}
+.tier-price-unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-secondary);
 }
 .tier-note {
   font-size: 13px;
   color: var(--text-tertiary);
+}
+
+.margin-callout {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0 auto 32px;
+  max-width: 640px;
+}
+.margin-callout strong {
+  color: var(--primary);
 }
 
 .pricing-details {

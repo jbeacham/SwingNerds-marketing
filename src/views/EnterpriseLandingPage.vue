@@ -6,7 +6,7 @@
         <div class="hero-badge">For Commercial Facilities</div>
         <h1>SwingNerds<br>for Your Sim Bays</h1>
         <p class="hero-subtitle">
-          Give every member automatic swing video with zero staff required. Leave SwingNerds Vision running on every bay, members log in with their email, and their videos sync automatically. You manage it all from one dashboard.
+          Give every member automatic swing video with zero staff required. Members log in at the bay, swings record themselves, and videos sync to their account. Runs on any USB camera (~$130 each). Software from $5/mo per active member.
         </p>
         <div class="hero-cta">
           <button @click="scrollToContact" class="cta-button primary large">Contact Sales</button>
@@ -89,8 +89,21 @@
 
       <!-- Pricing Section -->
       <section class="pricing-section" ref="trialSection">
-        <h2>Let's talk pricing</h2>
-        <p class="pricing-subtitle">Every facility is different - bays, member volume, and how much you want to cover vs. let members self-subscribe. We keep it simple by talking it through with you.</p>
+        <h2>Simple, transparent pricing</h2>
+        <p class="pricing-subtitle">Two costs to think about: the cameras and the software. No platform fees, no per-bay fees, no contracts.</p>
+
+        <div class="cost-grid">
+          <div class="cost-card">
+            <div class="cost-label">Cameras</div>
+            <div class="cost-figure">~$130<span class="cost-unit"> / camera</span></div>
+            <p class="cost-detail">Use any USB webcam. Good 120fps swing-cams run about $130 each. Most bays use 1–2 cameras (down-the-line + face-on).</p>
+          </div>
+          <div class="cost-card featured">
+            <div class="cost-label">Software</div>
+            <div class="cost-figure">From $5<span class="cost-unit"> / mo per member</span></div>
+            <p class="cost-detail">Per active member, billed monthly. You decide who pays — cover them on your invoice or let them self-subscribe with their own card.</p>
+          </div>
+        </div>
 
         <div class="enterprise-pricing-card">
           <div class="pricing-card-header">
@@ -100,7 +113,7 @@
           <ul class="pricing-features">
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>Every active member has their own SwingNerds subscription.</strong> You choose who pays for it - you can cover some or all members on your monthly bill, or let them self-subscribe with their own card (with a standard free trial).</span>
+              <span><strong>Every active member has their own SwingNerds subscription.</strong> You choose who pays for it — cover some or all members on your monthly bill, or let them self-subscribe with their own card (with a standard free trial).</span>
             </li>
             <li>
               <span class="check">&#10003;</span>
@@ -108,17 +121,21 @@
             </li>
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>If you ever cancel or pause, members keep all their data</strong> - shots, videos, AI analyses. They just switch to their own personal plan.</span>
+              <span><strong>If you ever cancel or pause, members keep all their data</strong> — shots, videos, AI analyses. They just switch to their own personal plan.</span>
             </li>
             <li>
               <span class="check">&#10003;</span>
-              <span><strong>Tier is your call.</strong> Cover members at Pro, Premium, or Ultimate - or mix and match per member.</span>
+              <span><strong>Tier is your call.</strong> Cover members at Pro ($5/mo), Premium ($10/mo), or Ultimate ($20/mo) — or mix and match per member.</span>
+            </li>
+            <li>
+              <span class="check">&#10003;</span>
+              <span><strong>Hardware is one-time.</strong> Pay once for the cameras, run them as long as you want. No proprietary lock-in — they're just USB webcams.</span>
             </li>
           </ul>
 
           <div class="pricing-cta">
-            <button @click="scrollToContact" class="cta-button primary large">Contact us for pricing</button>
-            <p class="trial-note">We'll get back the same day with a clear quote based on your facility.</p>
+            <button @click="scrollToContact" class="cta-button primary large">Talk to us about your setup</button>
+            <p class="trial-note">Want a custom quote, help picking cameras, or volume pricing across multiple locations? We'll get back the same day.</p>
           </div>
         </div>
       </section>
@@ -544,6 +561,69 @@ async function submitContact() {
   color: var(--text-secondary);
   font-size: 1.1rem;
   margin: -32px 0 48px;
+}
+
+/* Two-card cost overview — sits above the detailed "How it works" card and
+   gives visitors a price anchor before they read further. The featured card
+   highlights the recurring software cost since that's the more relevant
+   ongoing number for facility budget planning. */
+.cost-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  max-width: 800px;
+  margin: 0 auto 48px;
+  text-align: left;
+}
+
+.cost-card {
+  background: var(--surface);
+  border: 1px solid var(--border, #1f2937);
+  border-radius: 16px;
+  padding: 28px 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.cost-card.featured {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+}
+
+.cost-label {
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+}
+
+.cost-figure {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--primary);
+  line-height: 1.1;
+}
+
+.cost-unit {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.cost-detail {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 640px) {
+  .cost-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
 }
 
 .enterprise-pricing-card {
