@@ -5,6 +5,7 @@ date: 2026-04-16
 author: SwingNerds Team
 tags: [setup, basics]
 featured: false
+image: /SwingNerds_Screenshot_AllTimePerformance_Desktop.png
 ---
 
 A home golf simulator is a small system of parts that work together to do one thing: take a real golf swing in a small space and turn it into a meaningful golf experience. Once you have all the pieces, the whole thing feels like one product. Before you have all the pieces, it can feel like a lot to figure out.
@@ -92,6 +93,11 @@ Indoor putting setups range from a small mat for tap-ins to a full putting green
 ## Review tooling
 
 Once shots are happening, players often want a place to review the data and the video over time. This is where SwingNerds sits. (Disclosure: this blog is written by us. The point of this post is the components, not the review tool.)
+
+<figure>
+  <img src="/SwingNerds_Screenshot_AllTimePerformance_Desktop.png" alt="SwingNerds all-time performance dashboard showing shot data charts, club averages, and progress over time" />
+  <figcaption>An example of what review tooling looks like once shot data starts to pile up across sessions.</figcaption>
+</figure>
 
 ## Putting it together
 

@@ -270,6 +270,28 @@ function go(slug) {
   margin: 24px 0;
   border: 1px solid #e2e8f0;
 }
+.post-body :deep(video) {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin: 24px 0;
+  border: 1px solid #e2e8f0;
+  background: #000;
+}
+.post-body :deep(figure) {
+  margin: 24px 0;
+}
+.post-body :deep(figure img),
+.post-body :deep(figure video) {
+  margin: 0 0 8px;
+}
+.post-body :deep(figcaption) {
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: center;
+  font-style: italic;
+}
 .post-body :deep(hr) {
   border: 0;
   border-top: 1px solid #e2e8f0;

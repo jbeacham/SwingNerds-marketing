@@ -5,7 +5,13 @@ date: 2026-04-06
 author: SwingNerds Team
 tags: [cameras, setup]
 featured: true
+image: /Kayeton_120fps_1.jpg
 ---
+
+<figure>
+  <img src="/Kayeton_120fps_1.jpg" alt="120fps USB swing camera mounted in a sim bay" />
+  <figcaption>A typical 120fps USB swing camera. Mount once, runs every session.</figcaption>
+</figure>
 
 A surprising amount of what looks like "my swing video looks weird" is actually "my camera is in the wrong place." Once the camera is in the right spot, the same swing tells you a lot more.
 

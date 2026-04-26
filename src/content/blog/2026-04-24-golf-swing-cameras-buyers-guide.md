@@ -5,7 +5,13 @@ date: 2026-04-24
 author: SwingNerds Team
 tags: [cameras, setup]
 featured: true
+image: /Kayeton_120fps_1.jpg
 ---
+
+<figure>
+  <img src="/Kayeton_120fps_1.jpg" alt="USB golf swing camera for indoor sim bay setups" />
+  <figcaption>A typical USB swing camera for sim setups. Around $100, plug-and-play, runs every session.</figcaption>
+</figure>
 
 This is a buyer's guide for golf swing cameras. Not a ranked list of products. The market changes constantly, specific cameras go in and out of stock, and what is "best" depends on your bay, your light, your budget, and what you want to see. Instead, this is a framework for making the decision yourself.
 

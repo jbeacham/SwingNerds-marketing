@@ -5,7 +5,13 @@ date: 2026-03-27
 author: SwingNerds Team
 tags: [product, swing comparison, story]
 featured: true
+image: /SwingNerds_Screenshot_ShotComparison_Desktop.png
 ---
+
+<figure>
+  <video src="/comparison_scrubbing_web.mp4" autoplay muted loop playsinline controls></video>
+  <figcaption>Side-by-side swing comparison with synchronized slow-motion scrubbing.</figcaption>
+</figure>
 
 If SwingNerds had to be one feature, it would be this one. Side-by-side video comparison is the reason the rest of the product exists. (See [the backstory](/blog/what-is-swingnerds-a-backstory) for how that played out.) The very short version: there was a day when I could not see what was wrong with my swing on its own, but the moment I put a good swing next to a bad swing, the difference was obvious.
 
@@ -48,6 +54,11 @@ The trick is that golf swing clips are short. A two-second swing at 60 frames pe
 For most setups, the synchronized playback "just works" and the player never thinks about it.
 
 ## Quick stats overlay
+
+<figure>
+  <img src="/SwingNerds_Screenshot_ShotComparison_Desktop.png" alt="SwingNerds shot comparison view on desktop with shot data overlaid on each swing" />
+  <figcaption>Both swings, side by side, with the shot's numbers right next to each clip.</figcaption>
+</figure>
 
 When two clips are loaded, a small data panel shows the relevant shot numbers for each swing.
 

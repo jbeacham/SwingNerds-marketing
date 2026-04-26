@@ -5,7 +5,13 @@ date: 2026-03-24
 author: SwingNerds Team
 tags: [product, automatic recording]
 featured: true
+image: /Kayeton_120fps_2.jpg
 ---
+
+<figure>
+  <img src="/Kayeton_120fps_2.jpg" alt="USB swing camera mounted in a sim bay, ready to auto-record every swing" />
+  <figcaption>Mount the camera once. SwingNerds Vision detects every swing and saves the clip on its own.</figcaption>
+</figure>
 
 The first thing that surprises people about SwingNerds is that there is no record button. You walk up, you swing, the clip is saved. No mouse click, no countdown, no app to switch to between shots. The detection is automatic, and the goal is to make it disappear.
 

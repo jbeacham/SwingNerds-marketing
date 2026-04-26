@@ -5,7 +5,13 @@ date: 2026-04-07
 author: SwingNerds Team
 tags: [product, drawing]
 featured: false
+image: /SwingNerds_Screenshot_ShotComparison_Desktop.png
 ---
+
+<figure>
+  <video src="/drawing_comparison.mp4" autoplay muted loop playsinline controls></video>
+  <figcaption>Drawing reference lines on a swing to compare against another clip.</figcaption>
+</figure>
 
 A swing video is a sequence of frames. A swing video with a few lines drawn on it is a piece of analysis. The drawing tools in SwingNerds exist to bridge that gap, with the minimum amount of fuss.
 

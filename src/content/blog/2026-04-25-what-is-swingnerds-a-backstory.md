@@ -5,7 +5,13 @@ date: 2026-04-25
 author: SwingNerds Team
 tags: [story, product]
 featured: true
+image: /SwingNerds_Screenshot_ShotComparison_Desktop.png
 ---
+
+<figure>
+  <video src="/comparison_scrubbing_web.mp4" autoplay muted loop playsinline controls></video>
+  <figcaption>The feature that started everything: side-by-side swing comparison.</figcaption>
+</figure>
 
 This is a "what is SwingNerds" post, but it is mostly the story of how it ended up existing in the first place. The story is short. The product grew out of it.
 

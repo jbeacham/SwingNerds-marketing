@@ -5,7 +5,13 @@ date: 2026-04-26
 author: SwingNerds Team
 tags: [cameras, setup]
 featured: false
+image: /Kayeton_120fps_3.jpg
 ---
+
+<figure>
+  <img src="/Kayeton_120fps_3.jpg" alt="Dedicated USB golf swing camera, one of three options for filming your swing in a sim bay" />
+  <figcaption>A dedicated swing camera is one of three options. Phones and webcams are the other two.</figcaption>
+</figure>
 
 There are three ways most sim golfers end up filming their swings:
 

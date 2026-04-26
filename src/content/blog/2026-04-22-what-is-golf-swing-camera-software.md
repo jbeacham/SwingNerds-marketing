@@ -5,7 +5,13 @@ date: 2026-04-22
 author: SwingNerds Team
 tags: [product, cameras, basics]
 featured: true
+image: /SwingNerds_Screenshot_ShotComparison_Desktop.png
 ---
+
+<figure>
+  <video src="/comparison_scrubbing_web.mp4" autoplay muted loop playsinline controls></video>
+  <figcaption>Golf swing camera software in action: paired video and shot data, ready to compare side by side.</figcaption>
+</figure>
 
 Golf swing camera software is the layer of software that records, replays, stores, and reviews video of your golf swing. For sim setups, it sits between your camera and your launch monitor and turns "I just hit a ball" into "I have the swing video, the shot data, and a way to compare them later."
 

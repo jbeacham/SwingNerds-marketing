@@ -5,7 +5,13 @@ date: 2026-04-03
 author: SwingNerds Team
 tags: [product, sharing]
 featured: false
+image: /swingnerds_share_yourlogohere.jpg
 ---
+
+<figure>
+  <video src="/share_link_ios.mp4" autoplay muted loop playsinline controls></video>
+  <figcaption>Generating a shareable swing link with stats burned into the frame.</figcaption>
+</figure>
 
 Sometimes you just want to send someone a swing. A buddy who is going to roast you. A coach who is going to look at it later. A spouse who has been wondering what you do in there for two hours. The share feature in SwingNerds exists for that.
 
@@ -63,6 +69,11 @@ Pick three or four for clarity. More than five tends to clutter the frame.
 A swing share is public in the sense that anyone with the link can view it. It is not public in the sense of being indexed in search engines or showing up in any directory. The links are unguessable strings. If you give someone a link, they have it. If you do not, they do not.
 
 You can also delete a share at any time. The original swing in your account is untouched; just the public page goes away.
+
+<figure>
+  <img src="/swingnerds_share_yourlogohere.jpg" alt="Shared swing video with a facility or dealer logo overlaid alongside SwingNerds branding" />
+  <figcaption>White-label share preview: the customer's facility or dealer logo appears on every public swing share.</figcaption>
+</figure>
 
 ## What this looks like for facilities and dealers
 

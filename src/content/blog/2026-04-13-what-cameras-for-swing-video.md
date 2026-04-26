@@ -5,7 +5,13 @@ date: 2026-04-13
 author: SwingNerds Team
 tags: [cameras, setup]
 featured: true
+image: /Kayeton_120fps_2.jpg
 ---
+
+<figure>
+  <img src="/Kayeton_120fps_2.jpg" alt="A 120fps USB global-shutter swing camera, the kind used in most sim bay setups" />
+  <figcaption>The kind of camera most sim setups land on: a 120fps USB swing-cam with a global shutter, around $100.</figcaption>
+</figure>
 
 A swing camera does one thing: it captures the moment a club hits a ball, plus the seconds before and after, in enough detail that you can replay it and see what happened. Three specifications drive how well a camera does that job: frame rate, shutter speed, and field of view.
 

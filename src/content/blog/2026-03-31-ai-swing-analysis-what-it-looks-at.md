@@ -5,7 +5,13 @@ date: 2026-03-31
 author: SwingNerds Team
 tags: [product, ai analysis]
 featured: true
+image: /ai_analysis_pic.png
 ---
+
+<figure>
+  <img src="/ai_analysis_pic.png" alt="SwingNerds AI swing analysis output with overall score, strengths, areas to improve, and suggested drills" />
+  <figcaption>A typical AI swing analysis: overall score, strengths, areas to improve, and drills.</figcaption>
+</figure>
 
 There is a lot of AI in golf right now. Some of it is genuinely useful, some of it is marketing. This post describes what AI swing analysis actually does inside SwingNerds, what it sees, and what it produces, so you can decide for yourself whether it is useful for your practice.
 
