@@ -160,6 +160,164 @@ ${cats.other.length ? `\n## Blog: other\n${cats.other.map(link).join('\n')}\n` :
 `;
 }
 
+// HTML escape for attribute values. Belt-and-suspenders, since titles and
+// descriptions can contain quotes, ampersands, and other characters that
+// break HTML attributes.
+function escapeAttr(s) {
+  return String(s ?? '')
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+function buildHeadTags({ title, description, urlPath, image, type = 'website', jsonLd }) {
+  const url = `${SITE_URL}${urlPath}`;
+  const finalImage = image
+    ? (image.startsWith('http') ? image : `${SITE_URL}${image}`)
+    : `${SITE_URL}/swingnerds_logo_blueswing_allwhite.png`;
+  const jsonLdTag = jsonLd
+    ? `\n    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
+    : '';
+  return `
+    <title>${escapeAttr(title)}</title>
+    <meta name="description" content="${escapeAttr(description)}">
+    <link rel="canonical" href="${url}">
+    <meta property="og:type" content="${type}">
+    <meta property="og:site_name" content="SwingNerds">
+    <meta property="og:title" content="${escapeAttr(title)}">
+    <meta property="og:description" content="${escapeAttr(description)}">
+    <meta property="og:url" content="${url}">
+    <meta property="og:image" content="${escapeAttr(finalImage)}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${escapeAttr(title)}">
+    <meta name="twitter:description" content="${escapeAttr(description)}">
+    <meta name="twitter:image" content="${escapeAttr(finalImage)}">${jsonLdTag}
+  `;
+}
+
+// Inject the head tags into a Vite-built index.html. Removes the existing
+// <title> tag (Vite adds one) and inserts our tags right before </head>.
+function injectIntoTemplate(html, headTags) {
+  return html
+    .replace(/<title>[^<]*<\/title>\s*/i, '')
+    .replace(/<meta name="description" content="[^"]*">\s*/gi, '')
+    .replace('</head>', `${headTags}</head>`);
+}
+
+// Hardcoded metadata for the main marketing routes. Keep in sync with the
+// setMeta() calls in the corresponding Vue files. (Single source of truth
+// would be cleaner; this is pragmatic for now.)
+function getRouteMetadata(posts) {
+  const routes = [
+    {
+      urlPath: '/',
+      title: 'SwingNerds | Golf swing camera software for sim setups',
+      description:
+        'SwingNerds is golf swing camera software with automatic shot data capture for indoor golf simulators. Records every swing automatically using any USB camera, pairs each clip with your launch monitor data, and stores everything in the cloud.',
+      type: 'website',
+      jsonLd: {
+        '@context': 'https://schema.org',
+        '@graph': [
+          {
+            '@type': 'Organization',
+            '@id': `${SITE_URL}#organization`,
+            name: 'SwingNerds',
+            url: SITE_URL,
+            logo: `${SITE_URL}/swingnerds-logo-white.png`,
+          },
+          {
+            '@type': 'WebSite',
+            '@id': `${SITE_URL}#website`,
+            url: SITE_URL,
+            name: 'SwingNerds',
+            description: 'Golf swing camera software with automatic shot data capture for sim setups',
+            publisher: { '@id': `${SITE_URL}#organization` },
+          },
+          {
+            '@type': 'SoftwareApplication',
+            '@id': `${SITE_URL}#software`,
+            name: 'SwingNerds',
+            description:
+              'Golf swing camera software with automatic shot data capture for indoor golf simulators.',
+            applicationCategory: 'SportsApplication',
+            operatingSystem: 'Windows, iOS, Web',
+            offers: {
+              '@type': 'AggregateOffer',
+              lowPrice: '0',
+              highPrice: '19.99',
+              priceCurrency: 'USD',
+              offerCount: '4',
+            },
+          },
+        ],
+      },
+    },
+    {
+      urlPath: '/vision',
+      title: 'Golf swing camera software for sim setups | SwingNerds Vision',
+      description:
+        'Free Windows golf swing camera software. Records every swing in your sim bay automatically using any USB camera, pairs each clip with your launch monitor data, and uploads to the cloud for replay and side-by-side comparison.',
+      type: 'website',
+    },
+    {
+      urlPath: '/cameras',
+      title: 'Golf swing cameras: recommended USB swing cams for sim bays | SwingNerds',
+      description:
+        'A buying guide for golf swing cameras. USB swing cams from $30 to $130 that work with SwingNerds Vision. Frame rate, global shutter, color vs monochrome, and lighting tradeoffs explained.',
+      type: 'website',
+    },
+    {
+      urlPath: '/blog',
+      title: 'SwingNerds Blog: launch monitors, sim golf, and shot data',
+      description:
+        'Plain-English explainers on launch monitors, golf simulators, swing cameras, and shot data. Written by the SwingNerds team.',
+      type: 'website',
+    },
+  ];
+
+  for (const post of posts) {
+    routes.push({
+      urlPath: `/blog/${post.slug}`,
+      title: `${post.title} | SwingNerds`,
+      description: post.description,
+      image: post.image || '/SwingNerds_Screenshot_ShotComparison_Desktop.png',
+      type: 'article',
+    });
+  }
+
+  return routes;
+}
+
+function generateRoutePages(posts, outDir) {
+  const indexHtmlPath = path.join(outDir, 'index.html');
+  if (!fs.existsSync(indexHtmlPath)) {
+    console.warn('[aeo] dist/index.html not found, skipping route pages');
+    return;
+  }
+  const template = fs.readFileSync(indexHtmlPath, 'utf-8');
+  const routes = getRouteMetadata(posts);
+  let count = 0;
+
+  for (const route of routes) {
+    const headTags = buildHeadTags(route);
+    const html = injectIntoTemplate(template, headTags);
+
+    let outPath;
+    if (route.urlPath === '/') {
+      outPath = indexHtmlPath; // overwrite the home page in place
+    } else {
+      const routeDir = path.join(outDir, route.urlPath.replace(/^\//, ''));
+      fs.mkdirSync(routeDir, { recursive: true });
+      outPath = path.join(routeDir, 'index.html');
+    }
+    fs.writeFileSync(outPath, html);
+    count++;
+  }
+  console.log(`[aeo] wrote ${count} route HTML files with per-route OG tags`);
+}
+
 export function generateAeoFiles({ outDir = DIST_DIR } = {}) {
   if (!fs.existsSync(BLOG_DIR)) {
     console.warn('[aeo] blog dir not found, skipping');
@@ -172,6 +330,7 @@ export function generateAeoFiles({ outDir = DIST_DIR } = {}) {
   fs.writeFileSync(path.join(outDir, 'sitemap.xml'), buildSitemap(posts));
   fs.writeFileSync(path.join(outDir, 'llms.txt'), buildLlmsTxt(posts));
   console.log(`[aeo] wrote sitemap.xml and llms.txt with ${posts.length} blog posts`);
+  generateRoutePages(posts, outDir);
 }
 
 export default function vitePluginAeo() {
