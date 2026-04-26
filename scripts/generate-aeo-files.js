@@ -180,7 +180,7 @@ function buildHeadTags({ title, description, urlPath, image, type = 'website', j
   const url = `${SITE_URL}${urlPath}`;
   const finalImage = image
     ? (image.startsWith('http') ? image : `${SITE_URL}${image}`)
-    : `${SITE_URL}/swingnerds_logo_blueswing_allwhite.png`;
+    : `${SITE_URL}/og-card-default.png`;
   const jsonLdTag = jsonLd
     ? `\n    <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>`
     : '';
