@@ -14,6 +14,17 @@ const tabs = [
 const changelogs = {
   web: [
     {
+      version: 'April 2026',
+      date: '2026-04-26',
+      changes: [
+        'AI swing analysis now detects 8 named swing faults: early extension, casting, over-the-top, sliding, reverse pivot, chicken wing, swaying, and cupped lead wrist at the top. Each fault includes confidence, severity (minor / moderate / severe), and the frames where it appears.',
+        'AI swing analysis now reads your historical shot-data context (averages, dispersion, trends), so the analysis is tailored to your patterns rather than generic tour stats.',
+        'AI Analysis page history now shows both swing analyses and multi-shot analyses, with type badges and per-row metadata (club, score, fault count, fault names).',
+        'Shot Data table video column: replaced the camera emoji with compact DTL / FO / IMP chips so you can see at a glance which video angles each shot has attached.',
+        'Email update sent to all members about the AI upgrade. Monthly AI credits reset to 0 for everyone so you can try the new analysis without burning your existing quota.',
+      ],
+    },
+    {
       version: 'March 2026',
       date: '2026-03-25',
       changes: [

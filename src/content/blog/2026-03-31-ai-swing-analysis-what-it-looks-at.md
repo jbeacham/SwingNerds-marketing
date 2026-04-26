@@ -57,10 +57,28 @@ A typical analysis comes back as a structured response:
 - **Overall score**, with a color-coded rating from poor to excellent. This is the AI's read on how the swing looked, not a magic number.
 - **Strengths.** Two or three things the swing did well.
 - **Areas to improve.** Two or three things that could be tighter.
+- **Detected swing faults.** Any of 8 well-known faults the AI saw in the video, with confidence and severity (more on this in the next section).
 - **Drills.** Specific practice ideas tied to the issues identified.
 - **A follow-up chat.** A text box where you can ask the AI questions about your own swing. "What did you mean by sliding through impact?" "What is a good drill for tempo?" "Compare this to my last analysis."
 
 The follow-up chat is part of what makes it useful. The first response is one shot. The conversation that follows is where you can drill into specific things.
+
+## Detected swing faults
+
+Alongside the prose, the AI also returns a structured list of named swing faults if it sees any. The list is drawn from a fixed set of 8 well-known patterns, so the output is consistent across analyses and maps to a future library of pro reference clips:
+
+- **Early extension** (hips moving toward the ball during the downswing)
+- **Casting** (early release of the wrist hinge)
+- **Over the top** (club coming from outside-in path)
+- **Sliding** (lateral hip slide instead of rotation)
+- **Reverse pivot** (weight transfer in the wrong direction)
+- **Chicken wing** (lead arm bending sharply through impact)
+- **Swaying** (lateral movement away from target during backswing)
+- **Cupped lead wrist at the top** (wrist in extension at the top of the backswing)
+
+Each detected fault includes a confidence percentage, a severity label (minor, moderate, severe), and the specific frames where the fault is visible so you can scrub the video to the exact moment.
+
+The detection is deliberately conservative. If the AI is not confident, it leaves the fault out. An empty list is the correct answer for a clean swing, and the prompt explicitly tells the AI not to pad. Most swings have zero or one or two faults.
 
 ## What it does well
 

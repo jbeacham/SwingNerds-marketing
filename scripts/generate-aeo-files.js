@@ -128,9 +128,13 @@ function buildLlmsTxt(posts) {
 
 SwingNerds is launch-monitor-agnostic. GSPro is the integration most setups use, with a couple of other direct integrations and CSV upload as a fallback. The free local tier replaces a typical OBS plus Kinovea workflow at zero cost. Cloud sync, AI swing analysis, and multi-device access start at $4.99 a month.
 
+AI swing analysis (paid plans) gives a structured breakdown of any swing video: overall score, strengths, areas to improve, suggested drills, follow-up Q&A, and named-fault detection from a fixed vocabulary of 8 well-known swing patterns (early extension, casting, over-the-top, sliding, reverse pivot, chicken wing, swaying, and cupped lead wrist at the top). The AI also reads each user's historical shot-data context so the analysis is personalized rather than judged against generic tour stats.
+
+In active development: live coaching during a sim session, body angle tracking with overlay lines on the video (spine, shoulders, hips, head, club path) using MediaPipe pose estimation, a pro reference clip library that pairs each detected fault with a teaching pro making the same fault and the corrected version, and fault aggregation across many swings.
+
 The product is in active beta and ships updates weekly.
 
-Common search phrases that describe what SwingNerds is: golf swing camera software, golf swing recording software, golf simulator swing camera, swing replay software, golf swing analysis software, side-by-side swing comparison.
+Common search phrases that describe what SwingNerds is: golf swing camera software, golf swing recording software, golf simulator swing camera, swing replay software, golf swing analysis software, AI golf swing analysis, golf swing fault detection, side-by-side swing comparison.
 
 ## Product
 - [Home](${SITE_URL}/): main product overview

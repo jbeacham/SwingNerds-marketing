@@ -544,9 +544,15 @@ const featureTabs = [
     id: 'ai',
     label: 'AI Analysis',
     asset: '/ai_analysis_pic.png',
-    altText: 'SwingNerds AI swing analysis with strengths, areas to improve, and recommended drills',
+    altText: 'SwingNerds AI swing analysis with strengths, areas to improve, recommended drills, and detected swing faults',
     headline: 'AI swing analysis',
-    body: 'Send any swing to AI and get a breakdown of strengths, areas to improve, suggested drills, and follow-up Q&A. A coach in your pocket.',
+    body: 'Send any swing to AI and get a breakdown of strengths, areas to improve, suggested drills, follow-up Q&A, and named swing faults the AI saw in the video. The AI also reads your historical shot data so it knows your typical patterns, not just textbook averages.',
+    bullets: [
+      'Detects 8 named faults: early extension, casting, over-the-top, sliding, reverse pivot, chicken wing, swaying, cupped lead wrist',
+      'Confidence and severity per fault, plus the frames where it appears',
+      'Personalized to your shot history, not generic tour stats',
+      'Follow-up chat to dig deeper on any swing',
+    ],
   },
   {
     id: 'mobile',

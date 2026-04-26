@@ -103,7 +103,7 @@
                 <li> Upload clips to the cloud</li>
                 <li> Auto-pair videos to shot data</li>
                 <li> Side-by-side swing comparison</li>
-                <li> AI swing analysis</li>
+                <li> AI swing analysis with named-fault detection</li>
                 <li> Full analytics dashboard</li>
               </ul>
             </div>

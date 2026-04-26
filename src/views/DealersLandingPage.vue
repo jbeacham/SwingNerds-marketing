@@ -9,7 +9,7 @@
           Your brand on every install. Upload your logo and SwingNerds becomes a branded extension of your business. Your name on every swing video your customers share.
         </p>
         <p class="hero-description">
-          Buy Premium licenses in bulk for as little as $79.99 each (retails at $99.99/yr) and keep $10–$20 margin. Customers redeem a code at signup, no credit card needed, and get a full year of Premium. Works with GSPro, Uneekor, Rapsodo, and any USB camera.
+          Buy Premium licenses in bulk for as little as $79.99 each (retails at $99.99/yr) and keep $10 to $20 margin. Customers redeem a code at signup, no credit card needed, and get a full year of Premium. Works with GSPro, Uneekor, Rapsodo, and any USB camera.
         </p>
         <div class="hero-cta">
           <button @click="scrollToContact" class="cta-button primary large">Apply for Dealer Access</button>
@@ -99,13 +99,13 @@
 
         <div class="pricing-tiers-grid">
           <div class="pricing-tier-card">
-            <div class="tier-label">1–9 licenses</div>
+            <div class="tier-label">1 to 9 licenses</div>
             <div class="tier-discount">10% off</div>
             <div class="tier-price">$89.99 <span class="tier-price-unit">/ license</span></div>
             <div class="tier-note">Great for getting started</div>
           </div>
           <div class="pricing-tier-card featured">
-            <div class="tier-label">10–19 licenses</div>
+            <div class="tier-label">10 to 19 licenses</div>
             <div class="tier-discount">15% off</div>
             <div class="tier-price">$84.99 <span class="tier-price-unit">/ license</span></div>
             <div class="tier-note">Most popular</div>
@@ -118,15 +118,15 @@
           </div>
         </div>
 
-        <p class="margin-callout">Sell at retail and keep <strong>$10–$20 per license</strong>, or bundle into your sim install at any price you set.</p>
+        <p class="margin-callout">Sell at retail and keep <strong>$10 to $20 per license</strong>, or bundle into your sim install at any price you set.</p>
 
         <div class="pricing-details">
           <h3>What you get per license</h3>
           <ul class="pricing-features">
             <li><span class="check">&#10003;</span> <strong>12 months of SwingNerds Premium</strong> for one customer</li>
             <li><span class="check">&#10003;</span> Automatic swing video recording (Windows + iOS)</li>
-            <li><span class="check">&#10003;</span> AI Swing Analysis with follow-up questions</li>
-            <li><span class="check">&#10003;</span> Launch monitor integrations (GSPro, Uneekor, Rapsodo, Square Golf, CSV)</li>
+            <li><span class="check">&#10003;</span> AI Swing Analysis with named-fault detection and follow-up questions</li>
+            <li><span class="check">&#10003;</span> Launch monitor integrations: GSPro for most setups, with a couple of other direct integrations and CSV upload as a fallback</li>
             <li><span class="check">&#10003;</span> Side-by-side swing comparison, synced frame-by-frame</li>
             <li><span class="check">&#10003;</span> Full stats, consistency charts, and dispersion analysis</li>
             <li><span class="check">&#10003;</span> No credit card required for your customer to redeem</li>
@@ -135,7 +135,7 @@
 
         <div class="pricing-cta">
           <button @click="scrollToContact" class="cta-button primary large">Apply to Become a Dealer</button>
-          <p class="pricing-note">Dealer accounts are onboarded by our team — typically same-day. Tell us a little about your business and we'll get you set up with codes and your dashboard.</p>
+          <p class="pricing-note">Dealer accounts are onboarded by our team: typically same-day. Tell us a little about your business and we'll get you set up with codes and your dashboard.</p>
         </div>
       </section>
 
@@ -339,7 +339,7 @@ async function submitContact() {
   flex-wrap: wrap;
 }
 
-/* Hero proof — white-label share image + caption. Sized small so it reads
+/* Hero proof: white-label share image + caption. Sized small so it reads
    as a supporting visual, not a full hero image. Will be replaced by a
    Windows-app login-screen screenshot showing dealer branding (see
    docs/marketing-update-2026-04-25.md). */

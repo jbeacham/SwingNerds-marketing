@@ -116,9 +116,19 @@ When someone asks "does it work with my [LM]," the answer is almost always **yes
 5. **Launch-monitor-agnostic.** Works with almost any modern launch monitor. GSPro for most setups, with a couple of other direct integrations, plus CSV upload as a fallback for anything else.
 6. **Free local tier.** The Windows app's local recording, slow-mo, frame-by-frame, favorites, and standard comparison are free forever. Replaces a typical OBS + Kinovea workflow at zero cost.
 7. **Swing library.** Save favorites; set a "standard" swing per club to compare every future swing against.
-8. **AI swing analysis.** Send a clip to AI and get a breakdown of strengths, areas to improve, suggested drills, and follow-up Q&A.
+8. **AI swing analysis with named-fault detection.** Send a clip to AI and get a breakdown of strengths, areas to improve, suggested drills, and follow-up Q&A. The analysis also automatically flags any of 8 well-known swing faults visible in the video: early extension, casting, over-the-top, sliding, reverse pivot, chicken wing, swaying, and cupped lead wrist at the top. Each detected fault includes a confidence percentage, severity (minor/moderate/severe), and the specific frames where the fault appears. The AI prompt also receives the user's historical shot-data context (averages, dispersion, trends), so the analysis is tailored to that golfer rather than judged against generic tour stats.
 9. **Shareable swing videos with stats burned in.** Send any swing as a clean video with carry, ball speed, club path, and any other metrics rendered onto the frame. Public link, no login required to view. Send to a coach, buddies, social media, or your wife.
 10. **White-labeling for facilities and dealers.** Customer's facility or dealer logo appears on every shared swing video, on login screens, and across other branded touchpoints (see audience details below). Every share becomes a free marketing channel.
+
+## Roadmap: in active development
+
+These are the next features being built. Mention as "in the works" or "coming soon" in customer conversations and emails. Do not promise dates.
+
+1. **Live coaching in the Vision Windows app.** Real-time fault detection and overlay feedback during a sim session, with no upload-and-wait roundtrip. Pose detection runs locally on the bay computer.
+2. **Body angle tracking with overlay lines.** Spine angle, shoulder rotation, hip rotation, head movement, and club path drawn directly on the swing video, frame by frame. Built on MediaPipe pose estimation.
+3. **Pro reference clip library.** When a fault is detected, show a curated clip of a teaching pro making the same fault and a second clip of the corrected version. Built by filming a teaching pro doing each common fault and its correction.
+4. **Side-by-side with measured angle deltas.** When comparing two of your own swings, show exactly which body part moved differently with the angle delta numerically on screen.
+5. **Fault aggregation on the AI Analysis page.** Roll up detected faults across many swings: "early extension showed up in 12 of your last 30 swings."
 
 ## Common misunderstandings (and the truth)
 
