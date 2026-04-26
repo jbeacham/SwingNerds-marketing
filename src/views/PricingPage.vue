@@ -32,14 +32,14 @@
             </div>
           </div>
           <div class="trial-badge">7 Days Free</div>
-          <div class="video-limit-badge">500 shots with video</div>
+          <div class="video-limit-badge">Unlimited shots · 500 with video*</div>
           <ul class="features-list">
             <li><span class="check">&#10003;</span> Unlimited shot tracking</li>
             <li><span class="check">&#10003;</span> Advanced analytics &amp; charts</li>
             <li><span class="check">&#10003;</span> Cloud sync across devices</li>
             <li><span class="check">&#10003;</span> SwingNerds Vision recording</li>
             <li><span class="check">&#10003;</span> Side-by-side swing comparison</li>
-            <li><span class="check">&#10003;</span> AI Swing Analysis</li>
+            <li><span class="check">&#10003;</span> <strong>10 AI analysis credits / month</strong></li>
             <li><span class="check">&#10003;</span> Priority support</li>
             <li><span class="check">&#10003;</span> Cancel anytime</li>
           </ul>
@@ -61,10 +61,11 @@
               <template v-else>or $9.99/month</template>
             </div>
           </div>
-          <div class="video-limit-badge highlight">2,000 shots with video</div>
+          <div class="video-limit-badge highlight">Unlimited shots · 2,000 with video*</div>
           <ul class="features-list">
             <li><span class="check">&#10003;</span> Everything in Pro</li>
             <li><span class="check">&#10003;</span> 4x more video storage</li>
+            <li><span class="check">&#10003;</span> <strong>40 AI analysis credits / month</strong></li>
           </ul>
           <button @click="startTrial" class="cta-button featured-cta">
             Start Free Trial
@@ -83,26 +84,15 @@
               <template v-else>or $19.99/month</template>
             </div>
           </div>
-          <div class="video-limit-badge highlight">5,000 shots with video</div>
+          <div class="video-limit-badge highlight">Unlimited shots · 5,000 with video*</div>
           <ul class="features-list">
             <li><span class="check">&#10003;</span> Everything in Premium</li>
             <li><span class="check">&#10003;</span> 10x more video storage</li>
+            <li><span class="check">&#10003;</span> <strong>150 AI analysis credits / month</strong></li>
           </ul>
           <button @click="startTrial" class="cta-button">
             Start Free Trial
           </button>
-        </div>
-      </section>
-
-      <!-- Integrations Section -->
-      <section class="integrations-section">
-        <h2>Works With Your Equipment</h2>
-        <p class="integrations-subtitle">Import data from the launch monitors and simulators you already use</p>
-        <div class="integrations-logos">
-          <img src="../assets/rapsodo-logo.png" alt="Rapsodo" class="integration-logo" title="Rapsodo" />
-          <img src="../assets/uneekor_logo.png" alt="Uneekor" class="integration-logo" title="Uneekor" />
-          <img src="../assets/gspro_logo.png" alt="GSPro" class="integration-logo" title="GSPro" />
-          <img src="../assets/squaregolf_logo.png" alt="Square Golf" class="integration-logo" title="Square Golf" />
         </div>
       </section>
 
@@ -120,7 +110,7 @@
           </div>
           <div class="faq-item">
             <h4>What launch monitors are supported?</h4>
-            <p>GSPro (with real-time automatic sync via our Windows app), Rapsodo MLM2Pro, Uneekor QED and EYE XO, and Square Golf. More integrations are being added regularly.</p>
+            <p>If you use GSPro for sim play, SwingNerds works — your launch monitor brand is irrelevant. Plus direct integrations with Uneekor, Rapsodo, and Square Golf, and CSV upload for anything else.</p>
           </div>
           <div class="faq-item">
             <h4>Is my data secure?</h4>

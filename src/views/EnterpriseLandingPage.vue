@@ -4,12 +4,24 @@
       <!-- Hero Section -->
       <section class="hero-section">
         <div class="hero-badge">For Commercial Facilities</div>
-        <h1>SwingNerds<br>for Your Sim Bays</h1>
+        <h1>Auto-Recorded Swing Video<br>in Every Bay, Branded as You</h1>
         <p class="hero-subtitle">
-          Give every member automatic swing video with zero staff required. Members log in at the bay, swings record themselves, and videos sync to their account. Runs on any USB camera (~$130 each). Software from $5/mo per active member.
+          Give every member automatic swing video with your facility's logo on every screen and every share they post. Zero staff required, runs unattended on any USB camera (~$130 each). Software from $5/mo per active member.
         </p>
         <div class="hero-cta">
-          <button @click="scrollToContact" class="cta-button primary large">Contact Sales</button>
+          <button @click="scrollToContact" class="cta-button primary large">Book a 15-Min Demo</button>
+          <button @click="scrollToTrialSection" class="cta-button outline large">See Pricing</button>
+        </div>
+        <div class="hero-proof">
+          <img
+            src="/swingnerds_share_yourlogohere.jpg"
+            alt="Example swing share with the facility's logo branded onto the video and stats burned in"
+            class="hero-proof-img"
+            loading="lazy"
+          />
+          <p class="hero-proof-caption">
+            Every swing your members share publicly carries your facility's brand. Free marketing on every clip your customers post.
+          </p>
         </div>
       </section>
 
@@ -61,8 +73,8 @@
           </div>
           <div class="feature-card">
             <div class="feature-icon">&#9632;</div>
-            <h3>White-Label Vision</h3>
-            <p>Your logo, your colors on the Vision login screen. Customers see your brand when they sit down at a bay.</p>
+            <h3>White-Label, Everywhere</h3>
+            <p>Your logo and colors on the Vision login screen at every bay, on every swing video your members share publicly, and across customer-facing surfaces. Every share customers post becomes organic marketing for your facility.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon">&#9632;</div>
@@ -405,6 +417,30 @@ async function submitContact() {
   justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
+}
+
+/* Hero proof — white-label share image + caption. Sized small so it reads
+   as a supporting visual, not a full hero image. Will be replaced by a
+   Windows-app login-screen screenshot showing facility branding (see
+   docs/marketing-update-2026-04-25.md). */
+.hero-proof {
+  margin: 40px auto 0;
+  max-width: 360px;
+}
+.hero-proof-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.hero-proof-caption {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* CTA Buttons */

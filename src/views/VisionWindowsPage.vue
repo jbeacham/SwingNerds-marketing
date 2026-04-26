@@ -38,6 +38,18 @@
         </div>
       </section>
 
+      <!-- Hardware visual: shows the kind of USB swing-cam Vision works with.
+           Anchors the "any USB camera, ~$100 on Amazon" framing in something
+           tangible so visitors see the hardware bar is low. -->
+      <section class="hero-camera-strip">
+        <img src="/Kayeton_120fps_1.jpg" alt="Kayeton 120fps USB swing camera" class="camera-strip-img" />
+        <div class="camera-strip-copy">
+          <h3>This is the camera.</h3>
+          <p>120fps USB swing-cams like this one run about $100 each on Amazon from third-party sellers. Most setups use 1–2. Mount once, runs every session.</p>
+          <a href="#" class="camera-link" @click.prevent="showCameraModal = true">See camera recommendations →</a>
+        </div>
+      </section>
+
       <!-- Core value prop -->
       <section class="value-prop">
         <div class="value-grid">
@@ -713,6 +725,54 @@ h2 {
 .hero {
   text-align: center;
   padding: 80px 0 64px;
+}
+
+/* Hero camera strip — small visual + caption right below the hero so
+   visitors immediately see what the hardware looks like and understand
+   the price bar. */
+.hero-camera-strip {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  max-width: 720px;
+  margin: 0 auto 48px;
+  padding: 24px 28px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+}
+.camera-strip-img {
+  flex: 0 0 auto;
+  width: 160px;
+  height: auto;
+  border-radius: 10px;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+}
+.camera-strip-copy {
+  flex: 1 1 auto;
+  text-align: left;
+}
+.camera-strip-copy h3 {
+  margin: 0 0 8px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary, #0f172a);
+}
+.camera-strip-copy p {
+  margin: 0 0 8px;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: var(--text-secondary, #475569);
+}
+@media (max-width: 640px) {
+  .hero-camera-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .camera-strip-copy { text-align: center; }
+  .camera-strip-img { width: 140px; }
 }
 
 .hero-badge {

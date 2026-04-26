@@ -3,14 +3,28 @@
     <div class="dealers-container">
       <!-- Hero Section -->
       <section class="hero-section">
-        <div class="hero-badge">For Partners &amp; Resellers</div>
-        <h1>SwingNerds<br>for Dealers</h1>
+        <div class="hero-badge">For Sim Installers &amp; Dealers</div>
+        <h1>Bundle SwingNerds<br>With Every Sim You Install</h1>
         <p class="hero-subtitle">
-          Offer SwingNerds with your sim installs, bundle it in your packages, or sell it at your own price. Premium retails at $99.99/yr — you buy in bulk for as little as $79.99/license and keep the margin. Customers activate with a code, no credit card required, and get a full year of Premium.
+          Your brand on every install. Upload your logo and SwingNerds becomes a branded extension of your business. Your name on every swing video your customers share.
+        </p>
+        <p class="hero-description">
+          Buy Premium licenses in bulk for as little as $79.99 each (retails at $99.99/yr) and keep $10–$20 margin. Customers redeem a code at signup, no credit card needed, and get a full year of Premium. Works with GSPro, Uneekor, Rapsodo, and any USB camera.
         </p>
         <div class="hero-cta">
-          <button @click="scrollToContact" class="cta-button primary large">Become a Dealer</button>
-          <button @click="scrollToPricing" class="cta-button outline large">See Pricing</button>
+          <button @click="scrollToContact" class="cta-button primary large">Apply for Dealer Access</button>
+          <button @click="scrollToPricing" class="cta-button outline large">See Volume Pricing</button>
+        </div>
+        <div class="hero-proof">
+          <img
+            src="/swingnerds_share_yourlogohere.jpg"
+            alt="Example swing share with the dealer's logo branded onto the video and stats burned in"
+            class="hero-proof-img"
+            loading="lazy"
+          />
+          <p class="hero-proof-caption">
+            Every swing your customers share publicly carries your brand. Free organic reach on every clip your install touches.
+          </p>
         </div>
       </section>
 
@@ -67,8 +81,8 @@
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
-            <h3>Premium Product</h3>
-            <p>Customers get the full SwingNerds Premium suite - video recording, AI analysis, side-by-side comparison, dispersion, the works.</p>
+            <h3>White-Labeled for Your Brand</h3>
+            <p>Upload your logo once. While your customer is on a license you provided, your brand appears on every swing video they share publicly. Every share is free organic reach for your business.</p>
           </div>
           <div class="feature-card">
             <div class="feature-icon"></div>
@@ -323,6 +337,30 @@ async function submitContact() {
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Hero proof — white-label share image + caption. Sized small so it reads
+   as a supporting visual, not a full hero image. Will be replaced by a
+   Windows-app login-screen screenshot showing dealer branding (see
+   docs/marketing-update-2026-04-25.md). */
+.hero-proof {
+  margin: 40px auto 0;
+  max-width: 360px;
+}
+.hero-proof-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.hero-proof-caption {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
 }
 
 /* Section shared */

@@ -9,7 +9,7 @@
             All your shot data. All your swing videos. Automatically in one place.
           </h1>
           <p class="hero-sub">
-            Every shot you've ever hit - stored, analyzed, and paired with video from <router-link to="/cameras" class="camera-link">any USB camera</router-link> starting at $30. One place for all your launch monitor data, whether you're using GSPro, Uneekor, Rapsodo, Square, or anything else.
+            Every swing recorded automatically and paired with your shot data. Stored, analyzed, and accessible from any device. <strong>Automatically works with GSPro</strong> and any launch monitor that connects to it. <router-link to="/cameras" class="camera-link">Any USB camera</router-link> starting at $30.
           </p>
           <div class="hero-actions">
             <button @click="startFreeTrial" class="btn-primary lg">
@@ -27,198 +27,185 @@
               </a>
             </div>
             <span class="hero-note">7-day free trial &middot; No credit card &middot; Any launch monitor</span>
+            <p class="hero-business-link">
+              Running a sim facility or installing sims? See
+              <router-link to="/commercial">facility</router-link>
+              or
+              <router-link to="/dealers">dealer pricing</router-link>.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Hero Screenshot -->
-    <section class="hero-shot-section">
-      <div class="section-inner hero-shot-inner">
-        <p class="hero-shot-label">Compare two swings with their data side by side - without expensive cameras or software. Works with <router-link to="/cameras" class="camera-link">any USB camera</router-link></p>
-        <div class="lp-phone-mockup hero-phone">
-          <img :src="'/SwingNerds_screenshot_shotcomparison.PNG'" alt="SwingNerds swing comparison" class="lp-phone-screen" />
-        </div>
-        <p class="hero-shot-footnote">Compatible <router-link to="/cameras" class="camera-link">USB cameras</router-link> starting at $30 on Amazon - or even use your laptop's built-in webcam to get started</p>
-      </div>
-    </section>
-
-    <!-- Screenshots Showcase -->
-    <section class="screenshots-showcase">
+    <!-- Tabbed feature showcase. Defaults to "Compare". Replaces what used to
+         be 6 separate scroll-eating sections (hero screenshot, screenshots
+         showcase, comparison, drawing, share, mobile, analytics features)
+         with a single section so pricing is reachable in 2-3 scrolls. Tabs
+         scroll horizontally on mobile. Each tab swaps the visual + caption
+         without leaving the page. -->
+    <section class="features-tabbed">
       <div class="section-inner">
-
-        <!-- Desktop: All-Time Performance -->
-        <div class="showcase-row showcase-desktop">
-          <p class="showcase-caption">Track your progress across every club, every session</p>
-          <div class="lp-browser-mockup">
-            <div class="lp-browser-titlebar">
-              <span class="lp-browser-dot red"></span>
-              <span class="lp-browser-dot yellow"></span>
-              <span class="lp-browser-dot green"></span>
+        <h2 class="features-tabbed-title">See it in action</h2>
+        <p class="features-tabbed-sub">Pick a feature to see what it actually looks like.</p>
+        <div class="features-tabs" role="tablist">
+          <button
+            v-for="tab in featureTabs"
+            :key="tab.id"
+            :class="['features-tab', { active: activeFeatureTab === tab.id }]"
+            :aria-selected="activeFeatureTab === tab.id"
+            role="tab"
+            type="button"
+            @click="selectFeatureTab(tab.id)"
+          >
+            {{ tab.label }}
+          </button>
+        </div>
+        <div class="features-panel">
+          <div class="features-panel-content" role="tabpanel" :key="activeTab.id">
+            <div class="features-visual" :class="{ 'features-visual-portrait': activeTab.portrait }">
+              <video
+                v-if="activeTab.asset && isVideoAsset(activeTab.asset)"
+                :key="'v-' + activeTab.id"
+                :src="activeTab.asset"
+                class="features-visual-primary"
+                autoplay
+                muted
+                loop
+                playsinline
+              ></video>
+              <img
+                v-else-if="activeTab.asset"
+                :src="activeTab.asset"
+                :alt="activeTab.altText"
+                class="features-visual-primary"
+                loading="lazy"
+              />
+              <div v-else class="features-visual-placeholder">
+                <span>{{ activeTab.placeholder || 'Coming soon' }}</span>
+              </div>
+              <div v-if="activeTab.secondaryAsset" class="features-visual-secondary-wrap">
+                <img
+                  :src="activeTab.secondaryAsset"
+                  :alt="activeTab.secondaryAltText"
+                  class="features-visual-secondary"
+                  loading="lazy"
+                />
+              </div>
             </div>
-            <img :src="'/SwingNerds_Screenshot_AllTimePerformance_Desktop.png'" alt="All-time performance analysis" class="lp-browser-screen" />
-          </div>
-        </div>
-
-        <!-- Phone: Shot Dispersion -->
-        <div class="showcase-row showcase-phone">
-          <p class="showcase-caption">See where your shots land and click to view the video for that shot</p>
-          <div class="lp-phone-mockup showcase-phone-mockup">
-            <img :src="'/SwingNerds_Screenshot_ShotDispersion_Mobile.PNG'" alt="Shot dispersion chart" class="lp-phone-screen" />
-          </div>
-        </div>
-
-        <!-- Desktop: Shot Comparison -->
-        <div class="showcase-row showcase-desktop">
-          <p class="showcase-caption">In-depth shot analysis from every angle - right in your browser</p>
-          <div class="lp-browser-mockup">
-            <div class="lp-browser-titlebar">
-              <span class="lp-browser-dot red"></span>
-              <span class="lp-browser-dot yellow"></span>
-              <span class="lp-browser-dot green"></span>
+            <div class="features-text">
+              <h3>{{ activeTab.headline }}</h3>
+              <p>{{ activeTab.body }}</p>
+              <ul v-if="activeTab.bullets" class="features-bullets">
+                <li v-for="b in activeTab.bullets" :key="b">{{ b }}</li>
+              </ul>
+              <p v-if="activeTab.liveLink" class="features-live-link">
+                {{ activeTab.liveLinkPrefix || 'Learn more:' }}
+                <a
+                  :href="activeTab.liveLink"
+                  :target="isExternalLink(activeTab.liveLink) ? '_blank' : null"
+                  :rel="isExternalLink(activeTab.liveLink) ? 'noopener' : null"
+                >{{ activeTab.liveLinkLabel }}</a>
+              </p>
             </div>
-            <img :src="'/SwingNerds_Screenshot_ShotComparison_Desktop.png'" alt="Shot comparison analysis" class="lp-browser-screen" />
           </div>
         </div>
-
-        <!-- Phone: Charts -->
-        <div class="showcase-row showcase-phone">
-          <p class="showcase-caption">Dig into trends across every club and every session</p>
-          <div class="lp-phone-mockup showcase-phone-mockup">
-            <img :src="'/SwingNerds_Screenshot_Charts_Mobile.PNG'" alt="Charts and analytics" class="lp-phone-screen" />
-          </div>
-        </div>
-
       </div>
     </section>
 
-    <!-- Emotional hook -->
-    <section class="hook-section">
-      <div class="section-inner hook-inner">
-        <blockquote class="hook-quote">
-          &ldquo;You hit a perfect 7&#8209;iron and have no idea what you did differently.&rdquo;
-        </blockquote>
-        <p class="hook-answer">
-          Now you can go back and look. Your swing video is sitting right next to your shot data - carry, ball speed, launch, spin - for every single shot. Compare your best to your worst and actually see the difference.
-        </p>
-      </div>
-    </section>
-
-    <!-- Side-by-Side Comparison -->
-    <section class="comparison-section">
-      <div class="section-inner comparison-text-only">
-        <h2>Compare any two swings, side&nbsp;by&nbsp;side</h2>
-        <p>
-          This is what first hooked people. Pick any two shots, see the videos synced in slow motion with full shot data overlaid. Finally understand what changed between your best swing and your worst.
-        </p>
-        <ul class="comparison-list">
-          <li>Synced slow-motion playback</li>
-          <li>Frame-by-frame scrubbing</li>
-          <li>Full shot metrics overlaid</li>
-          <li>Save your best as a reference swing</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Your Data, Forever -->
-    <section class="data-forever">
-      <div class="section-inner data-forever-inner">
-        <div class="data-forever-icon">
-          <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M12 2v4m0 12v4M4.93 4.93l2.83 2.83m8.48 8.48l2.83 2.83M2 12h4m12 0h4M4.93 19.07l2.83-2.83m8.48-8.48l2.83-2.83"/>
-          </svg>
-        </div>
-        <h2>Your data lives in one place, forever</h2>
-        <p>
-          Switch launch monitors. Change sim software. It doesn't matter. SwingNerds is cloud storage and analytics for your <em>lifetime</em> of golf data - every shot, every session, every video, regardless of what hardware you're on today.
-        </p>
-      </div>
-    </section>
-
-    <!-- Data Sources -->
+    <!-- Data Sources. GSPro is the bridge for almost every modern launch
+         monitor, so we lead with a hero card for it, then show the grid of
+         all the LMs that work. The 3 with their own native API integrations
+         (Rapsodo, Uneekor, Square Golf) get an "Auto Sync" badge plus an "or
+         via GSPro" subtitle since they also work that way. The rest are
+         text-only "via GSPro" cards (logos can be added later, see
+         docs/marketing-update-2026-04-25.md). -->
     <section class="datasources-section">
       <div class="section-inner">
-        <h2 class="datasources-title">Works with your launch monitor</h2>
-        <p class="datasources-sub">Connect your existing gear - no extra hardware needed.</p>
+        <h2 class="datasources-title">Works with GSPro automatically</h2>
+        <p class="datasources-sub">SwingNerds reads from GSPro and pairs every shot with your swing video. If you use GSPro for sim play, you're set. Plus direct integrations with Uneekor, Rapsodo, and Square Golf, plus CSV upload for anything else.</p>
+
+        <!-- GSPro hero -->
+        <router-link to="/vision" class="ds-hero">
+          <span class="ds-top-pick">Top pick</span>
+          <img src="../assets/gspro_logo.png" alt="GSPro" class="ds-hero-logo" />
+          <div class="ds-hero-name">GSPro</div>
+          <p class="ds-hero-desc">Auto-sync via the SwingNerds Vision Windows app. Every shot paired with its swing video automatically.</p>
+          <span class="ds-hero-cta">Set up Vision &rarr;</span>
+        </router-link>
+
+        <!-- All brands. "via GSPro" green badge is the consistent headline
+             across every card. The 3 with their own native API integrations
+             (Rapsodo, Uneekor, Square Golf) get a small "or auto sync" /
+             "or CSV" gray subtitle as a secondary note. -->
         <div class="datasources-grid">
-          <router-link to="/vision" class="ds-card ds-card-link ds-card-featured">
-            <span class="ds-top-pick">Top pick</span>
-            <img src="../assets/gspro_logo.png" alt="GSPro" class="ds-logo" />
-            <div class="ds-name">GSPro</div>
-            <span class="ds-badge ds-auto-sync">&#10003; Auto Sync</span>
-            <span class="ds-csv-note">via Windows App &rarr;</span>
-          </router-link>
           <div class="ds-card">
             <img src="../assets/rapsodo-logo.png" alt="Rapsodo" class="ds-logo" />
             <div class="ds-name">Rapsodo</div>
-            <span class="ds-badge ds-auto-sync">&#10003; Auto Sync</span>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+            <span class="ds-sub">or auto sync</span>
           </div>
           <div class="ds-card">
             <img src="../assets/uneekor_logo.png" alt="Uneekor" class="ds-logo" />
             <div class="ds-name">Uneekor</div>
-            <span class="ds-badge ds-auto-sync">&#10003; Auto Sync</span>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+            <span class="ds-sub">or auto sync</span>
           </div>
           <div class="ds-card">
             <img src="../assets/squaregolf_logo.png" alt="Square Golf" class="ds-logo" />
             <div class="ds-name">Square Golf</div>
-            <span class="ds-badge ds-auto-sync">&#10003; CSV</span>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+            <span class="ds-sub">or CSV</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/foresight.png" alt="Foresight Sports" class="ds-logo" />
+            <div class="ds-name">Foresight</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/bushnell.png" alt="Bushnell Launch Pro" class="ds-logo" />
+            <div class="ds-name">Bushnell</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/skytrak.png" alt="SkyTrak" class="ds-logo" />
+            <div class="ds-name">SkyTrak</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/flightscope.png" alt="FlightScope" class="ds-logo" />
+            <div class="ds-name">FlightScope</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/garmin.png" alt="Garmin" class="ds-logo" />
+            <div class="ds-name">Garmin R10</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/protee.png" alt="ProTee" class="ds-logo" />
+            <div class="ds-name">ProTee VX</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/fullswing.jpeg" alt="Full Swing Golf" class="ds-logo" />
+            <div class="ds-name">Full Swing</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/prgr.jpg" alt="PRGR" class="ds-logo" />
+            <div class="ds-name">PRGR Black</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
+          </div>
+          <div class="ds-card">
+            <img src="/integration_logos/spectrum.jpg" alt="Spectrum Golf Technologies" class="ds-logo" />
+            <div class="ds-name">Spectrum</div>
+            <span class="ds-badge ds-auto-sync">&#10003; via GSPro</span>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- Analytics Features -->
-    <section class="features">
-      <div class="section-inner">
-        <h2 class="features-title">Everything you need to improve</h2>
-        <div class="features-grid">
-          <div class="feat">
-            <div class="feat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M7 12h10M7 8h10M7 16h10"/></svg>
-            </div>
-            <h3>Shot-by-Shot Data</h3>
-            <p>Carry, ball speed, club speed, launch, spin, smash factor - every metric, every shot.</p>
-          </div>
-          <div class="feat">
-            <div class="feat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-            </div>
-            <h3>Progress Over Time</h3>
-            <p>Track consistency, compare sessions, and see real trends in your game.</p>
-          </div>
-          <div class="feat">
-            <div class="feat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/><circle cx="8" cy="9" r="1.5"/><circle cx="16" cy="14" r="1.5"/></svg>
-            </div>
-            <h3>Dispersion &amp; Gapping</h3>
-            <p>See where your shots actually land. Compare clubs and find your real distances.</p>
-          </div>
-          <div class="feat">
-            <div class="feat-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a2 2 0 0 1 2 2c0 .74-.4 1.39-1 1.73V7h1a7 7 0 0 1 7 7h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-1v1a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-1H2a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1h1a7 7 0 0 1 7-7h1V5.73c-.6-.34-1-.99-1-1.73a2 2 0 0 1 2-2z"/><circle cx="8" cy="14" r="1"/><circle cx="16" cy="14" r="1"/></svg>
-            </div>
-            <h3>AI Swing Analysis</h3>
-            <p>Get AI-powered insights on your swing with personalized recommendations.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Mobile App -->
-    <section class="mobile-section">
-      <div class="section-inner">
-        <div class="mobile-card">
-          <div class="mobile-badge">iOS App</div>
-          <h3>Full dashboard on your phone</h3>
-          <p>
-            Browse your data, watch swing videos, and compare shots from anywhere.
-            Plus automatic swing video recording - prop up your iPhone, hit balls, and every clip syncs to the matching shot.
-          </p>
-          <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="mobile-link">
-            Join the TestFlight Beta
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-        </div>
+        <p class="datasources-fineprint">
+          Plus any launch monitor that exports CSV. Don't see your LM? If it connects to GSPro, SwingNerds works.
+        </p>
       </div>
     </section>
 
@@ -250,7 +237,7 @@
           <div class="pricing-card">
             <div class="pricing-tier-name">Pro</div>
             <div class="pricing-price">$4.99 <span class="pricing-period">/ month</span></div>
-            <p class="pricing-desc">500 shots with video</p>
+            <p class="pricing-desc">Unlimited shots · 500 with video*</p>
             <button @click="startFreeTrial" class="btn-pricing-outline">
               Start 7-Day Free Trial
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -261,7 +248,7 @@
               <li><span class="pf-check">&#10003;</span> Cloud sync across devices</li>
               <li><span class="pf-check">&#10003;</span> SwingNerds Vision recording</li>
               <li><span class="pf-check">&#10003;</span> Side-by-side swing comparison</li>
-              <li><span class="pf-check">&#10003;</span> AI swing analysis</li>
+              <li><span class="pf-check">&#10003;</span> <strong>10 AI analysis credits / month</strong></li>
               <li><span class="pf-check">&#10003;</span> Data import from GSPro, Rapsodo, Uneekor, Square</li>
             </ul>
           </div>
@@ -271,7 +258,7 @@
             <div class="pricing-popular-badge">Most Popular</div>
             <div class="pricing-tier-name">Premium</div>
             <div class="pricing-price">$9.99 <span class="pricing-period">/ month</span></div>
-            <p class="pricing-desc">2,000 shots with video</p>
+            <p class="pricing-desc">Unlimited shots · 2,000 with video*</p>
             <button @click="startFreeTrial" class="btn-pricing-primary">
               Start 7-Day Free Trial
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -279,6 +266,7 @@
             <ul class="pricing-features-list">
               <li><span class="pf-check">&#10003;</span> Everything in Pro</li>
               <li><span class="pf-check">&#10003;</span> 4x more video storage</li>
+              <li><span class="pf-check">&#10003;</span> <strong>40 AI analysis credits / month</strong></li>
             </ul>
           </div>
 
@@ -286,7 +274,7 @@
           <div class="pricing-card">
             <div class="pricing-tier-name">Ultimate</div>
             <div class="pricing-price">$19.99 <span class="pricing-period">/ month</span></div>
-            <p class="pricing-desc">5,000 shots with video</p>
+            <p class="pricing-desc">Unlimited shots · 5,000 with video*</p>
             <button @click="startFreeTrial" class="btn-pricing-outline">
               Start 7-Day Free Trial
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -294,9 +282,32 @@
             <ul class="pricing-features-list">
               <li><span class="pf-check">&#10003;</span> Everything in Premium</li>
               <li><span class="pf-check">&#10003;</span> 10x more video storage</li>
+              <li><span class="pf-check">&#10003;</span> <strong>150 AI analysis credits / month</strong></li>
             </ul>
           </div>
 
+        </div>
+        <p class="pricing-asterisk">
+          *Every plan tracks unlimited shots. Video storage holds your latest swings plus everything you've favorited or saved as a "standard" — older non-favorited videos roll off as new ones come in.
+        </p>
+      </div>
+    </section>
+
+    <!-- Audience cross-sell — facility operators and dealers/installers landing on the consumer page should still find their pricing. -->
+    <section class="audience-cross-section">
+      <div class="section-inner">
+        <h2 class="audience-title">Other ways to use SwingNerds</h2>
+        <div class="audience-grid">
+          <router-link to="/commercial" class="audience-card">
+            <h3>Running a sim facility?</h3>
+            <p>White-label SwingNerds across your bays. Branded logins, branded shares, recurring revenue per active member, runs unattended.</p>
+            <span class="audience-cta">For facilities &rarr;</span>
+          </router-link>
+          <router-link to="/dealers" class="audience-card">
+            <h3>Installing sims for customers?</h3>
+            <p>Bundle SwingNerds with every sim install. Your logo on every share customers post. $10 to $20 margin per license.</p>
+            <span class="audience-cta">For dealers &rarr;</span>
+          </router-link>
         </div>
       </div>
     </section>
@@ -358,12 +369,111 @@
 </template>
 
 <script setup>
-import { ref } from 'vue';
+import { ref, computed } from 'vue';
 import { useRouter } from 'vue-router';
 import { goToApp } from '../services/appUrl.js';
 
 const router = useRouter();
 const mobileMenuOpen = ref(false);
+
+// Tabbed feature showcase. Default tab is "compare" since the side-by-side
+// comparison is the killer feature. Each tab swaps the visual + caption
+// without leaving the page. Mobile-friendly: tab list scrolls horizontally
+// when it overflows and the visual/text stack vertically below ~720px.
+const featureTabs = [
+  {
+    id: 'compare',
+    label: 'Compare',
+    asset: '/comparison_scrubbing_web.mp4',
+    altText: 'Side-by-side swing comparison with synced slow-motion scrubbing',
+    secondaryAsset: '/SwingNerds_screenshot_shotcomparison.PNG',
+    secondaryAltText: 'SwingNerds iOS app showing swing comparison',
+    headline: 'Compare any two swings, side by side',
+    body: 'Pick any two shots, see the videos synced in slow motion with full shot data overlaid. Web or iOS, frame-by-frame, finally understand what changed between your best swing and your worst.',
+    bullets: [
+      'Synced slow-motion playback',
+      'Frame-by-frame scrubbing',
+      'Full shot metrics overlaid',
+      'Save your best as a reference swing',
+    ],
+  },
+  {
+    id: 'markup',
+    label: 'Mark Up',
+    asset: '/drawing_comparison.mp4',
+    altText: 'Drawing lines and angles on a swing video',
+    headline: 'Mark up any swing',
+    body: 'Draw lines, angles, and posture marks right on the frame. Annotations save with the swing and stay visible in side-by-side comparisons, so you can pinpoint exactly what changed.',
+  },
+  {
+    id: 'share',
+    label: 'Share',
+    asset: '/share_link_ios.mp4',
+    portrait: true,
+    altText: 'Sharing a swing video with stats burned in from the SwingNerds iOS app',
+    headline: 'Share your best swings',
+    body: "Send any swing as a clean video with the stats burned right in. Coach. Buddies. Social. Your wife (she'll love it). One tap, one link, no login required to view. On Commercial and Dealer plans, every share carries your logo.",
+    liveLink: 'https://app.swingnerds.com/share/aoGiSmed173XO_rksXjizw?ref=bjvx387d',
+    liveLinkLabel: 'app.swingnerds.com/share/aoGi…',
+    liveLinkPrefix: 'See a real one:',
+  },
+  {
+    id: 'ai',
+    label: 'AI Analysis',
+    asset: '/ai_analysis_pic.png',
+    altText: 'SwingNerds AI swing analysis with strengths, areas to improve, and recommended drills',
+    headline: 'AI swing analysis',
+    body: 'Send any swing to AI and get a breakdown of strengths, areas to improve, suggested drills, and follow-up Q&A. A coach in your pocket.',
+  },
+  {
+    id: 'mobile',
+    label: 'Mobile',
+    asset: '/SwingNerds_Screenshot_Charts_Mobile.PNG',
+    portrait: true,
+    altText: 'SwingNerds iOS app showing charts and analytics',
+    headline: 'Full dashboard on your phone',
+    body: 'Browse your data, watch swing videos, and compare shots from anywhere. Plus iPhone-as-a-camera recording — prop up your phone, hit balls, every clip syncs to the matching shot.',
+  },
+  {
+    id: 'cameras',
+    label: 'Cameras',
+    asset: '/Kayeton_120fps_1.jpg',
+    altText: 'Kayeton 120fps USB camera commonly used with SwingNerds',
+    headline: 'Use any USB camera, $100 on Amazon',
+    body: "We don't sell hardware. The 120fps swing-cams pictured run about $100 each on Amazon from third-party sellers. Most setups use 1–2 (down-the-line + face-on). Or start with your laptop webcam to try it out.",
+    liveLink: '/cameras',
+    liveLinkLabel: 'See camera recommendations →',
+    liveLinkPrefix: 'Want help picking?',
+  },
+];
+const activeFeatureTab = ref('compare');
+
+// Computed lookup of the active tab's data. The template renders a single
+// panel that swaps content via this computed, instead of v-for + v-show
+// across N panels. v-for + v-show with ref-comparison conditions has been
+// flaky in some Vue 3.x versions — single-panel + computed is rock-solid.
+const activeTab = computed(() =>
+  featureTabs.find((t) => t.id === activeFeatureTab.value) ?? featureTabs[0]
+);
+
+function selectFeatureTab(id) {
+  activeFeatureTab.value = id;
+}
+
+// Decide whether to render a tab's asset as <video> (autoplaying loop) or
+// <img> based on file extension. Lets the same `asset` path slot accept
+// either MP4/WebM (preferred — smaller, smoother) or PNG/JPG/GIF (fallback).
+function isVideoAsset(path) {
+  return /\.(mp4|webm|mov)(\?.*)?$/i.test(path || '');
+}
+
+// External vs internal link detection. External links open in a new tab
+// (target=_blank); internal links navigate normally. Used by the tab live-link
+// renderer so /cameras (internal) stays in-window but app.swingnerds.com/share
+// (external) opens in a new tab.
+function isExternalLink(url) {
+  return typeof url === 'string' && /^https?:\/\//i.test(url);
+}
 
 function startFreeTrial() { goToApp('/register'); }
 function goToLogin() { goToApp('/login'); }
@@ -766,6 +876,43 @@ function scrollToSection(id) {
   border-radius: 3px;
 }
 
+.feature-gif-wrap {
+  margin: 32px auto 0;
+  max-width: 620px;
+}
+.feature-gif {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 32px rgba(15, 23, 42, 0.12);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+
+/* Drawing/annotation feature section. Mirrors the comparison block so the
+   page rhythm stays consistent — header, paragraph, GIF below. */
+.drawing-section {
+  padding: 80px 0;
+  background: var(--bg-alt, #f8fafc);
+}
+.drawing-inner {
+  max-width: 620px;
+  margin: 0 auto;
+}
+.drawing-inner h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+.drawing-inner p {
+  font-size: 1.02rem;
+  color: var(--text-2);
+  line-height: 1.65;
+  margin: 0;
+}
+
 /* Phone mockup for comparison section */
 .lp-phone-mockup {
   flex-shrink: 0;
@@ -855,10 +1002,15 @@ function scrollToSection(id) {
 }
 .datasources-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 16px;
-  max-width: 900px;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+  max-width: 1080px;
   margin: 0 auto;
+}
+@media (max-width: 720px) {
+  .datasources-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 .ds-card {
   background: var(--bg);
@@ -1474,5 +1626,477 @@ function scrollToSection(id) {
 @media (max-width: 480px) {
   .hero-headline { font-size: 1.7rem; }
   .steps { grid-template-columns: 1fr; }
+}
+
+/* ===== 2026-04-25 marketing update ===== */
+
+/* Tabbed feature showcase. Replaces the old per-feature sections so pricing
+   stays reachable in 2-3 scrolls. Two-column on desktop (visual left, text
+   right), stacked on mobile. Tab list scrolls horizontally when it overflows. */
+.features-tabbed {
+  padding: 80px 0;
+  background: #ffffff;
+}
+.features-tabbed-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.features-tabbed-sub {
+  text-align: center;
+  color: #64748b;
+  margin: 0 0 28px;
+  font-size: 0.98rem;
+}
+.features-tabs {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto 32px;
+  max-width: 100%;
+  /* Allow horizontal scroll fallback on very narrow screens. */
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 4px;
+}
+.features-tab {
+  flex-shrink: 0;
+  background: #f1f5f9;
+  border: 1px solid transparent;
+  color: #475569;
+  font-size: 0.95rem;
+  font-weight: 600;
+  padding: 10px 18px;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+  font-family: inherit;
+}
+.features-tab:hover {
+  background: #e2e8f0;
+  color: #0f172a;
+}
+.features-tab.active {
+  background: #0f172a;
+  color: #ffffff;
+  border-color: #0f172a;
+}
+.features-panel {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+.features-panel-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+.features-visual {
+  position: relative;
+  display: block;
+  /* Padding gives the absolutely-positioned phone room to "float off" the
+     corner of the primary asset without clipping. */
+  padding: 0 28px 28px 0;
+}
+.features-visual-primary {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-width: 520px;
+  margin: 0 auto;
+  border-radius: 14px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.14);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.features-visual-secondary-wrap {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 22%;
+  max-width: 140px;
+  z-index: 2;
+}
+/* Portrait-orientation visuals (e.g. iOS phone screen recordings). Constrain
+   width and add a dark "bezel" so the video reads as a phone in context
+   instead of stretching to fill the whole column. */
+.features-visual-portrait {
+  padding: 0;
+  text-align: center;
+}
+.features-visual-portrait .features-visual-primary {
+  width: auto;
+  max-width: 280px;
+  margin: 0 auto;
+  border-radius: 24px;
+  border: 4px solid #0f172a;
+  background: #0f172a;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.18);
+}
+.features-visual-secondary {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 18px;
+  box-shadow: 0 12px 28px rgba(15, 23, 42, 0.25);
+  border: 3px solid #0f172a;
+  background: #0f172a;
+}
+.features-visual-placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+  border: 1px dashed #94a3b8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #64748b;
+  font-size: 0.95rem;
+  font-style: italic;
+  text-align: center;
+  padding: 24px;
+}
+.features-text h3 {
+  margin: 0 0 12px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  line-height: 1.25;
+}
+.features-text p {
+  margin: 0 0 16px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #475569;
+}
+.features-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.features-bullets li {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1e293b;
+  padding-left: 22px;
+  position: relative;
+  line-height: 1.5;
+}
+.features-bullets li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 9px;
+  height: 9px;
+  background: #06b6d4;
+  border-radius: 3px;
+}
+.features-live-link {
+  margin: 6px 0 0;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+.features-live-link a {
+  color: #06b6d4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.features-live-link a:hover { color: #0891b2; }
+
+@media (max-width: 720px) {
+  .features-tabbed { padding: 56px 0; }
+  .features-tabs {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    padding: 4px 16px;
+    margin-bottom: 24px;
+  }
+  .features-panel-content {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .features-text {
+    text-align: left;
+  }
+  /* On mobile the phone stops floating in the corner and stacks below the
+     primary visual instead. */
+  .features-visual {
+    padding: 0;
+    text-align: center;
+  }
+  .features-visual-secondary-wrap {
+    position: static;
+    width: 50%;
+    max-width: 220px;
+    margin: -32px auto 0;
+  }
+  .features-text h3 { font-size: 1.25rem; }
+}
+
+
+/* Hero secondary link below the trust note, linking to /commercial and /dealers */
+.hero-business-link {
+  margin: 12px 0 0;
+  font-size: 0.85rem;
+  color: #475569;
+}
+.hero-business-link a {
+  color: #06b6d4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.hero-business-link a:hover { color: #0891b2; }
+
+/* Datasources fine-print SEO list under the launch monitor logos */
+.datasources-fineprint {
+  max-width: 900px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+
+/* GSPro hero card — the bridge to most LMs, so it gets a big standalone
+   treatment above the grid of all the brands. */
+.ds-hero {
+  display: block;
+  max-width: 720px;
+  margin: 0 auto 32px;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, #f0fdfa 0%, #ecfeff 100%);
+  border: 2px solid var(--accent, #06b6d4);
+  border-radius: 16px;
+  text-align: center;
+  position: relative;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.ds-hero:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(6, 182, 212, 0.18);
+}
+.ds-hero .ds-top-pick {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--accent, #06b6d4);
+  color: #fff;
+  padding: 4px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.ds-hero-logo {
+  display: block;
+  height: 56px;
+  width: auto;
+  margin: 8px auto 16px;
+  object-fit: contain;
+}
+.ds-hero-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 8px;
+}
+.ds-hero-desc {
+  margin: 0 auto 16px;
+  font-size: 0.95rem;
+  color: #475569;
+  line-height: 1.5;
+  max-width: 480px;
+}
+.ds-hero-cta {
+  display: inline-block;
+  color: var(--accent, #06b6d4);
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+/* Text-only cards for via-GSPro LMs that don't have their own logos yet.
+   Visually lighter than logo cards so the direct-integration cards still
+   read as more important. */
+.ds-card-text {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+.ds-card-text .ds-name {
+  margin-top: 4px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+.ds-name-sub {
+  display: block;
+  margin: 2px 0 6px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+/* Subtitle line under the badge ("or via GSPro" for direct-integration
+   cards). Reinforces that even direct-API LMs also work via GSPro. */
+.ds-sub {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.78rem;
+  color: #94a3b8;
+  font-style: italic;
+}
+
+/* "via GSPro" badge — gray-blue, less prominent than the green Auto Sync. */
+.ds-badge.ds-via-gspro {
+  background: #e2e8f0;
+  color: #475569;
+}
+
+/* Pricing asterisk — explains the rolling-video-storage rule that applies
+   to all paid tiers. */
+.pricing-asterisk {
+  max-width: 720px;
+  margin: 32px auto 0;
+  padding: 0 16px;
+  text-align: center;
+  font-size: 0.82rem;
+  color: #64748b;
+  line-height: 1.55;
+  font-style: italic;
+}
+
+/* Testimonial / social-proof slot */
+.testimonial-section {
+  padding: 56px 0;
+  background: #f8fafc;
+}
+.testimonial-inner {
+  max-width: 760px;
+  text-align: center;
+}
+.testimonial-quote {
+  margin: 0 0 12px;
+  padding: 0;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 1.5;
+  color: #0f172a;
+  font-style: italic;
+}
+.testimonial-attribution {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.95rem;
+}
+
+/* Share-your-swings section */
+.share-section {
+  padding: 80px 0;
+}
+.share-inner {
+  max-width: 820px;
+}
+.share-section h2 {
+  margin: 0 0 16px;
+  font-size: 2rem;
+  font-weight: 800;
+  color: #0f172a;
+}
+.share-lead {
+  font-size: 1.1rem;
+  color: #475569;
+  line-height: 1.65;
+  margin: 0 0 20px;
+}
+.share-list {
+  list-style: disc;
+  padding-left: 22px;
+  margin: 0;
+  color: #334155;
+}
+.share-list li {
+  margin: 6px 0;
+  line-height: 1.6;
+}
+.share-live-link {
+  margin: 14px 0 0;
+  text-align: center;
+  font-size: 0.88rem;
+  color: #64748b;
+}
+.share-live-link a {
+  color: #06b6d4;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.share-live-link a:hover { color: #0891b2; }
+
+/* Audience cross-sell cards (facility / dealer) */
+.audience-cross-section {
+  padding: 80px 0;
+  background: #f8fafc;
+}
+.audience-title {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: 800;
+  margin: 0 0 32px;
+  color: #0f172a;
+}
+.audience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  max-width: 880px;
+  margin: 0 auto;
+}
+.audience-card {
+  display: block;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 28px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+.audience-card:hover {
+  border-color: #06b6d4;
+  transform: translateY(-2px);
+}
+.audience-card h3 {
+  margin: 0 0 10px;
+  font-size: 1.15rem;
+  color: #0f172a;
+  font-weight: 700;
+}
+.audience-card p {
+  margin: 0 0 12px;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
+.audience-cta {
+  color: #06b6d4;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+@media (max-width: 600px) {
+  .audience-grid { grid-template-columns: 1fr; }
+  .share-section h2 { font-size: 1.5rem; }
+  .testimonial-quote { font-size: 1.1rem; }
 }
 </style>
