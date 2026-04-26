@@ -93,6 +93,17 @@ The CSS for these old sections is still in the file but unused. Safe to leave �
   - **Where it goes**: Replace `swingnerds_share_yourlogohere.jpg` reference in `/commercial` and `/dealers` heroes (search for `hero-proof-img` in those files).
   - **Sizing**: ~360px wide max so it reads as supporting proof, not a competing hero image.
 
+### Showcase enhancements (home page "See it in action" tabs)
+
+- [ ] **Lightbox / click-to-expand on tab visuals** — clicking any image or video in the showcase should open a near-full-viewport modal so visitors can actually study the frame, scrub, or read the screenshot. Click outside / X / ESC to close. Videos should keep autoplaying in the modal. Portrait visuals (Share, Mobile) should keep their phone-frame chrome at the larger size.
+
+- [ ] **More feature tabs to add** — once each has its own visual, add:
+  - **Graphs** — progress over time, club averages, consistency. Use one of the existing chart screenshots (or a new GIF showing the chart selector switching between metrics).
+  - **All-Time Analysis** — career stats, club progression (earliest vs recent shots), top sessions ranking. Could reuse `SwingNerds_Screenshot_AllTimePerformance_Desktop.png`.
+  - **Shot Data Tables** — every metric per shot, sort, filter, search, club filter, source filter, pagination. Best as a screenshot or short GIF of sorting/filtering in action.
+  - **Data Quality Cleanup** — AI-detected partial swings, wrong-club shots, mishits, outliers. Configurable sensitivity, preview before applying. Either a screenshot of the data-quality page or a GIF of the preview-then-apply flow.
+  - **Pro Swing Comparison** *(coming soon — placeholder treatment)* — comparing your swing to a tour-pro reference. Show "Coming soon" placeholder until the feature ships.
+
 ### Priority 3 — nice-to-have
 
 - [ ] **Tagging GIF** — could become a 7th tab if recorded.

@@ -5,27 +5,19 @@
       <div class="hero-inner">
         <div class="hero-text">
           <img src="/swingnerds-logo-black.png" alt="SwingNerds" class="hero-big-logo" />
+          <div class="hero-eyebrow">Golf swing camera software for sim setups</div>
           <h1 class="hero-headline">
             All your shot data. All your swing videos. Automatically in one place.
           </h1>
           <p class="hero-sub">
-            Every swing recorded automatically and paired with your shot data. Stored, analyzed, and accessible from any device. <strong>Automatically works with GSPro</strong> and any launch monitor that connects to it. <router-link to="/cameras" class="camera-link">Any USB camera</router-link> starting at $30.
+            SwingNerds is golf swing camera software for indoor golf simulators. Every swing in your bay is recorded automatically, paired with your launch monitor data, and stored in the cloud. Replay, compare side by side, and analyze on any device. <strong>Works with GSPro</strong> and any launch monitor that connects to it, plus <router-link to="/cameras" class="camera-link">any USB camera</router-link> starting at $30.
           </p>
           <div class="hero-actions">
             <button @click="startFreeTrial" class="btn-primary lg">
               Start Free Trial
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </button>
-            <div class="hero-download-row">
-              <router-link to="/vision" class="btn-outline lg">
-                Download Windows App
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
-              </router-link>
-              <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="btn-outline lg">
-                Download iOS Beta
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
-              </a>
-            </div>
+            <a href="#features" class="hero-see-it">See how it works &darr;</a>
             <span class="hero-note">7-day free trial &middot; No credit card &middot; Any launch monitor</span>
             <p class="hero-business-link">
               Running a sim facility or installing sims? See
@@ -44,10 +36,14 @@
          with a single section so pricing is reachable in 2-3 scrolls. Tabs
          scroll horizontally on mobile. Each tab swaps the visual + caption
          without leaving the page. -->
-    <section class="features-tabbed">
+    <section id="features" class="features-tabbed">
       <div class="section-inner">
         <h2 class="features-tabbed-title">See it in action</h2>
         <p class="features-tabbed-sub">Pick a feature to see what it actually looks like.</p>
+        <p class="features-tabbed-hint">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+          Click an image or video to see it bigger.
+        </p>
         <div class="features-tabs" role="tablist">
           <button
             v-for="tab in featureTabs"
@@ -63,7 +59,16 @@
         </div>
         <div class="features-panel">
           <div class="features-panel-content" role="tabpanel" :key="activeTab.id">
-            <div class="features-visual" :class="{ 'features-visual-portrait': activeTab.portrait }">
+            <div
+              class="features-visual"
+              :class="{ 'features-visual-portrait': activeTab.portrait, 'features-visual-zoomable': activeTab.asset }"
+              :role="activeTab.asset ? 'button' : null"
+              :tabindex="activeTab.asset ? 0 : null"
+              :aria-label="activeTab.asset ? 'Click to view full size' : null"
+              @click="activeTab.asset && openLightbox(activeTab)"
+              @keydown.enter="activeTab.asset && openLightbox(activeTab)"
+              @keydown.space.prevent="activeTab.asset && openLightbox(activeTab)"
+            >
               <video
                 v-if="activeTab.asset && isVideoAsset(activeTab.asset)"
                 :key="'v-' + activeTab.id"
@@ -288,12 +293,12 @@
 
         </div>
         <p class="pricing-asterisk">
-          *Every plan tracks unlimited shots. Video storage holds your latest swings plus everything you've favorited or saved as a "standard" — older non-favorited videos roll off as new ones come in.
+          *Every plan tracks unlimited shots. Video storage holds your latest swings plus everything you've favorited or saved as a "standard": older non-favorited videos roll off as new ones come in.
         </p>
       </div>
     </section>
 
-    <!-- Audience cross-sell — facility operators and dealers/installers landing on the consumer page should still find their pricing. -->
+    <!-- Audience cross-sell: facility operators and dealers/installers landing on the consumer page should still find their pricing. -->
     <section class="audience-cross-section">
       <div class="section-inner">
         <h2 class="audience-title">Other ways to use SwingNerds</h2>
@@ -319,6 +324,19 @@
         <div class="bottom-buttons">
           <button @click="startFreeTrial" class="btn-primary lg">Start Free Trial</button>
           <button @click="goToLogin" class="btn-ghost lg">Log In</button>
+        </div>
+        <div class="bottom-downloads">
+          <span class="bottom-downloads-label">Or jump straight to the apps:</span>
+          <div class="bottom-downloads-row">
+            <router-link to="/vision" class="btn-outline">
+              Download Windows App
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+            </router-link>
+            <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="btn-outline">
+              Download iOS Beta
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect><line x1="12" y1="18" x2="12.01" y2="18"></line></svg>
+            </a>
+          </div>
         </div>
         <div class="trust">
           <span class="trust-item">
@@ -365,16 +383,121 @@
       </div>
     </footer>
 
+    <!-- Lightbox modal for the "See it in action" tab visuals -->
+    <div
+      v-if="lightboxAsset"
+      class="lightbox"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Feature preview"
+      @click.self="closeLightbox"
+    >
+      <button class="lightbox-close" type="button" @click="closeLightbox" aria-label="Close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <div class="lightbox-content" @click.self="closeLightbox">
+        <video
+          v-if="isVideoAsset(lightboxAsset.asset)"
+          :src="lightboxAsset.asset"
+          class="lightbox-media"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+        ></video>
+        <img
+          v-else
+          :src="lightboxAsset.asset"
+          :alt="lightboxAsset.altText"
+          class="lightbox-media"
+        />
+        <p v-if="lightboxAsset.headline" class="lightbox-caption">{{ lightboxAsset.headline }}</p>
+      </div>
+    </div>
+
   </div>
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted, onBeforeUnmount, watch } from 'vue';
 import { useRouter } from 'vue-router';
 import { goToApp } from '../services/appUrl.js';
+import { setMeta } from '../services/seoMeta.js';
 
 const router = useRouter();
 const mobileMenuOpen = ref(false);
+
+// Lightbox for the "See it in action" tab visuals. Click any tab visual to
+// see it full-screen. ESC, click outside, or X closes it.
+const lightboxAsset = ref(null);
+function openLightbox(tab) {
+  if (!tab?.asset) return;
+  lightboxAsset.value = tab;
+}
+function closeLightbox() {
+  lightboxAsset.value = null;
+}
+function handleLightboxKey(e) {
+  if (e.key === 'Escape' && lightboxAsset.value) closeLightbox();
+}
+onMounted(() => {
+  document.addEventListener('keydown', handleLightboxKey);
+});
+onBeforeUnmount(() => {
+  document.removeEventListener('keydown', handleLightboxKey);
+});
+// Lock body scroll while the lightbox is open.
+watch(lightboxAsset, (val) => {
+  document.body.style.overflow = val ? 'hidden' : '';
+});
+
+onMounted(() => {
+  setMeta({
+    title: 'SwingNerds | Golf swing camera software for sim setups',
+    description:
+      'SwingNerds is golf swing camera software with automatic shot data capture for indoor golf simulators. Records every swing automatically using any USB camera, pairs each clip with your launch monitor data, and stores everything in the cloud.',
+    path: '/',
+    type: 'website',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': 'https://swingnerds.com#organization',
+          name: 'SwingNerds',
+          url: 'https://swingnerds.com',
+          logo: 'https://swingnerds.com/swingnerds-logo-white.png',
+          sameAs: [],
+        },
+        {
+          '@type': 'WebSite',
+          '@id': 'https://swingnerds.com#website',
+          url: 'https://swingnerds.com',
+          name: 'SwingNerds',
+          description: 'Golf swing camera software with automatic shot data capture for sim setups',
+          publisher: { '@id': 'https://swingnerds.com#organization' },
+        },
+        {
+          '@type': 'SoftwareApplication',
+          '@id': 'https://swingnerds.com#software',
+          name: 'SwingNerds',
+          description:
+            'Golf swing camera software with automatic shot data capture for indoor golf simulators. Records every swing automatically using any USB camera, pairs each clip with the matching shot data from your launch monitor, and stores everything in the cloud for replay, side-by-side comparison, drawing, tagging, and AI analysis on any device.',
+          applicationCategory: 'SportsApplication',
+          operatingSystem: 'Windows, iOS, Web',
+          offers: {
+            '@type': 'AggregateOffer',
+            lowPrice: '0',
+            highPrice: '19.99',
+            priceCurrency: 'USD',
+            offerCount: '4',
+          },
+        },
+      ],
+    },
+  });
+});
 
 // Tabbed feature showcase. Default tab is "compare" since the side-by-side
 // comparison is the killer feature. Each tab swaps the visual + caption
@@ -432,7 +555,7 @@ const featureTabs = [
     portrait: true,
     altText: 'SwingNerds iOS app showing charts and analytics',
     headline: 'Full dashboard on your phone',
-    body: 'Browse your data, watch swing videos, and compare shots from anywhere. Plus iPhone-as-a-camera recording — prop up your phone, hit balls, every clip syncs to the matching shot.',
+    body: 'Browse your data, watch swing videos, and compare shots from anywhere. Plus iPhone-as-a-camera recording: prop up your phone, hit balls, every clip syncs to the matching shot.',
   },
   {
     id: 'cameras',
@@ -440,7 +563,7 @@ const featureTabs = [
     asset: '/Kayeton_120fps_1.jpg',
     altText: 'Kayeton 120fps USB camera commonly used with SwingNerds',
     headline: 'Use any USB camera, $100 on Amazon',
-    body: "We don't sell hardware. The 120fps swing-cams pictured run about $100 each on Amazon from third-party sellers. Most setups use 1–2 (down-the-line + face-on). Or start with your laptop webcam to try it out.",
+    body: "We don't sell hardware. The 120fps swing-cams pictured run about $100 each on Amazon from third-party sellers. Most setups use 1 to 2 (down-the-line + face-on). Or start with your laptop webcam to try it out.",
     liveLink: '/cameras',
     liveLinkLabel: 'See camera recommendations →',
     liveLinkPrefix: 'Want help picking?',
@@ -451,7 +574,7 @@ const activeFeatureTab = ref('compare');
 // Computed lookup of the active tab's data. The template renders a single
 // panel that swaps content via this computed, instead of v-for + v-show
 // across N panels. v-for + v-show with ref-comparison conditions has been
-// flaky in some Vue 3.x versions — single-panel + computed is rock-solid.
+// flaky in some Vue 3.x versions: single-panel + computed is rock-solid.
 const activeTab = computed(() =>
   featureTabs.find((t) => t.id === activeFeatureTab.value) ?? featureTabs[0]
 );
@@ -462,7 +585,7 @@ function selectFeatureTab(id) {
 
 // Decide whether to render a tab's asset as <video> (autoplaying loop) or
 // <img> based on file extension. Lets the same `asset` path slot accept
-// either MP4/WebM (preferred — smaller, smoother) or PNG/JPG/GIF (fallback).
+// either MP4/WebM (preferred: smaller, smoother) or PNG/JPG/GIF (fallback).
 function isVideoAsset(path) {
   return /\.(mp4|webm|mov)(\?.*)?$/i.test(path || '');
 }
@@ -487,6 +610,78 @@ function scrollToSection(id) {
 
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;0,9..40,800;1,9..40,400&display=swap');
+
+.features-visual-zoomable {
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+.features-visual-zoomable:hover {
+  transform: translateY(-2px);
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  background: rgba(15, 23, 42, 0.92);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  animation: lightboxFadeIn 0.18s ease-out;
+}
+@keyframes lightboxFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, transform 0.15s;
+}
+.lightbox-close:hover {
+  background: rgba(255, 255, 255, 0.22);
+  transform: scale(1.05);
+}
+.lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  max-width: 95vw;
+  max-height: 95vh;
+}
+.lightbox-media {
+  display: block;
+  max-width: 95vw;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: #000;
+}
+.lightbox-caption {
+  color: #f8fafc;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center;
+  max-width: 700px;
+}
 
 .camera-link {
   color: var(--accent);
@@ -634,7 +829,7 @@ function scrollToSection(id) {
 
 /* --- Hero --- */
 .hero {
-  padding: 80px 0 96px;
+  padding: 48px 0 96px;
   background: var(--bg);
 }
 .hero-inner {
@@ -653,9 +848,24 @@ function scrollToSection(id) {
 }
 .hero-big-logo {
   display: block;
-  width: 160px;
+  width: 260px;
   height: auto;
-  margin: 0 auto 28px;
+  margin: 0 auto 12px;
+}
+@media (max-width: 640px) {
+  .hero-big-logo { width: 200px; margin-bottom: 8px; }
+}
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(6, 182, 212, 0.12);
+  color: #0891b2;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 18px;
 }
 .hero-headline {
   font-size: 2.8rem;
@@ -677,11 +887,17 @@ function scrollToSection(id) {
   align-items: center;
   gap: 10px;
 }
-.hero-download-row {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  flex-wrap: wrap;
+.hero-see-it {
+  color: var(--text-2);
+  font-size: 0.95rem;
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-3);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.hero-see-it:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 .hero-note {
   font-size: 0.85rem;
@@ -890,7 +1106,7 @@ function scrollToSection(id) {
 }
 
 /* Drawing/annotation feature section. Mirrors the comparison block so the
-   page rhythm stays consistent — header, paragraph, GIF below. */
+   page rhythm stays consistent: header, paragraph, GIF below. */
 .drawing-section {
   padding: 80px 0;
   background: var(--bg-alt, #f8fafc);
@@ -1215,6 +1431,25 @@ function scrollToSection(id) {
   justify-content: center;
   gap: 12px;
   margin-bottom: 24px;
+}
+.bottom-downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 28px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(148, 163, 184, 0.18);
+}
+.bottom-downloads-label {
+  font-size: 0.85rem;
+  color: var(--text-3);
+}
+.bottom-downloads-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 .trust {
   display: flex;
@@ -1648,8 +1883,22 @@ function scrollToSection(id) {
 .features-tabbed-sub {
   text-align: center;
   color: #64748b;
-  margin: 0 0 28px;
+  margin: 0 0 6px;
   font-size: 0.98rem;
+}
+.features-tabbed-hint {
+  text-align: center;
+  color: #94a3b8;
+  margin: 0 0 24px;
+  font-size: 0.78rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  width: 100%;
+  justify-content: center;
+}
+.features-tabbed-hint svg {
+  flex: 0 0 auto;
 }
 .features-tabs {
   display: flex;
@@ -1867,7 +2116,7 @@ function scrollToSection(id) {
   line-height: 1.6;
 }
 
-/* GSPro hero card — the bridge to most LMs, so it gets a big standalone
+/* GSPro hero card: the bridge to most LMs, so it gets a big standalone
    treatment above the grid of all the brands. */
 .ds-hero {
   display: block;
@@ -1958,13 +2207,13 @@ function scrollToSection(id) {
   font-style: italic;
 }
 
-/* "via GSPro" badge — gray-blue, less prominent than the green Auto Sync. */
+/* "via GSPro" badge: gray-blue, less prominent than the green Auto Sync. */
 .ds-badge.ds-via-gspro {
   background: #e2e8f0;
   color: #475569;
 }
 
-/* Pricing asterisk — explains the rolling-video-storage rule that applies
+/* Pricing asterisk: explains the rolling-video-storage rule that applies
    to all paid tiers. */
 .pricing-asterisk {
   max-width: 720px;

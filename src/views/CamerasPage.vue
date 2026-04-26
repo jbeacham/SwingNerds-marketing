@@ -4,8 +4,9 @@
 
       <!-- Hero -->
       <section class="hero">
-        <h1>Camera Guide</h1>
-        <p class="hero-sub">Everything you need to pick the right camera for SwingNerds Vision. Start with what you have - upgrade when you're ready.</p>
+        <div class="hero-eyebrow">Golf swing cameras for SwingNerds Vision</div>
+        <h1>Golf swing cameras: a buying guide for sim bays</h1>
+        <p class="hero-sub">Everything you need to pick the right swing cam for your sim setup. SwingNerds works with any USB camera, so start with what you have (laptop webcam, iPhone, $30 USB cam) and upgrade to a dedicated 90 to 240fps global-shutter swing camera around $100 when you are ready.</p>
       </section>
 
       <!-- Recommended cameras -->
@@ -19,7 +20,7 @@
         <h3 class="subsection">Just Getting Started</h3>
         <p class="subsection-desc">Any USB Webcam or Laptop Camera. Works for swing detection and recording. Try the whole workflow before buying anything.</p>
 
-        <h3 class="subsection">Color - 180fps (if you have good lighting)</h3>
+        <h3 class="subsection">Color, 180fps (if you have good lighting)</h3>
         <div class="camera-link-row">
           <div class="cam-listing">
             <a href="https://amzn.to/4tm43b9" target="_blank" rel="noopener" class="cam-link top-pick">Kayeton 180fps Global Shutter (4-8 ft) <span class="src">Amazon</span></a>
@@ -27,12 +28,12 @@
           </div>
         </div>
 
-        <h3 class="subsection">Monochrome - 210fps (less light needed)</h3>
+        <h3 class="subsection">Monochrome, 210fps (less light needed)</h3>
         <div class="camera-link-row">
           <a href="https://www.aliexpress.us/item/3256806204926888.html" target="_blank" rel="noopener" class="cam-link">Monochrome Global Shutter USB <span class="src">AliExpress</span></a>
         </div>
 
-        <h3 class="subsection">Color - 120fps (good all-around)</h3>
+        <h3 class="subsection">Color, 120fps (good all-around)</h3>
         <div class="camera-link-row">
           <div class="cam-listing">
             <a href="https://amzn.to/4djhZ0M" target="_blank" rel="noopener" class="cam-link top-pick">Kayeton 120fps Global Shutter (4-6 ft) <span class="src">Amazon</span></a>
@@ -44,7 +45,7 @@
           </div>
         </div>
 
-        <h3 class="subsection">Color - 90fps (budget)</h3>
+        <h3 class="subsection">Color, 90fps (budget)</h3>
         <div class="camera-link-row">
           <div class="cam-listing">
             <a href="https://a.co/d/04y8zqXT" target="_blank" rel="noopener" class="cam-link">ELP 90fps Global Shutter <span class="src">Amazon</span></a>
@@ -74,7 +75,7 @@
           <div class="compare-card">
             <h3>Color (RGB)</h3>
             <ul>
-              <li><span class="pro">+</span> Full color video - looks natural</li>
+              <li><span class="pro">+</span> Full color video, looks natural</li>
               <li><span class="pro">+</span> Easier to see clothing, club, ground</li>
               <li><span class="con">-</span> Needs more light for high FPS</li>
               <li><span class="con">-</span> Bayer filter blocks ~2/3 of light</li>
@@ -87,14 +88,14 @@
               <li><span class="pro">+</span> 2-3x better light sensitivity</li>
               <li><span class="pro">+</span> Higher FPS at same exposure</li>
               <li><span class="pro">+</span> Works great with invisible IR lighting</li>
-              <li><span class="con">-</span> No color - grayscale only</li>
+              <li><span class="con">-</span> No color, grayscale only</li>
             </ul>
             <p class="compare-verdict">Best for dim bays, or if you want max FPS without blasting lights. Pair with IR LEDs for invisible lighting that won't affect your sim screen.</p>
           </div>
         </div>
 
         <div class="tip-box">
-          <strong>Do I need color?</strong> For swing analysis, not really. You're looking at club path, body position, and ball contact - all clearly visible in monochrome. Color is nicer to watch but doesn't change the analysis.
+          <strong>Do I need color?</strong> For swing analysis, not really. You're looking at club path, body position, and ball contact, all clearly visible in monochrome. Color is nicer to watch but doesn't change the analysis.
         </div>
       </section>
 
@@ -113,33 +114,33 @@
             <tr><td><strong>60&deg; / 3.6mm+</strong></td><td>10-15 feet</td><td>Far-mount, outdoor range</td></tr>
           </tbody>
         </table>
-        <p class="tip-inline">Not sure? Start with a <strong>110&deg; / 2.5mm lens</strong> - it works well in most sim bay setups at 6-8 feet.</p>
+        <p class="tip-inline">Not sure? Start with a <strong>110&deg; / 2.5mm lens</strong>, it works well in most sim bay setups at 6-8 feet.</p>
       </section>
 
       <!-- Why global shutter -->
       <section class="section">
         <h2>Why Global Shutter?</h2>
-        <p>Rolling shutter cameras read the image one row of pixels at a time. During a golf swing, the club moves faster than the camera can scan - causing the shaft to appear bent and the image to smear. A global shutter reads all pixels at the same instant, so the club and ball look exactly as they are, even at impact.</p>
+        <p>Rolling shutter cameras read the image one row of pixels at a time. During a golf swing, the club moves faster than the camera can scan, causing the shaft to appear bent and the image to smear. A global shutter reads all pixels at the same instant, so the club and ball look exactly as they are, even at impact.</p>
         <p>Any USB webcam works for recording swings, but if you want sharp freeze-frames at impact, global shutter is the way to go.</p>
       </section>
 
       <!-- Already have a setup -->
       <section class="section">
         <div class="tip-box">
-          <strong>Already set up for Kinovea or another swing analysis tool?</strong> Your existing camera works perfectly with SwingNerds Vision - just plug in and go. Any UVC-compatible camera will work.
+          <strong>Already set up for Kinovea or another swing analysis tool?</strong> Your existing camera works perfectly with SwingNerds Vision, just plug in and go. Any UVC-compatible camera will work.
         </div>
       </section>
 
       <!-- Help -->
       <section class="section help-section">
         <h2>Not Sure What to Get?</h2>
-        <p>Reach out and we'll help you find the right camera for under $100 - based on your setup, angle, and launch monitor.</p>
+        <p>Reach out and we'll help you find the right camera for under $100, based on your setup, angle, and launch monitor.</p>
         <a href="mailto:support@swingnerds.com" class="help-link">support@swingnerds.com &rarr;</a>
       </section>
 
       <!-- CTA -->
       <section class="section cta-section">
-        <router-link to="/vision" class="cta-btn">Download SwingNerds Vision - Free</router-link>
+        <router-link to="/vision" class="cta-btn">Download SwingNerds Vision, Free</router-link>
       </section>
 
       <!-- Footer -->
@@ -169,7 +170,7 @@
           Questions? Email us at <a href="mailto:support@swingnerds.com">support@swingnerds.com</a>
         </p>
         <p class="lowlight-note">
-          <strong>Note:</strong> Only recommended for dim or poorly lit bays. Well lit bays work great with the stock lens - you don't need this upgrade if your bay has good overhead lighting.
+          <strong>Note:</strong> Only recommended for dim or poorly lit bays. Well lit bays work great with the stock lens, you don't need this upgrade if your bay has good overhead lighting.
         </p>
       </div>
     </div>
@@ -178,6 +179,7 @@
 
 <script setup>
 import { ref, onMounted, onUnmounted } from 'vue';
+import { setMeta } from '../services/seoMeta.js';
 
 const activeLowlightPopup = ref(null); // null | 'cs' | 'm12'
 
@@ -195,6 +197,22 @@ function handleEscape(e) {
 
 onMounted(() => {
   document.addEventListener('keydown', handleEscape);
+  setMeta({
+    title: 'Golf swing cameras: recommended USB swing cams for sim bays | SwingNerds',
+    description:
+      'A buying guide for golf swing cameras. USB swing cams from $30 to $130 that work with SwingNerds Vision. Frame rate, global shutter, color vs monochrome, and lighting tradeoffs explained.',
+    path: '/cameras',
+    type: 'website',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@type': 'Article',
+      headline: 'Golf swing cameras: recommended USB swing cams for sim bays',
+      description:
+        'A buying guide for golf swing cameras. USB swing cams from $30 to $130 that work with SwingNerds Vision.',
+      author: { '@type': 'Organization', name: 'SwingNerds Team' },
+      publisher: { '@type': 'Organization', name: 'SwingNerds', logo: { '@type': 'ImageObject', url: 'https://swingnerds.com/swingnerds-logo-white.png' } },
+    },
+  });
 });
 
 onUnmounted(() => {
@@ -233,6 +251,18 @@ onUnmounted(() => {
 /* Hero */
 .hero { text-align: center; padding: 64px 0 0; margin-bottom: 48px; }
 .hero h1 { margin: 0 0 12px; color: var(--text); }
+.hero-eyebrow {
+  display: inline-block;
+  background: rgba(6, 182, 212, 0.15);
+  color: #06b6d4;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
 .hero-sub { font-size: 1.1rem; color: var(--muted); line-height: 1.6; margin: 0; }
 
 /* Sections */

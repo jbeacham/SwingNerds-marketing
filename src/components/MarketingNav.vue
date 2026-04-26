@@ -45,11 +45,12 @@ const isActive = (name) => computed(() => route.name === name).value;
         <button class="nav-link" :class="{ active: isActive('Facilities') || isActive('EnterpriseLanding') }" @click="goTo('EnterpriseLanding')">Commercial</button>
         <button class="nav-link" :class="{ active: isActive('DealersLanding') }" @click="goTo('DealersLanding')">Dealers</button>
         <button class="nav-link" :class="{ active: isActive('About') }" @click="goTo('About')">About</button>
+        <button class="nav-link" :class="{ active: isActive('Blog') || isActive('BlogPost') }" @click="goTo('Blog')">Blog</button>
         <button class="nav-link" :class="{ active: isActive('Support') }" @click="goTo('Support')">Support</button>
 
         <div class="nav-cta-group">
           <button class="nav-cta-secondary" @click="() => { close(); goToApp('/login'); }">Sign In</button>
-          <button class="nav-cta-primary" @click="() => { close(); goToApp('/register'); }">Get Started</button>
+          <button class="nav-cta-primary" @click="() => { close(); goToApp('/register'); }">Start Free Trial</button>
         </div>
       </nav>
     </div>

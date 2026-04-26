@@ -7,7 +7,7 @@
         <div class="alpha-banner-inner">
           <span class="alpha-banner-badge">Beta</span>
           <span class="alpha-banner-text">
-            SwingNerds Vision is in beta - your feedback directly shapes what we build next.
+            SwingNerds Vision is in beta, your feedback directly shapes what we build next.
           </span>
           <a href="mailto:support@swingnerds.com" class="alpha-banner-link">Send feedback →</a>
         </div>
@@ -15,19 +15,16 @@
 
       <!-- Hero -->
       <section class="hero">
-        <div class="hero-badge">Beta · Windows</div>
-        <h1>SwingNerds Vision</h1>
+        <div class="hero-badge">Free golf swing camera software · Windows · Beta</div>
+        <h1>Golf swing camera software for sim setups</h1>
         <p class="hero-subtitle">All your shot data. All your swing videos. Automatically in one place.</p>
         <p class="hero-desc">
-          Mount <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB cameras</a> in your sim bay once and let SwingNerds Vision automatically capture every swing -
-          session after session, without touching anything. Clips sync to your account and pair to your
-          launch monitor data, so every shot has both the video and the numbers.
-          Then compare any two swings side by side, synced to the same frame.
+          SwingNerds Vision is free golf swing camera software for indoor sim bays. Mount <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB cameras</a> once and the app auto-records every swing, session after session, without you touching anything. Clips sync to your account and pair to your launch monitor data, so every shot has both the video and the numbers. Then compare any two swings side by side, synced to the same frame.
         </p>
         <div class="hero-cta">
           <a :href="installerUrl" target="_blank" class="cta-btn primary" @click="onDownloadClick">
             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-            Download for Windows - Free
+            Download for Windows, Free
           </a>
           <a href="#" class="cta-btn outline" @click.prevent="goToSignIn">Sign In / Create Account</a>
           <a href="https://testflight.apple.com/join/Dc5pv4PD" target="_blank" class="cta-btn outline">Download iOS Beta</a>
@@ -45,7 +42,7 @@
         <img src="/Kayeton_120fps_1.jpg" alt="Kayeton 120fps USB swing camera" class="camera-strip-img" />
         <div class="camera-strip-copy">
           <h3>This is the camera.</h3>
-          <p>120fps USB swing-cams like this one run about $100 each on Amazon from third-party sellers. Most setups use 1–2. Mount once, runs every session.</p>
+          <p>120fps USB swing-cams like this one run about $100 each on Amazon from third-party sellers. Most setups use 1 to 2. Mount once, runs every session.</p>
           <a href="#" class="camera-link" @click.prevent="showCameraModal = true">See camera recommendations →</a>
         </div>
       </section>
@@ -56,22 +53,22 @@
           <div class="value-item">
             <div class="value-icon"></div>
             <h3>Auto-capture every swing</h3>
-            <p>Sound + motion detection triggers a clip on every shot in your sim bay. Mount once - runs every session automatically.</p>
+            <p>Sound + motion detection triggers a clip on every shot in your sim bay. Mount once, runs every session automatically.</p>
           </div>
           <div class="value-item">
             <div class="value-icon"></div>
             <h3>Paired to your shot data</h3>
-            <p>Clips upload automatically and match to your GSPro, Uneekor, Rapsodo, or Square Golf data by timestamp.</p>
+            <p>Clips upload automatically and pair to your launch monitor data by timestamp. GSPro for most setups, with a couple of other direct integrations.</p>
           </div>
           <div class="value-item value-item-highlight">
             <div class="value-icon"></div>
             <h3>Compare side by side</h3>
-            <p>Open any two shots in SwingNerds and compare the videos synchronized frame by frame - alongside all the numbers.</p>
+            <p>Open any two shots in SwingNerds and compare the videos synchronized frame by frame, alongside all the numbers.</p>
           </div>
           <div class="value-item">
             <div class="value-icon"></div>
             <h3>Works with the iOS app too</h3>
-            <p>Swings recorded on iPhone pair with your data the same way - use one device or both, however works best for your setup.</p>
+            <p>Swings recorded on iPhone pair with your data the same way, use one device or both, however works best for your setup.</p>
           </div>
         </div>
       </section>
@@ -119,14 +116,14 @@
         <div class="loop-label">The Complete Workflow</div>
         <h2>Mount once. Every session runs itself.</h2>
         <p class="section-subtitle">
-          SwingNerds Vision closes the loop between video and data - automatically, every time you play.
+          SwingNerds Vision closes the loop between video and data, automatically, every time you play.
         </p>
         <div class="loop-steps">
           <div class="loop-step">
             <div class="loop-step-num">1</div>
             <div class="loop-step-body">
               <h3>Mount <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB cameras</a> in your sim bay</h3>
-              <p>Set up your cameras once - down-the-line, face-on, or both. Launch SwingNerds Vision, fire up GSPro or your sim software, and play. Every ball strike triggers a clip automatically. You don't touch anything between shots.</p>
+              <p>Set up your cameras once, down-the-line, face-on, or both. Launch SwingNerds Vision, fire up GSPro or your sim software, and play. Every ball strike triggers a clip automatically. You don't touch anything between shots.</p>
             </div>
           </div>
           <div class="loop-connector">→</div>
@@ -134,7 +131,7 @@
             <div class="loop-step-num">2</div>
             <div class="loop-step-body">
               <h3>Import your shot data</h3>
-              <p>Connect your launch monitor. <strong>GSPro syncs automatically in real time</strong> (via the Windows app), Uneekor and Rapsodo sync via our cloud integrations, and Square Golf supports CSV upload after your session.</p>
+              <p>Connect your launch monitor. <strong>GSPro syncs automatically in real time</strong> via the Windows app, with a couple of other direct integrations available, plus CSV upload as a fallback for any other launch monitor.</p>
             </div>
           </div>
           <div class="loop-connector">→</div>
@@ -142,20 +139,20 @@
             <div class="loop-step-num">3</div>
             <div class="loop-step-body">
               <h3>Review and compare later</h3>
-              <p>Pull up SwingNerds that evening. Every swing video is paired to its shot data - carry, ball speed, spin, everything. Compare any two shots side by side, synced to the same frame.</p>
+              <p>Pull up SwingNerds that evening. Every swing video is paired to its shot data, carry, ball speed, spin, everything. Compare any two shots side by side, synced to the same frame.</p>
             </div>
           </div>
         </div>
         <!-- App screenshot -->
         <div class="app-screenshot-row">
           <div class="phone-mockup">
-            <img :src="'/SwingNerds_screenshot_shotcomparison.PNG'" alt="SwingNerds iOS app - swing comparison" class="phone-screen" />
+            <img :src="'/SwingNerds_screenshot_shotcomparison.PNG'" alt="SwingNerds iOS app, swing comparison" class="phone-screen" />
           </div>
           <div class="screenshot-caption">
-            <h3>Review your swings paired with shot data - anytime, anywhere.</h3>
+            <h3>Review your swings paired with shot data, anytime, anywhere.</h3>
             <p>
               After each sim session, every swing video is automatically paired with its shot data in SwingNerds.
-              Open the iOS or web app to compare any two shots side by side - videos synced frame by frame,
+              Open the iOS or web app to compare any two shots side by side, videos synced frame by frame,
               carry and ball speed right there alongside them.
             </p>
           </div>
@@ -163,10 +160,10 @@
 
         <div class="loop-callout">
           <p>
-            This is the workflow serious sim golfers have wanted for years - not just video, not just data, but
+            This is the workflow serious sim golfers have wanted for years, not just video, not just data, but
             <strong>both together, automatically, every session in your bay.</strong>
           </p>
-          <a :href="installerUrl" target="_blank" class="cta-btn primary" @click="onDownloadClick">Try it today - Free download</a>
+          <a :href="installerUrl" target="_blank" class="cta-btn primary" @click="onDownloadClick">Try it today, Free download</a>
         </div>
       </section>
 
@@ -186,13 +183,13 @@
             </div>
             <p>
               A global shutter captures every pixel at the same instant, so fast
-              club movement and the ball at impact appear sharp and stable - no wobble,
+              club movement and the ball at impact appear sharp and stable, no wobble,
               no jello, no skew. Look for <strong>90+ fps</strong> and a global shutter sensor.
             </p>
             <div class="camera-buy-links">
               <span class="buy-links-label">Cameras we use:</span>
               <a href="https://amzn.to/4tm43b9" target="_blank" rel="noopener" class="top-pick">Kayeton 180fps Global Shutter (4-8 ft) <span class="buy-source">Amazon</span></a>
-              <span class="buy-links-subnote">Best quality - needs good sim bay lighting for 180fps</span>
+              <span class="buy-links-subnote">Best quality, needs good sim bay lighting for 180fps</span>
               <a href="https://amzn.to/4djhZ0M" target="_blank" rel="noopener" class="top-pick">Kayeton 120fps Global Shutter (4-6 ft) <span class="buy-source">Amazon</span></a>
               <a href="https://amzn.to/3OamdNV" target="_blank" rel="noopener" class="top-pick">Kayeton 120fps Global Shutter (8-12 ft) <span class="buy-source">Amazon</span></a>
               <span class="buy-links-divider">Also good (90fps):</span>
@@ -202,7 +199,7 @@
               <p class="buy-note">These go in and out of stock. AliExpress often has the same cameras when Amazon is sold out.</p>
               <span class="buy-links-divider" style="margin-top: 10px;">Monochrome (higher FPS, less light needed):</span>
               <a href="https://www.aliexpress.us/item/3256806204926888.html" target="_blank" rel="noopener">Monochrome Global Shutter USB <span class="buy-source">AliExpress</span></a>
-              <span class="buy-links-subnote">No color - but 2-3x better light sensitivity. Pair with IR lighting for an invisible light source. Great for high FPS in dim bays.</span>
+              <span class="buy-links-subnote">No color, but 2-3x better light sensitivity. Pair with IR lighting for an invisible light source. Great for high FPS in dim bays.</span>
             </div>
             <div class="camera-specs">
               <div class="spec"><span class="spec-label">Frame rate</span><span class="spec-value">90 fps or higher</span></div>
@@ -234,7 +231,7 @@
               <div class="camera-card-header">
                 <span class="camera-badge starter">Just Getting Started</span>
                 <h3>Your Laptop's Built-in Camera</h3>
-                <p class="camera-price">No cost - use what you have</p>
+                <p class="camera-price">No cost, use what you have</p>
               </div>
               <p>
                 You can even use your laptop's built-in front camera as a face-on angle to
@@ -272,7 +269,7 @@
               <tr><td><strong>60&deg; / 3.6mm+</strong></td><td>10-15 feet</td><td>Far-mount, outdoor range</td></tr>
             </tbody>
           </table>
-          <p class="lens-tip">Not sure? Start with a <strong>110&deg; / 2.5mm lens</strong> - it works well in most sim bay setups at 6-8 feet.</p>
+          <p class="lens-tip">Not sure? Start with a <strong>110&deg; / 2.5mm lens</strong>, it works well in most sim bay setups at 6-8 feet.</p>
         </div>
 
         <!-- Kinovea callout -->
@@ -280,7 +277,7 @@
           <div class="kinovea-callout-icon"></div>
           <div class="kinovea-callout-text">
             <strong>Already set up for Kinovea or another swing analysis tool?</strong>
-            Your existing camera setup works perfectly with SwingNerds Vision - just plug in and go.
+            Your existing camera setup works perfectly with SwingNerds Vision, just plug in and go.
             Any UVC-compatible camera that works with Kinovea, Coach's Eye, or similar software
             will work here too.
           </div>
@@ -290,7 +287,7 @@
           <div class="camera-help-icon"></div>
           <div class="camera-help-text">
             <strong>Not sure which camera to get?</strong>
-            Reach out and we'll help you find the right one for under $100 - based on your setup, angle, and launch monitor.
+            Reach out and we'll help you find the right one for under $100, based on your setup, angle, and launch monitor.
           </div>
           <a href="mailto:support@swingnerds.com" class="camera-help-link">Get a recommendation →</a>
         </div>
@@ -309,7 +306,7 @@
             <p class="angle-position">Camera positioned <strong>behind you</strong>, pointing toward the target</p>
             <ul class="angle-uses">
               <li>Club path and face angle at impact</li>
-              <li>Swing plane - on plane, over the top, under</li>
+              <li>Swing plane, on plane, over the top, under</li>
               <li>Shaft lean at address and impact</li>
               <li>Ball flight relationship to swing direction</li>
               <li>Alignment and setup position</li>
@@ -358,7 +355,7 @@
             <div class="step-body">
               <h3>Mount <a href="#" class="camera-link" @click.prevent="showCameraModal = true">any USB cameras</a> in your sim bay</h3>
               <p>
-                Position 1 or 2 cameras in your sim bay - down-the-line, face-on, or both. Select them in the app
+                Position 1 or 2 cameras in your sim bay, down-the-line, face-on, or both. Select them in the app
                 and assign each one a camera angle. Adjust exposure, gain, and FPS once and you're set for every session.
                 You can also use your laptop's built-in camera as a face-on angle to get started today.
               </p>
@@ -370,7 +367,7 @@
               <h3>Fire up your sim and play</h3>
               <p>
                 Launch SwingNerds Vision, hit "Start Session," then open GSPro or your sim software and start playing.
-                The app listens for the ball strike sound and confirms it with motion detection - each swing triggers
+                The app listens for the ball strike sound and confirms it with motion detection, each swing triggers
                 a clip automatically. You don't touch anything between shots.
               </p>
             </div>
@@ -392,21 +389,16 @@
               <h3>Compare swings alongside your data</h3>
               <p>
                 Uploaded clips are automatically matched to your shot data by timestamp.
-                Open any shot in SwingNerds and your swing video is right there -
-                alongside carry distance, ball speed, spin, and every other number from
-                GSPro, Uneekor, Square Golf, or Rapsodo. Select two shots and compare
-                them side by side with synchronized playback.
+                Open any shot in SwingNerds and your swing video is right there, alongside carry distance, ball speed, spin, and every other number from your launch monitor. Select two shots and compare them side by side with synchronized playback.
               </p>
             </div>
           </div>
         </div>
         <div class="integrations">
-          <p class="integrations-label">Works with your launch monitor data from</p>
+          <p class="integrations-label">Works with your launch monitor data via</p>
           <div class="integrations-list">
             <span class="integration-chip">GSPro</span>
-            <span class="integration-chip">Uneekor</span>
-            <span class="integration-chip">Rapsodo</span>
-            <span class="integration-chip">Square Golf</span>
+            <span class="integration-chip">Direct integrations</span>
             <span class="integration-chip">CSV Upload</span>
           </div>
         </div>
@@ -429,7 +421,7 @@
           <div class="req-item">
             <div class="req-icon"></div>
             <h4>Microphone</h4>
-            <p>Any microphone - a simple USB mic or headset works great for impact detection.</p>
+            <p>Any microphone, a simple USB mic or headset works great for impact detection.</p>
           </div>
           <div class="req-item">
             <div class="req-icon"></div>
@@ -443,7 +435,7 @@
       <section class="alpha-cta-section">
         <div class="alpha-cta-card">
           <div class="alpha-cta-icon"></div>
-          <h2>This is a beta - and that matters.</h2>
+          <h2>This is a beta, and that matters.</h2>
           <p>
             SwingNerds Vision is actively being built. Features are added fast, things get improved week to week,
             and your feedback is the single biggest driver of what gets built next.
@@ -503,10 +495,40 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import { useRouter } from 'vue-router';
 import { trackAppDownload } from '../services/tracking.js';
 import { trackEvent } from '../services/analyticsService';
+import { setMeta } from '../services/seoMeta.js';
+
+onMounted(() => {
+  setMeta({
+    title: 'Golf swing camera software for sim setups | SwingNerds Vision',
+    description:
+      'Free Windows golf swing camera software. Records every swing in your sim bay automatically using any USB camera, pairs each clip with your launch monitor data, and uploads to the cloud for replay and side-by-side comparison.',
+    path: '/vision',
+    type: 'website',
+    jsonLd: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'SoftwareApplication',
+          '@id': 'https://swingnerds.com/vision#software',
+          name: 'SwingNerds Vision',
+          description:
+            'Free golf swing camera software for Windows. Auto-records every swing in your sim bay, pairs each clip with launch monitor shot data, and uploads to the cloud.',
+          applicationCategory: 'SportsApplication',
+          operatingSystem: 'Windows 10, Windows 11',
+          offers: {
+            '@type': 'Offer',
+            price: '0',
+            priceCurrency: 'USD',
+          },
+        },
+      ],
+    },
+  });
+});
 import CameraInfoModal from '../components/CameraInfoModal.vue';
 import { goToApp } from '../services/appUrl.js';
 
@@ -727,7 +749,7 @@ h2 {
   padding: 80px 0 64px;
 }
 
-/* Hero camera strip — small visual + caption right below the hero so
+/* Hero camera strip: small visual + caption right below the hero so
    visitors immediately see what the hardware looks like and understand
    the price bar. */
 .hero-camera-strip {
