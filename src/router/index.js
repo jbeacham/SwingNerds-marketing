@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import LandingPage from '../components/LandingPage.vue'
 import AboutPage from '../views/AboutPage.vue'
 import PrivacyPage from '../views/PrivacyPage.vue'
+import SecurityPage from '../views/SecurityPage.vue'
 import SupportPage from '../views/SupportPage.vue'
 import PricingPage from '../views/PricingPage.vue'
 import VisionLandingPage from '../views/VisionLandingPage.vue'
@@ -31,6 +32,7 @@ const routes = [
   { path: '/', name: 'Home', component: LandingPage },
   { path: '/about', name: 'About', component: AboutPage },
   { path: '/privacy', name: 'Privacy', component: PrivacyPage },
+  { path: '/security', name: 'Security', component: SecurityPage },
   { path: '/support', name: 'Support', component: SupportPage },
   { path: '/contact', redirect: '/support' },
   { path: '/pricing', name: 'Pricing', component: PricingPage },
