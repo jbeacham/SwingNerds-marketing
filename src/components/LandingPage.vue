@@ -529,6 +529,20 @@ const featureTabs = [
     body: 'Draw lines, angles, and posture marks right on the frame. Annotations save with the swing and stay visible in side-by-side comparisons, so you can pinpoint exactly what changed.',
   },
   {
+    id: 'angles',
+    label: 'Swing Angles',
+    asset: '/swing_angles_halfspeed.mp4',
+    altText: 'Spine, shoulder, hip, and head lines traced on a swing video with live angle measurements',
+    headline: 'Measured body angles, drawn on every swing',
+    body: 'Spine angle, shoulder line, hip line, and head trace — pose-tracked from the video and drawn live on every clip. Posture loss, head movement, and spine angles at top and impact are surfaced as actual numbers, not estimates. Compare your shot to your standard with the angle deltas in plain view. The same measurements feed the AI analysis, so it can connect body cause to ball effect.',
+    bullets: [
+      'Spine, shoulders, hips, and head traced live on the video',
+      'Numbers at address, top, impact, and finish',
+      'Side-by-side comparison with measured angle deltas',
+      'Same measurements feed the AI analysis for cause-and-effect coaching',
+    ],
+  },
+  {
     id: 'share',
     label: 'Share',
     asset: '/share_link_ios.mp4',

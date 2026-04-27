@@ -14,6 +14,18 @@ const tabs = [
 const changelogs = {
   web: [
     {
+      version: 'Late April 2026',
+      date: '2026-04-27',
+      changes: [
+        'Swing Angles (Alpha): pose-tracked spine, shoulder, hip, and head lines drawn live on every swing video. Numerical readings at address, top, impact, and finish — spine angle, posture loss, head movement — captured directly from the video.',
+        'Swing Angles works on any existing video automatically when you open the shot. New uploads from the Vision Windows app capture the exact moment of impact via audio detection, anchoring the measurements to sub-millisecond accuracy.',
+        'Side-by-side comparison now shows measured angle deltas between any shot and your standard, so you can see exactly which body part moved differently and by how much.',
+        'AI swing analysis prompt now receives the measured body angles alongside launch monitor data, so the AI can connect body cause to ball effect (for example "your spine collapsed 6° from top to impact, which is why this one came out heavy"). The "Body angles included" pill on the analysis card confirms when this richer commentary fires.',
+        'Shot detail modal cleanup: Standard, Favorite, Share, and Draw moved into the header next to the close button so the body of the modal is calmer and "View Analysis" stands alone as the primary action.',
+        'Per-shot opt-out for the body-angles section in the AI analysis modal, in case pose tracking on a specific clip looks off.',
+      ],
+    },
+    {
       version: 'April 2026',
       date: '2026-04-26',
       changes: [
