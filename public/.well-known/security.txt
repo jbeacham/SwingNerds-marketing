@@ -1,0 +1,24 @@
+# SwingNerds Security Contact
+# https://datatracker.ietf.org/doc/html/rfc9116
+
+Contact: mailto:security@swingnerds.com
+Expires: 2027-04-27T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://swingnerds.com/.well-known/security.txt
+
+# We welcome reports about vulnerabilities in our products and services.
+# Please include:
+#   - A clear description of the issue
+#   - Steps to reproduce, with example payloads if applicable
+#   - The impact you believe it has
+#   - Whether you are willing to be acknowledged once a fix ships
+#
+# We try to acknowledge new reports within two business days. We don't
+# currently run a paid bounty program, but legitimate disclosures will
+# be credited (with permission) and we'll send swag for any meaningful
+# finding.
+#
+# Out of scope: automated scanner output without manual validation,
+# attacks requiring physical access to a user's device or session,
+# missing best-practice headers without a demonstrated exploit, social
+# engineering of our staff or customers, denial-of-service.
